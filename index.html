@@ -3495,7 +3495,7 @@ function drawMilZones(ctx, z, tileX0, tileY0){
 const builderState={
   layer:'standard',
   zoom:null,
-  centreLat:31.5,centreLon:34.9,  // geographic centre of current view
+  centreLat:31.5951,centreLon:34.7691,  // geographic centre of all rides
   panX:0,panY:0,  // kept for legacy but not used for tile origin
   insideMilZone:false,  // tracks whether last waypoint was inside a zone
   waypoints:[],       // [{lat,lon}]
@@ -3508,17 +3508,29 @@ const builderState={
 };
 
 // Israel bounding box for initial view
-const BUILDER_DEFAULT={lat:31.5,lon:34.9,zoom:10};
+const BUILDER_DEFAULT={lat:31.5951,lon:34.7691,zoom:10};
 
 function initBuilder(){
   const wrap=document.getElementById('builder-wrap');
   const canvas=document.getElementById('builder-canvas');
   if(!wrap||!canvas)return;
-  canvas.width=wrap.clientWidth;canvas.height=wrap.clientHeight;
-  canvas.style.width=wrap.clientWidth+'px';canvas.style.height=wrap.clientHeight+'px';
-  builderState.zoom=BUILDER_DEFAULT.zoom;
-  builderState.centreLat=BUILDER_DEFAULT.lat;
-  builderState.centreLon=BUILDER_DEFAULT.lon;
+  // Use offsetWidth/Height which work even when tab is transitioning to visible
+  const W=wrap.offsetWidth||800;
+  const H=wrap.offsetHeight||600;
+  canvas.width=W;canvas.height=H;
+  canvas.style.width=W+'px';canvas.style.height=H+'px';
+  // Auto-fit to show all rides on first open
+  if(RIDES&&RIDES.length>0){
+    const allLats=RIDES.flatMap(r=>r.lats);
+    const allLons=RIDES.flatMap(r=>r.lons);
+    builderState.centreLat=(Math.min(...allLats)+Math.max(...allLats))/2;
+    builderState.centreLon=(Math.min(...allLons)+Math.max(...allLons))/2;
+    builderState.zoom=chooseBestZoom(Math.min(...allLats),Math.max(...allLats),Math.min(...allLons),Math.max(...allLons),wrap.clientWidth,wrap.clientHeight,1.1);
+  } else {
+    builderState.zoom=BUILDER_DEFAULT.zoom;
+    builderState.centreLat=BUILDER_DEFAULT.lat;
+    builderState.centreLon=BUILDER_DEFAULT.lon;
+  }
   builderRenderBase();
   attachBuilderEvents();
 }
@@ -3597,7 +3609,12 @@ async function builderRenderBase(){
   const wrap=document.getElementById('builder-wrap');
   const canvas=document.getElementById('builder-canvas');
   if(!canvas||!wrap)return;
-  const W=wrap.clientWidth,H=wrap.clientHeight;
+  const W=wrap.clientWidth||wrap.offsetWidth||800;
+  const H=wrap.clientHeight||wrap.offsetHeight||600;
+  if(W<10||H<10){
+    // Tab is hidden or not yet laid out — retry after a short delay
+    setTimeout(()=>builderRenderBase(),100);return;
+  }
   canvas.width=W;canvas.height=H;
   canvas.style.width=W+'px';canvas.style.height=H+'px';
   const ctx=canvas.getContext('2d');
@@ -3611,17 +3628,23 @@ async function builderRenderBase(){
   const attrEl=document.getElementById('builder-attr');if(attrEl)attrEl.textContent=source.attr||'';
   try{const tiles=await loadTiles(source,z,txMin,txMax,tyMin,tyMax);drawTiles(ctx,tiles,tileX0,tileY0);}catch(e){}
 
-  // Ghost layer
-  ctx.lineWidth=2;ctx.lineCap='round';
+  // Ghost layer — dark outline + coloured line so it reads on any map style
   RIDES.forEach(r=>{
-    ctx.globalAlpha=0.22;ctx.strokeStyle=r.color;
-    ctx.beginPath();
+    const pts=[];
     r.lats.forEach((lat,i)=>{
-      const px=(lonToTileX(r.lons[i],z)-tileX0)*TILE_SIZE;
-      const py=(latToTileY(lat,z)-tileY0)*TILE_SIZE;
-      i===0?ctx.moveTo(px,py):ctx.lineTo(px,py);
+      pts.push([(lonToTileX(r.lons[i],z)-tileX0)*TILE_SIZE,(latToTileY(lat,z)-tileY0)*TILE_SIZE]);
     });
-    ctx.stroke();
+    if(pts.length<2)return;
+    // Dark halo for contrast against light and dark backgrounds
+    ctx.beginPath();
+    pts.forEach(([px,py],i)=>i===0?ctx.moveTo(px,py):ctx.lineTo(px,py));
+    ctx.strokeStyle='rgba(0,0,0,0.35)';ctx.lineWidth=4;ctx.lineCap='round';ctx.lineJoin='round';
+    ctx.globalAlpha=1;ctx.stroke();
+    // Coloured line on top
+    ctx.beginPath();
+    pts.forEach(([px,py],i)=>i===0?ctx.moveTo(px,py):ctx.lineTo(px,py));
+    ctx.strokeStyle=r.color;ctx.lineWidth=2;ctx.lineCap='round';ctx.lineJoin='round';
+    ctx.globalAlpha=0.6;ctx.stroke();
   });
   ctx.globalAlpha=1;
 
