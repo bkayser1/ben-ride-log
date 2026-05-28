@@ -253,14 +253,11 @@ main{padding:36px 48px 80px;}
 <div class="hero-banner" id="hero">
   <div class="hero-gradient"></div>
   <div class="hero-content">
-    <div>
-      <div class="hero-eyebrow">Field Notes</div>
-      <div class="hero-title">Ride <span>Log</span></div>
-    </div>
+    <div><div class="hero-eyebrow">Field Notes</div><div class="hero-title">Ride <span>Log</span></div></div>
     <div class="hero-right-meta">
       <div class="hero-meta-line">Rider <strong>40M · Israel · MTB / Gravel</strong></div>
-      <div class="hero-meta-line">Rides <strong>37</strong></div>
-      <div class="hero-meta-line">25 Jul 2025 — 19 May 2026</div>
+      <div class="hero-meta-line">Rides <strong>38</strong></div>
+      <div class="hero-meta-line">25 Jul 2025 — 28 May 2026</div>
     </div>
   </div>
   <button class="hero-arrow hero-arrow-left" id="hero-prev">&#8249;</button>
@@ -268,11 +265,11 @@ main{padding:36px 48px 80px;}
   <div class="hero-dots" id="hero-dots"></div>
 </div>
 <div class="stats-bar">
-  <div class="stat-cell"><div class="stat-label">Total distance</div><div class="stat-value">1542.2<span class="stat-unit">km</span></div></div>
-  <div class="stat-cell"><div class="stat-label">Elevation gain</div><div class="stat-value">20,098<span class="stat-unit">m</span></div></div>
-  <div class="stat-cell"><div class="stat-label">Time in saddle</div><div class="stat-value">73:41<span class="stat-unit">h</span></div></div>
-  <div class="stat-cell"><div class="stat-label">On-form days</div><div class="stat-value">16<span class="stat-unit">/ 37</span></div></div>
-  <div class="stat-cell"><div class="stat-label">Rides logged</div><div class="stat-value">37</div></div>
+  <div class="stat-cell"><div class="stat-label">Total distance</div><div class="stat-value">1643.2<span class="stat-unit">km</span></div></div>
+  <div class="stat-cell"><div class="stat-label">Elevation gain</div><div class="stat-value">21,213<span class="stat-unit">m</span></div></div>
+  <div class="stat-cell"><div class="stat-label">Time in saddle</div><div class="stat-value">78:08<span class="stat-unit">h</span></div></div>
+  <div class="stat-cell"><div class="stat-label">On-form days</div><div class="stat-value">17<span class="stat-unit">/ 38</span></div></div>
+  <div class="stat-cell"><div class="stat-label">Rides logged</div><div class="stat-value">38</div></div>
 </div>
 <div class="section-nav">
   <div class="nav-tab active" onclick="showTab('rides',this)">Rides</div>
@@ -322,6 +319,7 @@ main{padding:36px 48px 80px;}
 <div class="ride-index-item" onclick="scrollToRide(34)" id="idx-34"><span class="ri-date">01 May 2026</span><span class="ri-name">Tel Zafit, Sdot Micha, Britannia, Tel Burna 🌾</span><span class="ri-dist">64.2 km · ↑1037m</span></div>
 <div class="ride-index-item" onclick="scrollToRide(35)" id="idx-35">🟢 <span class="ri-date">14 May 2026</span><span class="ri-name">Tel Lachish with Nissan and Gidon</span><span class="ri-dist">33.9 km · ↑367m</span></div>
 <div class="ride-index-item" onclick="scrollToRide(36)" id="idx-36"><span class="ri-date">19 May 2026</span><span class="ri-name">Five Tels 🌾</span><span class="ri-dist">66.6 km · ↑1017m</span></div>
+<div class="ride-index-item" onclick="scrollToRide(37)" id="idx-37">🟢 <span class="ri-date">28 May 2026</span><span class="ri-name">Zikim 100k exploring our beautiful land 🌿</span><span class="ri-dist">101.0 km · ↑1115m</span></div>
 </div>
     <div>
       <div class="sort-bar">
@@ -381,14 +379,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m0">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-0">
-        <div class="chart-wrap" id="chart-spd-wrap-0">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-0"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-0">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-0"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-0"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-0"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-0"></div>
         <div class="chart-tooltip" id="chart-tip-0"></div>
       </div>
@@ -446,14 +438,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m1">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-1">
-        <div class="chart-wrap" id="chart-spd-wrap-1">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-1"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-1">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-1"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-1"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-1"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-1"></div>
         <div class="chart-tooltip" id="chart-tip-1"></div>
       </div>
@@ -511,14 +497,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m2">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-2">
-        <div class="chart-wrap" id="chart-spd-wrap-2">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-2"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-2">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-2"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-2"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-2"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-2"></div>
         <div class="chart-tooltip" id="chart-tip-2"></div>
       </div>
@@ -576,14 +556,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m3">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-3">
-        <div class="chart-wrap" id="chart-spd-wrap-3">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-3"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-3">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-3"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-3"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-3"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-3"></div>
         <div class="chart-tooltip" id="chart-tip-3"></div>
       </div>
@@ -641,14 +615,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m4">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-4">
-        <div class="chart-wrap" id="chart-spd-wrap-4">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-4"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-4">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-4"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-4"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-4"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-4"></div>
         <div class="chart-tooltip" id="chart-tip-4"></div>
       </div>
@@ -706,14 +674,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m5">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-5">
-        <div class="chart-wrap" id="chart-spd-wrap-5">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-5"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-5">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-5"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-5"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-5"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-5"></div>
         <div class="chart-tooltip" id="chart-tip-5"></div>
       </div>
@@ -771,14 +733,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m6">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-6">
-        <div class="chart-wrap" id="chart-spd-wrap-6">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-6"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-6">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-6"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-6"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-6"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-6"></div>
         <div class="chart-tooltip" id="chart-tip-6"></div>
       </div>
@@ -836,14 +792,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m7">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-7">
-        <div class="chart-wrap" id="chart-spd-wrap-7">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-7"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-7">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-7"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-7"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-7"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-7"></div>
         <div class="chart-tooltip" id="chart-tip-7"></div>
       </div>
@@ -901,14 +851,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m8">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-8">
-        <div class="chart-wrap" id="chart-spd-wrap-8">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-8"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-8">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-8"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-8"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-8"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-8"></div>
         <div class="chart-tooltip" id="chart-tip-8"></div>
       </div>
@@ -966,14 +910,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m9">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-9">
-        <div class="chart-wrap" id="chart-spd-wrap-9">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-9"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-9">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-9"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-9"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-9"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-9"></div>
         <div class="chart-tooltip" id="chart-tip-9"></div>
       </div>
@@ -1031,14 +969,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m10">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-10">
-        <div class="chart-wrap" id="chart-spd-wrap-10">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-10"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-10">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-10"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-10"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-10"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-10"></div>
         <div class="chart-tooltip" id="chart-tip-10"></div>
       </div>
@@ -1096,14 +1028,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m11">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-11">
-        <div class="chart-wrap" id="chart-spd-wrap-11">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-11"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-11">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-11"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-11"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-11"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-11"></div>
         <div class="chart-tooltip" id="chart-tip-11"></div>
       </div>
@@ -1161,14 +1087,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m12">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-12">
-        <div class="chart-wrap" id="chart-spd-wrap-12">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-12"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-12">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-12"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-12"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-12"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-12"></div>
         <div class="chart-tooltip" id="chart-tip-12"></div>
       </div>
@@ -1226,14 +1146,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m13">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-13">
-        <div class="chart-wrap" id="chart-spd-wrap-13">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-13"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-13">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-13"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-13"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-13"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-13"></div>
         <div class="chart-tooltip" id="chart-tip-13"></div>
       </div>
@@ -1291,14 +1205,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m14">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-14">
-        <div class="chart-wrap" id="chart-spd-wrap-14">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-14"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-14">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-14"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-14"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-14"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-14"></div>
         <div class="chart-tooltip" id="chart-tip-14"></div>
       </div>
@@ -1356,14 +1264,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m15">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-15">
-        <div class="chart-wrap" id="chart-spd-wrap-15">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-15"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-15">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-15"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-15"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-15"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-15"></div>
         <div class="chart-tooltip" id="chart-tip-15"></div>
       </div>
@@ -1421,14 +1323,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m16">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-16">
-        <div class="chart-wrap" id="chart-spd-wrap-16">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-16"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-16">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-16"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-16"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-16"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-16"></div>
         <div class="chart-tooltip" id="chart-tip-16"></div>
       </div>
@@ -1486,14 +1382,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m17">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-17">
-        <div class="chart-wrap" id="chart-spd-wrap-17">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-17"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-17">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-17"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-17"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-17"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-17"></div>
         <div class="chart-tooltip" id="chart-tip-17"></div>
       </div>
@@ -1551,14 +1441,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m18">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-18">
-        <div class="chart-wrap" id="chart-spd-wrap-18">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-18"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-18">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-18"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-18"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-18"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-18"></div>
         <div class="chart-tooltip" id="chart-tip-18"></div>
       </div>
@@ -1616,14 +1500,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m19">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-19">
-        <div class="chart-wrap" id="chart-spd-wrap-19">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-19"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-19">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-19"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-19"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-19"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-19"></div>
         <div class="chart-tooltip" id="chart-tip-19"></div>
       </div>
@@ -1681,14 +1559,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m20">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-20">
-        <div class="chart-wrap" id="chart-spd-wrap-20">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-20"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-20">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-20"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-20"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-20"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-20"></div>
         <div class="chart-tooltip" id="chart-tip-20"></div>
       </div>
@@ -1746,14 +1618,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m21">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-21">
-        <div class="chart-wrap" id="chart-spd-wrap-21">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-21"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-21">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-21"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-21"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-21"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-21"></div>
         <div class="chart-tooltip" id="chart-tip-21"></div>
       </div>
@@ -1811,14 +1677,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m22">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-22">
-        <div class="chart-wrap" id="chart-spd-wrap-22">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-22"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-22">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-22"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-22"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-22"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-22"></div>
         <div class="chart-tooltip" id="chart-tip-22"></div>
       </div>
@@ -1876,14 +1736,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m23">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-23">
-        <div class="chart-wrap" id="chart-spd-wrap-23">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-23"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-23">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-23"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-23"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-23"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-23"></div>
         <div class="chart-tooltip" id="chart-tip-23"></div>
       </div>
@@ -1941,14 +1795,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m24">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-24">
-        <div class="chart-wrap" id="chart-spd-wrap-24">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-24"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-24">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-24"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-24"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-24"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-24"></div>
         <div class="chart-tooltip" id="chart-tip-24"></div>
       </div>
@@ -2006,14 +1854,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m25">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-25">
-        <div class="chart-wrap" id="chart-spd-wrap-25">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-25"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-25">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-25"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-25"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-25"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-25"></div>
         <div class="chart-tooltip" id="chart-tip-25"></div>
       </div>
@@ -2071,14 +1913,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m26">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-26">
-        <div class="chart-wrap" id="chart-spd-wrap-26">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-26"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-26">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-26"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-26"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-26"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-26"></div>
         <div class="chart-tooltip" id="chart-tip-26"></div>
       </div>
@@ -2136,14 +1972,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m27">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-27">
-        <div class="chart-wrap" id="chart-spd-wrap-27">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-27"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-27">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-27"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-27"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-27"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-27"></div>
         <div class="chart-tooltip" id="chart-tip-27"></div>
       </div>
@@ -2201,14 +2031,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m28">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-28">
-        <div class="chart-wrap" id="chart-spd-wrap-28">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-28"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-28">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-28"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-28"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-28"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-28"></div>
         <div class="chart-tooltip" id="chart-tip-28"></div>
       </div>
@@ -2266,14 +2090,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m29">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-29">
-        <div class="chart-wrap" id="chart-spd-wrap-29">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-29"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-29">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-29"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-29"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-29"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-29"></div>
         <div class="chart-tooltip" id="chart-tip-29"></div>
       </div>
@@ -2331,14 +2149,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m30">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-30">
-        <div class="chart-wrap" id="chart-spd-wrap-30">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-30"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-30">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-30"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-30"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-30"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-30"></div>
         <div class="chart-tooltip" id="chart-tip-30"></div>
       </div>
@@ -2396,14 +2208,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m31">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-31">
-        <div class="chart-wrap" id="chart-spd-wrap-31">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-31"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-31">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-31"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-31"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-31"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-31"></div>
         <div class="chart-tooltip" id="chart-tip-31"></div>
       </div>
@@ -2461,14 +2267,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m32">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-32">
-        <div class="chart-wrap" id="chart-spd-wrap-32">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-32"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-32">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-32"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-32"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-32"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-32"></div>
         <div class="chart-tooltip" id="chart-tip-32"></div>
       </div>
@@ -2526,14 +2326,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m33">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-33">
-        <div class="chart-wrap" id="chart-spd-wrap-33">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-33"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-33">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-33"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-33"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-33"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-33"></div>
         <div class="chart-tooltip" id="chart-tip-33"></div>
       </div>
@@ -2591,14 +2385,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m34">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-34">
-        <div class="chart-wrap" id="chart-spd-wrap-34">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-34"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-34">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-34"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-34"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-34"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-34"></div>
         <div class="chart-tooltip" id="chart-tip-34"></div>
       </div>
@@ -2656,14 +2444,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m35">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-35">
-        <div class="chart-wrap" id="chart-spd-wrap-35">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-35"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-35">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-35"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-35"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-35"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-35"></div>
         <div class="chart-tooltip" id="chart-tip-35"></div>
       </div>
@@ -2721,14 +2503,8 @@ main{padding:36px 48px 80px;}
         <div class="tile-attr" id="attr-m36">© OpenStreetMap contributors</div>
       </div>
       <div class="charts-col" id="charts-36">
-        <div class="chart-wrap" id="chart-spd-wrap-36">
-          <div class="chart-label">Speed <span class="chart-unit">km/h</span></div>
-          <canvas class="profile-canvas" id="chart-spd-36"></canvas>
-        </div>
-        <div class="chart-wrap" id="chart-ele-wrap-36">
-          <div class="chart-label">Elevation <span class="chart-unit">m</span></div>
-          <canvas class="profile-canvas" id="chart-ele-36"></canvas>
-        </div>
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-36"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-36"></canvas></div>
         <div class="chart-xaxis" id="chart-xaxis-36"></div>
         <div class="chart-tooltip" id="chart-tip-36"></div>
       </div>
@@ -2737,6 +2513,65 @@ main{padding:36px 48px 80px;}
       <span class="legend-label" id="llabel-m36">Speed</span>
       <canvas class="legend-gradient" id="lgrad-m36" width="180" height="8"></canvas>
       <span class="legend-minmax" id="lmin-m36"></span><span class="legend-sep">—</span><span class="legend-minmax" id="lmax-m36"></span>
+    </div>
+  </div>
+  <div class="ride-block" id="rideblock-37">
+    <div class="ride-card-inner">
+      <div class="card-top"><div class="ride-name">Zikim 100k exploring our beautiful land 🌿</div><div class="ride-date-wrap"><span class="ride-date">28 May 2026</span><span class="ride-time-label">start 02:23</span></div></div>
+      <div class="badges"><span class="badge badge-form">On form ↑</span><span class="badge badge-loop">Loop</span><span class="badge badge-dir">→ W</span></div>
+      <div class="metrics">
+        <div class="m-cell"><div class="m-label">Distance</div><div class="m-val">101.0<span class="u">km</span></div></div>
+        <div class="m-cell"><div class="m-label">Moving time</div><div class="m-val">4:27<span class="u">h</span></div></div>
+        <div class="m-cell"><div class="m-label">Avg speed</div><div class="m-val">22.9<span class="u">km/h</span></div></div>
+        <div class="m-cell"><div class="m-label">Max speed</div><div class="m-val">52.1<span class="u">km/h</span></div></div>
+        <div class="m-cell"><div class="m-label">Elev. gain</div><div class="m-val">1115<span class="u">m</span></div></div>
+        <div class="m-cell"><div class="m-label">Elev. loss</div><div class="m-val">1115<span class="u">m</span></div></div>
+        <div class="m-cell"><div class="m-label">Max elev.</div><div class="m-val">158<span class="u">m</span></div></div>
+        <div class="m-cell"><div class="m-label">Avg gradient</div><div class="m-val">1.1<span class="u">%</span></div></div>
+      </div>
+      <div class="elev-bar-wrap">
+        <div class="elev-bar-label"><span>↑ 1115m gain</span><span>↓ 1115m loss</span></div>
+        <div class="elev-track"><div class="elev-fill-gain" style="width:80%"></div><div class="elev-fill-loss" style="width:80%"></div></div>
+      </div>
+      <div class="bottom-row"><span class="suffering-label">Suffering score</span><span class="suffering-val">124,278</span></div>
+    </div>
+    <div class="map-controls">
+      <div class="map-controls-row">
+        <span class="map-controls-label">Map</span>
+        <button class="map-btn active-layer" onclick="setLayer('m37','standard',this)">Standard</button>
+        <button class="map-btn" onclick="setLayer('m37','satellite',this)">Satellite</button>
+        <button class="map-btn" onclick="setLayer('m37','terrain',this)">Terrain</button>
+      </div>
+      <div class="map-controls-row">
+        <span class="map-controls-label">Color by</span>
+        <button class="map-btn active" onclick="setColor('m37','speed',this)">Speed</button>
+        <button class="map-btn" onclick="setColor('m37','elevation',this)">Elevation</button>
+        <button class="map-btn" onclick="setColor('m37','plain',this)">Plain</button>
+      </div>
+    </div>
+    <div class="map-chart-row">
+      <div class="map-wrap" id="wrap-m37" style="position:relative;">
+        <canvas id="m37"></canvas>
+        <div class="map-loading" id="load-m37">Loading map…</div>
+        <div class="zoom-controls">
+          <button class="zoom-btn" onclick="zoomMap('m37',1)">+</button>
+          <div class="zoom-level" id="zlevel-m37">—</div>
+          <button class="zoom-btn" onclick="zoomMap('m37',-1)">−</button>
+          <button class="zoom-btn zoom-fit" onclick="resetZoom('m37')">fit</button>
+        </div>
+        <div class="tile-attr" id="attr-m37">© OpenStreetMap contributors</div>
+      </div>
+      <div class="charts-col" id="charts-37">
+        <div class="chart-wrap"><div class="chart-label">Speed <span class="chart-unit">km/h</span></div><canvas class="profile-canvas" id="chart-spd-37"></canvas></div>
+        <div class="chart-wrap"><div class="chart-label">Elevation <span class="chart-unit">m</span></div><canvas class="profile-canvas" id="chart-ele-37"></canvas></div>
+        <div class="chart-xaxis" id="chart-xaxis-37"></div>
+        <div class="chart-tooltip" id="chart-tip-37"></div>
+      </div>
+    </div>
+    <div class="legend-bar" id="legend-m37">
+      <span class="legend-label" id="llabel-m37">Speed</span>
+      <canvas class="legend-gradient" id="lgrad-m37" width="180" height="8"></canvas>
+      <span class="legend-minmax" id="lmin-m37"></span><span class="legend-sep">—</span><span class="legend-minmax" id="lmax-m37"></span>
     </div>
   </div></div>
     </div>
@@ -2801,6 +2636,7 @@ main{padding:36px 48px 80px;}
 <div class="master-legend-item"><div class="swatch" style="background:#e05a3a;"></div><span class="swatch-label">01 May 2026 · Tel Zafit, Sdot Micha, Britannia, Tel Burna 🌾</span></div>
 <div class="master-legend-item"><div class="swatch" style="background:#1a6bcc;"></div><span class="swatch-label">14 May 2026 · Tel Lachish with Nissan and Gidon</span></div>
 <div class="master-legend-item"><div class="swatch" style="background:#2d7a3a;"></div><span class="swatch-label">19 May 2026 · Five Tels 🌾</span></div>
+<div class="master-legend-item"><div class="swatch" style="background:#9b4dca;"></div><span class="swatch-label">28 May 2026 · Zikim 100k exploring our beautiful land 🌿</span></div>
 </div>
   </div>
 </div>
@@ -2936,6 +2772,7 @@ main{padding:36px 48px 80px;}
   </div>
 </div>
 
+
 </main>
 <script>
 const RIDES=[
@@ -2975,7 +2812,8 @@ const RIDES=[
   {name:"Local freestyle \ud83c\udf3f\ud83c\udf3e",color:"#c0392b",date:"24 Apr 2026",date_sort:"2026-04-24",start_time:"04:44",distance_km:47.1,moving_time:"2:06",elev_gain:554,elev_loss:553,max_elev:156,min_elev:81,avg_speed:22.7,max_speed:56.3,avg_gradient:1.18,suffering:30714,on_form:true,is_loop:true,direction:"W",lats:[31.623982, 31.625237, 31.626852, 31.628342, 31.629367, 31.629415, 31.629236, 31.628715, 31.628208, 31.627311, 31.626372, 31.625155, 31.624133, 31.622972, 31.621519, 31.620871, 31.621272, 31.621921, 31.620848, 31.6197, 31.619543, 31.61987, 31.62056, 31.621599, 31.622516, 31.623305, 31.62325, 31.622966, 31.623454, 31.624106, 31.624779, 31.625192, 31.625606, 31.625695, 31.625769, 31.626163, 31.62644, 31.6253, 31.62429, 31.624145, 31.62428, 31.624304, 31.625161, 31.625956, 31.626449, 31.626286, 31.626107, 31.625546, 31.625102, 31.624236, 31.623618, 31.622792, 31.622202, 31.621265, 31.620499, 31.620001, 31.619001, 31.618574, 31.617871, 31.616758, 31.615837, 31.614934, 31.613795, 31.612886, 31.612221, 31.611602, 31.611186, 31.610358, 31.609457, 31.60884, 31.608756, 31.608412, 31.608964, 31.610343, 31.611221, 31.612686, 31.613634, 31.614786, 31.614799, 31.61459, 31.615897, 31.617199, 31.618091, 31.617902, 31.618368, 31.618412, 31.618311, 31.619061, 31.619362, 31.619868, 31.620618, 31.620733, 31.620766, 31.620206, 31.620815, 31.621747, 31.622339, 31.622592, 31.623135, 31.623953, 31.624244, 31.623782, 31.624578, 31.625049, 31.625174, 31.625768, 31.626907, 31.627991, 31.628998, 31.629467, 31.629044, 31.628044, 31.627584, 31.627173, 31.625986, 31.624824, 31.623922, 31.623225, 31.62263, 31.621796, 31.620931, 31.619688, 31.618318, 31.617769, 31.61784, 31.618341, 31.618832, 31.618856, 31.61948, 31.620549, 31.621588, 31.621084, 31.621334, 31.620895, 31.62011, 31.619272, 31.617858, 31.616486, 31.616621, 31.617285, 31.617658, 31.615718, 31.613452, 31.613336, 31.614687, 31.615516, 31.615709, 31.615584, 31.615445, 31.615192, 31.614603, 31.614016, 31.613526, 31.612768, 31.611159, 31.609299, 31.607231, 31.605237, 31.603527, 31.602097, 31.600231, 31.598411, 31.596957, 31.596695, 31.596462, 31.596014, 31.59502, 31.594093, 31.594386, 31.595909, 31.597058, 31.596648, 31.595726, 31.59409, 31.593993, 31.595039, 31.595138, 31.594146, 31.594194, 31.595043, 31.595911, 31.596502, 31.596873, 31.595341, 31.593652, 31.592139, 31.590793, 31.589581, 31.5884, 31.587583, 31.587499, 31.587341, 31.587197, 31.58709, 31.586925, 31.586885, 31.586535, 31.586536, 31.586575, 31.586459, 31.586359, 31.586271, 31.586202, 31.586053, 31.585948, 31.586146, 31.586377, 31.586133, 31.586051, 31.58607, 31.586047, 31.586131, 31.586181, 31.586323, 31.586467, 31.586661, 31.586994, 31.587816, 31.588358, 31.589594, 31.591148, 31.591894, 31.592491, 31.593302, 31.594478, 31.595724, 31.596239, 31.597076, 31.59777, 31.598244, 31.59904, 31.599791, 31.600201, 31.600609, 31.60106, 31.601266, 31.601822, 31.601455, 31.600191, 31.599297, 31.598663, 31.598197, 31.599662, 31.601294, 31.602646, 31.603053, 31.604288, 31.605735, 31.607224, 31.608193, 31.608787, 31.610198, 31.611544, 31.613103, 31.614385, 31.615751, 31.617129, 31.618272, 31.619026, 31.619666, 31.620446, 31.621104, 31.622012, 31.623109, 31.624489, 31.625628, 31.626786, 31.628, 31.629131, 31.630365, 31.632643, 31.635298, 31.637437, 31.638369, 31.637334, 31.636624, 31.637269, 31.637956, 31.638672, 31.63936, 31.640019, 31.640657, 31.641307, 31.642166, 31.643365, 31.64407, 31.645055, 31.645023, 31.643545, 31.641923, 31.640524, 31.639091, 31.637751, 31.636497, 31.635474, 31.634543, 31.633298, 31.631478, 31.629511, 31.627707, 31.626055, 31.624505, 31.623246, 31.621966, 31.620406, 31.619735, 31.619313, 31.620167, 31.62145, 31.622913, 31.623928, 31.623911],lons:[34.774277, 34.774178, 34.774181, 34.774178, 34.773599, 34.772215, 34.770774, 34.769184, 34.767808, 34.766471, 34.765255, 34.764363, 34.763573, 34.76281, 34.762206, 34.760781, 34.759516, 34.758173, 34.756924, 34.7559, 34.755188, 34.753457, 34.751623, 34.75143, 34.752426, 34.75244, 34.752465, 34.753202, 34.753914, 34.754999, 34.756185, 34.757591, 34.757559, 34.756848, 34.7562, 34.755079, 34.753717, 34.753555, 34.752867, 34.752127, 34.752312, 34.751132, 34.750353, 34.750085, 34.749278, 34.748523, 34.748885, 34.749548, 34.749975, 34.750039, 34.750218, 34.75004, 34.749221, 34.748796, 34.748235, 34.748811, 34.748575, 34.747995, 34.746801, 34.746902, 34.747603, 34.748031, 34.747932, 34.747722, 34.747273, 34.747066, 34.747688, 34.747729, 34.74845, 34.748438, 34.748, 34.747814, 34.747269, 34.74722, 34.746299, 34.745597, 34.745845, 34.74587, 34.74411, 34.74293, 34.743306, 34.743717, 34.742775, 34.741929, 34.741226, 34.740277, 34.739305, 34.738375, 34.736685, 34.735764, 34.736547, 34.737554, 34.738907, 34.739955, 34.740807, 34.740215, 34.739004, 34.737689, 34.737022, 34.736618, 34.735841, 34.735253, 34.735083, 34.734011, 34.733345, 34.732385, 34.732314, 34.731657, 34.730991, 34.731871, 34.732995, 34.733972, 34.735748, 34.737329, 34.738039, 34.738951, 34.739671, 34.740298, 34.741701, 34.742516, 34.742112, 34.741472, 34.741289, 34.740714, 34.739346, 34.738138, 34.736675, 34.735102, 34.733878, 34.733233, 34.732573, 34.731926, 34.73102, 34.729936, 34.729303, 34.73046, 34.730021, 34.729285, 34.727629, 34.726055, 34.724587, 34.723381, 34.721792, 34.720054, 34.718724, 34.716909, 34.7151, 34.713223, 34.710869, 34.708505, 34.706454, 34.704722, 34.703274, 34.703037, 34.703603, 34.704208, 34.704301, 34.703607, 34.702947, 34.702529, 34.702855, 34.703236, 34.703406, 34.701914, 34.700497, 34.699122, 34.698079, 34.696705, 34.694921, 34.694794, 34.693055, 34.691268, 34.690407, 34.690638, 34.691741, 34.692281, 34.693749, 34.695191, 34.697158, 34.698207, 34.699068, 34.70111, 34.703467, 34.703929, 34.704303, 34.704406, 34.703629, 34.702523, 34.701438, 34.70121, 34.702741, 34.704394, 34.705948, 34.707668, 34.709655, 34.711659, 34.712999, 34.714819, 34.716483, 34.717745, 34.718801, 34.719964, 34.721173, 34.722593, 34.724565, 34.726662, 34.728428, 34.729913, 34.731214, 34.732422, 34.733444, 34.734398, 34.735375, 34.736427, 34.737695, 34.739083, 34.740009, 34.742325, 34.743416, 34.745458, 34.747169, 34.748251, 34.748889, 34.749865, 34.751528, 34.752673, 34.753462, 34.754084, 34.754553, 34.755691, 34.75754, 34.759281, 34.761032, 34.763005, 34.765274, 34.768585, 34.771023, 34.772435, 34.773599, 34.774972, 34.775895, 34.777121, 34.779054, 34.780215, 34.78116, 34.782624, 34.7842, 34.785128, 34.786095, 34.786768, 34.787074, 34.787433, 34.787845, 34.787578, 34.786907, 34.787269, 34.788126, 34.788396, 34.789064, 34.790018, 34.790934, 34.792118, 34.793568, 34.794779, 34.79629, 34.797489, 34.797802, 34.797965, 34.798064, 34.79834, 34.798903, 34.799445, 34.799911, 34.800078, 34.799856, 34.798971, 34.797104, 34.795039, 34.792915, 34.790863, 34.788879, 34.786989, 34.785052, 34.783354, 34.781936, 34.780635, 34.779243, 34.778037, 34.778046, 34.777934, 34.777963, 34.77796, 34.777928, 34.777986, 34.777957, 34.777979, 34.777963, 34.77798, 34.777934, 34.777953, 34.778101, 34.77832, 34.778583, 34.779003, 34.779569, 34.779409, 34.778869, 34.778426, 34.778078, 34.777625, 34.776897, 34.774922],spds:[0.0, 23.9, 26.6, 26.5, 25.9, 26.9, 21.3, 12.8, 24.7, 21.7, 24.9, 17.6, 22.1, 22.9, 17.6, 30.7, 26.8, 30.9, 33.9, 21.0, 20.2, 28.9, 28.8, 22.5, 16.6, 12.7, 21.2, 14.6, 14.7, 19.7, 20.7, 19.0, 17.8, 17.4, 16.5, 18.9, 9.6, 21.2, 24.5, 4.8, 12.8, 19.9, 16.1, 16.3, 11.3, 7.0, 4.6, 18.2, 12.5, 10.8, 11.7, 17.5, 18.1, 12.7, 13.1, 16.6, 13.9, 18.0, 26.4, 20.8, 18.1, 16.5, 22.4, 14.7, 15.3, 12.3, 19.0, 14.7, 15.9, 12.6, 10.7, 4.0, 24.7, 24.7, 26.3, 16.7, 24.4, 24.3, 21.5, 22.0, 21.5, 25.3, 16.7, 14.8, 11.5, 16.7, 17.5, 19.7, 24.8, 24.6, 9.8, 17.9, 15.9, 17.4, 14.0, 19.6, 19.0, 19.1, 18.1, 16.5, 9.3, 13.6, 16.2, 14.6, 12.9, 21.4, 22.1, 16.0, 18.8, 18.4, 19.3, 22.9, 29.9, 23.6, 24.8, 20.8, 17.4, 16.3, 25.8, 14.1, 17.9, 26.7, 29.3, 18.0, 19.1, 24.3, 19.1, 20.7, 18.7, 23.9, 16.3, 19.0, 22.1, 17.4, 10.9, 23.0, 22.6, 21.9, 28.5, 24.8, 30.7, 48.1, 36.4, 28.7, 29.2, 28.8, 25.6, 32.9, 33.3, 33.6, 28.4, 25.5, 16.6, 23.6, 29.6, 34.7, 34.8, 34.1, 27.2, 25.2, 36.3, 26.7, 21.3, 20.9, 20.9, 20.9, 24.1, 24.8, 26.9, 32.9, 33.3, 20.0, 24.7, 31.0, 18.8, 18.8, 25.5, 29.9, 28.6, 5.9, 29.5, 33.9, 20.6, 32.4, 25.5, 24.5, 24.9, 25.4, 23.2, 12.4, 25.2, 22.9, 22.0, 25.0, 28.9, 23.6, 22.8, 30.8, 22.0, 15.7, 16.0, 16.5, 18.5, 23.0, 32.9, 28.5, 23.3, 19.4, 19.8, 15.2, 14.6, 14.0, 15.2, 15.9, 20.1, 17.0, 19.7, 35.2, 22.5, 29.2, 37.5, 14.0, 14.7, 31.3, 29.7, 15.4, 13.6, 22.2, 13.5, 27.5, 29.5, 26.8, 27.3, 31.1, 40.9, 44.2, 29.1, 26.7, 24.9, 22.3, 14.9, 28.6, 32.8, 27.3, 24.8, 22.7, 31.6, 25.6, 27.3, 6.6, 24.7, 25.0, 24.2, 29.4, 31.6, 24.1, 24.8, 16.1, 15.1, 18.0, 18.2, 22.9, 25.1, 27.4, 32.1, 21.3, 21.7, 21.0, 22.2, 28.4, 44.2, 42.2, 34.7, 7.8, 20.7, 24.2, 30.7, 31.0, 32.6, 29.4, 31.3, 27.2, 29.5, 28.6, 24.2, 26.2, 26.8, 24.3, 27.9, 24.1, 23.4, 25.3, 21.4, 20.5, 14.8, 15.6, 27.5, 31.1, 33.2, 29.2, 27.6, 22.3, 20.0, 25.1, 28.6, 16.8, 13.3, 18.4, 23.3, 28.2, 25.6, 28.8],eles:[120.0, 120.6, 119.4, 118.2, 117.6, 116.4, 115.6, 113.4, 113.6, 114.4, 115.2, 116.4, 118.4, 121.6, 114.2, 110.6, 112.0, 112.0, 109.2, 108.6, 111.0, 106.2, 103.8, 105.6, 99.6, 95.6, 95.4, 98.0, 103.4, 104.4, 105.6, 106.4, 108.0, 107.0, 106.4, 105.8, 104.8, 104.8, 103.0, 101.6, 102.8, 97.0, 96.2, 96.0, 96.6, 97.0, 97.6, 98.2, 97.6, 97.4, 100.4, 102.8, 102.6, 98.8, 96.4, 96.6, 100.8, 104.0, 98.0, 98.4, 100.4, 103.6, 104.0, 105.8, 107.8, 112.4, 115.0, 115.8, 115.6, 123.4, 124.0, 127.6, 126.2, 119.6, 118.4, 114.0, 111.4, 106.6, 104.4, 99.2, 100.0, 98.8, 94.6, 98.4, 99.6, 103.8, 106.6, 103.4, 99.4, 94.0, 91.2, 96.0, 95.0, 96.4, 97.6, 95.8, 92.4, 90.0, 86.8, 87.6, 91.0, 89.4, 90.8, 86.0, 83.6, 83.0, 84.4, 81.8, 80.6, 81.6, 84.4, 86.6, 84.0, 85.0, 86.8, 88.2, 92.6, 98.2, 96.4, 100.4, 104.6, 102.2, 101.4, 105.2, 107.6, 107.4, 102.4, 96.6, 97.6, 97.8, 99.0, 101.6, 105.0, 106.0, 105.2, 107.2, 110.6, 112.0, 111.0, 111.0, 109.4, 100.2, 95.2, 96.6, 95.0, 94.8, 97.0, 93.8, 91.0, 91.2, 91.0, 94.0, 98.0, 99.0, 98.6, 97.0, 95.6, 97.0, 101.2, 104.8, 101.0, 105.2, 108.4, 114.4, 118.6, 121.4, 122.4, 123.6, 123.6, 119.4, 115.0, 119.6, 121.6, 115.0, 117.2, 123.6, 124.8, 124.2, 122.6, 123.4, 120.4, 117.4, 109.2, 107.4, 111.2, 114.0, 115.8, 118.4, 122.6, 125.2, 125.0, 128.2, 129.8, 129.4, 122.6, 117.8, 123.0, 119.0, 118.0, 123.2, 128.6, 131.4, 135.0, 135.6, 130.2, 126.2, 128.8, 129.8, 131.4, 134.6, 138.8, 142.6, 147.0, 149.6, 151.2, 152.6, 155.0, 148.2, 155.8, 145.4, 136.0, 144.2, 150.0, 147.6, 138.4, 135.2, 142.0, 142.8, 144.6, 141.2, 140.8, 142.8, 143.8, 143.0, 139.0, 126.4, 125.2, 128.8, 130.2, 132.8, 140.0, 135.4, 128.2, 128.4, 131.4, 136.2, 129.0, 131.6, 129.6, 132.6, 130.6, 130.0, 129.6, 126.2, 124.6, 127.0, 126.4, 130.8, 135.8, 139.6, 142.8, 145.6, 144.8, 144.4, 138.4, 142.8, 146.0, 149.0, 150.4, 150.0, 143.0, 135.2, 133.2, 132.4, 133.4, 134.4, 133.0, 130.4, 127.0, 125.0, 124.0, 121.8, 119.6, 117.8, 115.0, 115.8, 114.2, 111.6, 111.6, 111.0, 113.0, 113.0, 115.6, 119.4, 123.4, 126.8, 125.8, 122.8, 120.0, 119.4, 119.0, 120.8, 123.6, 123.8, 122.8, 118.4, 122.4, 123.6, 125.4, 124.0, 123.2, 121.2],dists:[0.0, 0.14, 0.32, 0.486, 0.612, 0.743, 0.881, 1.042, 1.184, 1.345, 1.5, 1.66, 1.796, 1.944, 2.115, 2.268, 2.396, 2.542, 2.71, 2.87, 2.94, 3.108, 3.298, 3.415, 3.554, 3.642, 3.649, 3.726, 3.813, 3.939, 4.074, 4.215, 4.261, 4.329, 4.391, 4.506, 4.639, 4.767, 4.897, 4.969, 4.992, 5.104, 5.225, 5.317, 5.411, 5.485, 5.525, 5.613, 5.677, 5.773, 5.844, 5.937, 6.039, 6.151, 6.251, 6.329, 6.442, 6.515, 6.652, 6.776, 6.898, 7.006, 7.133, 7.236, 7.321, 7.393, 7.468, 7.56, 7.681, 7.75, 7.793, 7.835, 7.915, 8.068, 8.199, 8.375, 8.483, 8.611, 8.778, 8.892, 9.042, 9.192, 9.325, 9.408, 9.492, 9.582, 9.675, 9.796, 9.959, 10.063, 10.175, 10.271, 10.399, 10.516, 10.621, 10.739, 10.871, 10.999, 11.086, 11.185, 11.265, 11.341, 11.431, 11.545, 11.61, 11.722, 11.849, 11.985, 12.114, 12.212, 12.328, 12.473, 12.649, 12.806, 12.954, 13.109, 13.23, 13.328, 13.476, 13.597, 13.701, 13.852, 14.005, 14.087, 14.217, 14.344, 14.493, 14.642, 14.777, 14.911, 15.042, 15.125, 15.215, 15.329, 15.435, 15.579, 15.742, 15.91, 16.068, 16.234, 16.379, 16.623, 16.916, 17.081, 17.277, 17.472, 17.645, 17.823, 18.046, 18.272, 18.477, 18.654, 18.802, 18.889, 19.076, 19.291, 19.521, 19.752, 19.952, 20.116, 20.326, 20.532, 20.694, 20.838, 20.975, 21.114, 21.262, 21.428, 21.6, 21.77, 21.978, 22.153, 22.284, 22.467, 22.572, 22.699, 22.838, 23.014, 23.2, 23.337, 23.463, 23.667, 23.894, 24.07, 24.261, 24.43, 24.597, 24.768, 24.935, 25.028, 25.173, 25.331, 25.479, 25.642, 25.831, 26.021, 26.154, 26.326, 26.484, 26.604, 26.705, 26.816, 26.931, 27.067, 27.254, 27.454, 27.623, 27.766, 27.89, 28.004, 28.101, 28.192, 28.285, 28.386, 28.507, 28.64, 28.735, 28.973, 29.093, 29.33, 29.567, 29.699, 29.789, 29.918, 30.123, 30.299, 30.393, 30.503, 30.592, 30.712, 30.908, 31.093, 31.265, 31.457, 31.678, 31.992, 32.231, 32.371, 32.55, 32.714, 32.826, 32.953, 33.198, 33.41, 33.585, 33.731, 33.934, 34.117, 34.306, 34.431, 34.503, 34.664, 34.819, 34.994, 35.15, 35.306, 35.479, 35.609, 35.714, 35.829, 35.952, 36.086, 36.256, 36.423, 36.633, 36.803, 36.935, 37.071, 37.197, 37.337, 37.596, 37.896, 38.138, 38.243, 38.36, 38.475, 38.666, 38.876, 39.092, 39.301, 39.503, 39.695, 39.892, 40.079, 40.268, 40.414, 40.585, 40.699, 40.863, 41.044, 41.2, 41.359, 41.508, 41.648, 41.762, 41.866, 42.004, 42.206, 42.425, 42.626, 42.81, 42.984, 43.126, 43.274, 43.456, 43.532, 43.601, 43.705, 43.851, 44.019, 44.151, 44.338],times_sec:[0, 30, 54, 78, 102, 126, 150, 174, 198, 222, 246, 270, 294, 318, 342, 366, 390, 414, 438, 462, 486, 510, 534, 558, 582, 606, 638, 662, 686, 710, 734, 758, 782, 806, 838, 862, 886, 910, 934, 989, 1101, 1125, 1154, 1178, 1202, 1226, 1279, 1303, 1340, 1364, 1388, 1412, 1436, 1460, 1484, 1508, 1532, 1556, 1580, 1604, 1628, 1652, 1676, 1700, 1724, 1748, 1772, 1796, 1820, 1844, 2016, 2134, 2165, 2189, 2213, 2237, 2261, 2285, 2309, 2333, 2357, 2381, 2405, 2429, 2453, 2477, 2501, 2525, 2549, 2573, 2597, 2621, 2645, 2669, 2693, 2717, 2741, 2765, 2789, 2813, 2837, 2861, 2885, 2909, 2933, 2957, 2981, 3005, 3029, 3053, 3077, 3101, 3125, 3149, 3173, 3197, 3221, 3245, 3269, 3293, 3317, 3341, 3365, 3389, 3413, 3437, 3461, 3485, 3509, 3533, 3557, 3581, 3605, 3629, 3671, 3695, 3719, 3743, 3767, 3791, 3815, 3839, 3863, 3887, 3911, 3935, 3959, 3983, 4007, 4031, 4055, 4079, 4103, 4132, 4156, 4180, 4204, 4228, 4252, 4276, 4300, 4324, 4348, 4372, 4396, 4420, 4444, 4468, 4492, 4516, 4540, 4564, 4588, 4612, 4636, 4660, 4684, 4708, 4732, 4756, 5204, 5228, 5252, 5276, 5300, 5324, 5348, 5372, 5396, 5420, 5444, 5468, 5492, 5516, 5540, 5564, 5588, 5612, 5636, 5660, 5684, 5708, 5732, 5756, 5780, 5804, 5828, 5852, 5876, 5900, 5924, 5948, 5972, 5996, 6020, 6044, 6141, 6165, 6189, 6213, 6237, 6261, 6285, 6309, 6333, 6357, 6381, 6405, 6489, 6525, 6549, 6573, 6597, 6621, 6645, 6669, 6693, 6717, 6741, 6765, 6789, 6813, 6837, 6861, 6885, 6909, 6933, 6957, 6981, 7005, 7034, 7058, 7082, 7106, 7130, 7154, 7178, 7202, 7226, 7250, 7274, 7298, 7322, 7346, 7370, 7394, 7418, 7442, 7466, 7490, 7514, 7538, 7562, 7586, 7610, 7634, 7658, 7682, 7706, 7730, 7754, 7778, 7802, 7826, 7850, 7874, 7898, 7922, 7946, 7970, 7994, 8018, 8042, 8066, 8090, 8114, 8138, 8162, 8186, 8210, 8234, 8258, 8282, 8306, 8330, 8354, 8378, 8402, 8426, 8450, 8474, 8498]},
   {name:"Tel Zafit, Sdot Micha, Britannia, Tel Burna \ud83c\udf3e",color:"#e05a3a",date:"01 May 2026",date_sort:"2026-05-01",start_time:"02:46",distance_km:64.2,moving_time:"3:01",elev_gain:1037,elev_loss:1036,max_elev:391,min_elev:117,avg_speed:21.2,max_speed:49.7,avg_gradient:1.62,suffering:107495,on_form:false,is_loop:true,direction:"E",lats:[31.624056, 31.623714, 31.62263, 31.620562, 31.619625, 31.619129, 31.618573, 31.618347, 31.619028, 31.618996, 31.61891, 31.619631, 31.620665, 31.621798, 31.623284, 31.625125, 31.626852, 31.628599, 31.630741, 31.63415, 31.637326, 31.639826, 31.641011, 31.642387, 31.644159, 31.647101, 31.650519, 31.653239, 31.655329, 31.656736, 31.65841, 31.660326, 31.662146, 31.663398, 31.66494, 31.666761, 31.667662, 31.669794, 31.671657, 31.673155, 31.674789, 31.676329, 31.677205, 31.678147, 31.680906, 31.682823, 31.68463, 31.685624, 31.686787, 31.689348, 31.691929, 31.69381, 31.695371, 31.696365, 31.697005, 31.697347, 31.69768, 31.698014, 31.69836, 31.698932, 31.699434, 31.700745, 31.701658, 31.702762, 31.703962, 31.705079, 31.706513, 31.707525, 31.708662, 31.71035, 31.711695, 31.712421, 31.713689, 31.71449, 31.714575, 31.714276, 31.714873, 31.714709, 31.714533, 31.714117, 31.714805, 31.713895, 31.713912, 31.714796, 31.716261, 31.717548, 31.718845, 31.720034, 31.720912, 31.719742, 31.718111, 31.716554, 31.714751, 31.713593, 31.712734, 31.711889, 31.712219, 31.712987, 31.713573, 31.714506, 31.71432, 31.713816, 31.712635, 31.711384, 31.71075, 31.70949, 31.70762, 31.705634, 31.704857, 31.704957, 31.705559, 31.706087, 31.706883, 31.708231, 31.70947, 31.711735, 31.71396, 31.71565, 31.717088, 31.718304, 31.719283, 31.719329, 31.717461, 31.718104, 31.718478, 31.717212, 31.715833, 31.714226, 31.712638, 31.710824, 31.709002, 31.708242, 31.70672, 31.705603, 31.705228, 31.704523, 31.703359, 31.702298, 31.70145, 31.700598, 31.699631, 31.698568, 31.69757, 31.695732, 31.694466, 31.693955, 31.693045, 31.690977, 31.689971, 31.688966, 31.687912, 31.686759, 31.68574, 31.685073, 31.684684, 31.683651, 31.683813, 31.684326, 31.684661, 31.683873, 31.684168, 31.68263, 31.681543, 31.679812, 31.679208, 31.678562, 31.679532, 31.679607, 31.679452, 31.679046, 31.679375, 31.679583, 31.67943, 31.678375, 31.677793, 31.677232, 31.676233, 31.674806, 31.672858, 31.671737, 31.670656, 31.668934, 31.668729, 31.668656, 31.66835, 31.667575, 31.666304, 31.664862, 31.663033, 31.662297, 31.661604, 31.661541, 31.661515, 31.660926, 31.660196, 31.658984, 31.65744, 31.65595, 31.654797, 31.65407, 31.653185, 31.652201, 31.650435, 31.649264, 31.647585, 31.647307, 31.645365, 31.643384, 31.642444, 31.640879, 31.639367, 31.63847, 31.637544, 31.639313, 31.639093, 31.639389, 31.63991, 31.639098, 31.638262, 31.637589, 31.636749, 31.635862, 31.635241, 31.633672, 31.631304, 31.630227, 31.629304, 31.628715, 31.628095, 31.627009, 31.626382, 31.624911, 31.623705, 31.622635, 31.621932, 31.621352, 31.620772, 31.620129, 31.619478, 31.617755, 31.614997, 31.613522, 31.613811, 31.616524, 31.618801, 31.621014, 31.623899, 31.626931, 31.629494, 31.630173, 31.630008, 31.629661, 31.628351, 31.627864, 31.628956, 31.630617, 31.630213, 31.63135, 31.629916, 31.630003, 31.629936, 31.629264, 31.628741, 31.628562, 31.627697, 31.627728, 31.627434, 31.627029, 31.626496, 31.626782, 31.627467, 31.628291, 31.629084, 31.629858, 31.630459, 31.630886, 31.630621, 31.630367, 31.630344, 31.630834, 31.630972, 31.630445, 31.633544, 31.63717, 31.637495, 31.635635, 31.633537, 31.631842, 31.630278, 31.628177, 31.625326, 31.623345, 31.621935, 31.620634, 31.618918, 31.619032, 31.618108, 31.618994, 31.619846, 31.619632, 31.621535, 31.623717, 31.623717],lons:[34.774576, 34.776717, 34.777788, 34.778304, 34.779363, 34.78045, 34.782294, 34.783718, 34.784991, 34.787085, 34.788689, 34.789957, 34.791342, 34.793107, 34.794808, 34.797153, 34.797801, 34.797931, 34.798521, 34.799202, 34.799877, 34.800489, 34.800542, 34.799616, 34.799004, 34.798885, 34.798776, 34.798177, 34.797771, 34.797272, 34.797494, 34.797837, 34.797371, 34.796373, 34.796559, 34.79833, 34.800287, 34.80112, 34.802857, 34.804299, 34.805686, 34.805876, 34.806387, 34.807361, 34.808268, 34.808971, 34.81055, 34.812185, 34.813684, 34.815153, 34.816687, 34.818209, 34.820097, 34.822187, 34.823948, 34.825696, 34.827197, 34.829279, 34.831352, 34.833185, 34.834982, 34.837672, 34.840024, 34.842072, 34.843969, 34.845709, 34.847456, 34.849086, 34.850619, 34.851024, 34.851181, 34.852223, 34.853767, 34.855637, 34.857809, 34.859759, 34.862225, 34.864495, 34.866258, 34.868417, 34.870222, 34.872281, 34.872272, 34.872533, 34.872884, 34.873374, 34.874116, 34.875222, 34.876469, 34.874891, 34.873767, 34.872884, 34.872525, 34.872749, 34.874759, 34.877031, 34.879511, 34.881852, 34.88428, 34.886554, 34.888333, 34.890413, 34.89311, 34.895071, 34.896667, 34.895541, 34.896007, 34.895743, 34.896885, 34.89816, 34.899427, 34.90079, 34.903042, 34.904476, 34.906798, 34.90826, 34.909188, 34.91011, 34.911247, 34.912932, 34.914407, 34.916496, 34.91735, 34.919551, 34.920987, 34.922467, 34.92359, 34.924003, 34.924654, 34.924439, 34.924587, 34.92554, 34.925247, 34.925326, 34.927351, 34.928908, 34.92902, 34.928368, 34.927785, 34.927229, 34.927446, 34.927763, 34.929129, 34.92886, 34.928829, 34.930006, 34.93103, 34.932641, 34.933658, 34.933882, 34.933486, 34.930901, 34.930221, 34.931005, 34.931864, 34.931756, 34.929339, 34.927051, 34.92486, 34.922645, 34.920117, 34.917835, 34.916558, 34.917772, 34.917324, 34.91864, 34.919095, 34.919924, 34.920652, 34.921633, 34.923043, 34.923999, 34.924928, 34.925711, 34.926839, 34.927403, 34.927002, 34.926326, 34.924506, 34.925749, 34.925957, 34.925337, 34.923783, 34.922575, 34.921269, 34.921558, 34.921257, 34.921733, 34.922062, 34.920292, 34.919539, 34.920152, 34.920866, 34.92122, 34.921263, 34.921224, 34.922659, 34.922108, 34.92174, 34.92181, 34.920345, 34.919078, 34.919399, 34.917959, 34.91843, 34.916308, 34.916493, 34.915898, 34.915123, 34.91462, 34.914573, 34.914421, 34.913704, 34.912219, 34.91114, 34.907478, 34.903998, 34.903004, 34.902874, 34.900276, 34.899463, 34.899905, 34.899731, 34.900136, 34.898014, 34.896767, 34.897677, 34.898315, 34.898402, 34.897434, 34.893891, 34.89242, 34.893753, 34.894345, 34.895296, 34.896175, 34.895906, 34.895225, 34.89373, 34.891613, 34.890603, 34.888698, 34.88738, 34.887097, 34.886032, 34.884345, 34.883308, 34.883194, 34.882746, 34.881688, 34.879563, 34.876845, 34.874578, 34.872066, 34.869305, 34.867536, 34.864945, 34.863074, 34.861474, 34.859613, 34.857506, 34.855112, 34.852984, 34.850072, 34.847609, 34.845196, 34.842548, 34.840123, 34.8379, 34.835344, 34.83242, 34.829169, 34.826229, 34.823174, 34.820054, 34.8171, 34.814328, 34.811755, 34.809314, 34.806386, 34.802815, 34.79892, 34.799083, 34.799857, 34.799893, 34.799424, 34.798998, 34.798664, 34.798105, 34.797894, 34.797274, 34.794773, 34.793265, 34.791145, 34.788501, 34.785177, 34.783287, 34.781349, 34.779632, 34.778633, 34.778052, 34.777473, 34.775462],spds:[0.0, 23.2, 21.4, 26.5, 15.2, 17.8, 19.3, 18.0, 19.0, 18.8, 13.0, 17.0, 17.4, 26.5, 28.6, 21.8, 22.4, 21.1, 35.3, 40.3, 33.0, 14.6, 15.6, 21.4, 28.1, 33.8, 39.4, 26.4, 20.0, 14.1, 20.5, 21.6, 18.8, 21.3, 21.3, 22.0, 26.2, 28.7, 20.4, 20.8, 22.6, 15.5, 16.2, 26.4, 19.7, 30.6, 27.6, 30.5, 14.0, 37.1, 28.8, 23.5, 26.3, 21.2, 21.3, 6.5, 20.7, 20.9, 20.3, 15.5, 21.7, 33.6, 19.4, 22.7, 21.2, 19.3, 25.3, 17.8, 21.7, 15.0, 13.3, 19.8, 21.4, 14.9, 20.7, 26.2, 20.2, 19.0, 21.4, 22.6, 19.0, 15.8, 21.5, 14.9, 16.5, 17.5, 15.4, 17.4, 0.1, 21.7, 18.9, 18.5, 23.1, 18.5, 22.2, 24.8, 25.7, 20.2, 26.3, 24.6, 17.5, 27.4, 25.6, 23.6, 18.8, 29.0, 19.5, 20.1, 10.5, 15.1, 13.0, 26.0, 29.8, 22.4, 29.1, 26.7, 26.3, 20.4, 16.4, 17.3, 24.7, 12.4, 24.4, 21.3, 17.7, 18.1, 17.9, 21.2, 19.5, 22.2, 17.8, 17.3, 18.2, 17.7, 20.4, 18.9, 15.2, 12.4, 10.5, 10.5, 10.9, 15.8, 21.0, 17.8, 12.7, 19.3, 21.8, 19.5, 13.4, 10.6, 10.2, 46.3, 9.7, 11.1, 9.4, 28.0, 36.0, 17.3, 30.1, 28.0, 30.0, 17.2, 21.1, 14.8, 12.4, 21.7, 10.6, 8.0, 8.1, 13.2, 11.1, 9.6, 14.2, 17.5, 12.6, 13.1, 12.0, 24.1, 29.5, 18.3, 39.0, 18.3, 14.8, 11.3, 13.8, 10.7, 26.8, 21.8, 22.3, 18.2, 9.9, 6.9, 7.6, 9.3, 7.9, 16.9, 23.1, 14.2, 8.7, 13.6, 23.8, 20.9, 26.7, 19.3, 18.3, 22.1, 16.5, 24.3, 15.5, 18.2, 15.8, 21.4, 11.5, 16.9, 37.9, 32.0, 30.8, 9.6, 9.0, 33.1, 17.5, 8.2, 7.8, 30.3, 35.0, 14.3, 11.9, 6.4, 9.1, 33.4, 36.2, 22.4, 17.4, 12.9, 11.8, 11.2, 13.4, 11.1, 22.5, 29.8, 30.5, 24.5, 22.7, 25.2, 29.0, 33.2, 33.5, 34.0, 23.8, 24.6, 22.2, 30.8, 30.3, 31.9, 29.5, 23.0, 28.1, 22.7, 29.2, 25.1, 20.3, 31.0, 24.2, 22.1, 28.6, 20.7, 27.3, 18.8, 14.4, 23.9, 35.0, 29.9, 29.9, 28.4, 32.2, 27.8, 27.1, 22.4, 23.7, 29.3, 39.9, 31.2, 49.2, 36.1, 19.4, 23.0, 22.2, 18.0, 21.2, 27.2, 37.0, 23.1, 25.8, 26.0, 33.1, 27.6, 23.0, 25.5, 22.5, 18.3, 24.6, 11.9, 27.4],eles:[119.0, 121.2, 123.4, 122.8, 119.6, 120.4, 121.4, 121.6, 124.0, 126.2, 133.0, 138.0, 143.4, 143.2, 142.4, 138.8, 144.6, 148.6, 146.6, 135.0, 130.4, 130.0, 138.0, 140.4, 141.4, 134.0, 120.4, 119.4, 121.8, 129.2, 131.6, 134.0, 138.6, 142.4, 144.6, 144.0, 145.6, 142.6, 142.2, 145.2, 141.0, 145.2, 151.6, 151.6, 144.8, 139.8, 125.6, 126.4, 135.2, 124.6, 121.0, 122.8, 118.2, 122.2, 126.4, 127.4, 130.2, 128.0, 130.8, 135.8, 135.4, 124.2, 124.8, 122.6, 125.8, 128.0, 121.0, 125.2, 125.2, 130.0, 135.8, 136.4, 139.2, 142.8, 138.6, 139.4, 139.2, 142.0, 148.8, 147.4, 153.2, 150.8, 151.2, 151.4, 151.8, 154.2, 157.2, 160.2, 163.4, 160.0, 157.4, 153.0, 151.2, 152.6, 155.0, 150.8, 148.8, 153.2, 152.4, 154.6, 163.2, 164.6, 160.0, 163.8, 168.8, 168.8, 174.0, 172.4, 182.6, 189.0, 196.6, 199.4, 194.0, 189.0, 187.0, 184.0, 183.8, 189.8, 194.8, 196.2, 200.2, 196.6, 195.2, 198.4, 203.4, 202.6, 206.6, 208.8, 212.8, 205.6, 205.2, 208.8, 209.4, 215.0, 217.0, 220.2, 226.8, 235.8, 244.4, 252.2, 260.8, 268.4, 271.6, 276.0, 285.2, 288.2, 290.6, 285.6, 295.6, 304.6, 311.2, 280.4, 288.0, 296.4, 305.8, 304.0, 303.6, 299.4, 282.8, 280.6, 278.6, 269.0, 245.4, 241.8, 250.2, 248.2, 258.0, 267.0, 277.0, 282.2, 288.2, 296.8, 303.6, 308.6, 315.8, 324.4, 334.8, 335.8, 326.8, 334.2, 322.6, 316.6, 326.2, 334.0, 339.4, 346.6, 347.6, 341.8, 335.2, 339.2, 347.0, 356.4, 365.2, 372.8, 380.6, 383.0, 361.8, 367.0, 374.0, 379.6, 374.0, 378.0, 377.6, 380.6, 382.2, 384.4, 381.8, 377.4, 385.8, 389.4, 390.8, 388.2, 368.0, 345.8, 321.2, 295.8, 279.6, 287.6, 295.2, 276.6, 271.4, 282.4, 291.4, 278.0, 257.2, 255.0, 260.4, 267.6, 277.8, 275.6, 253.8, 244.6, 250.0, 257.0, 263.2, 268.6, 273.4, 281.8, 279.8, 263.0, 251.2, 246.2, 244.0, 243.2, 238.6, 234.4, 230.0, 224.4, 225.2, 229.6, 232.2, 224.6, 223.0, 211.6, 208.8, 204.6, 200.8, 202.0, 197.8, 193.4, 195.2, 191.4, 187.6, 182.2, 178.0, 178.4, 174.6, 173.2, 170.2, 171.4, 168.2, 165.4, 162.8, 159.4, 156.2, 156.6, 158.2, 161.4, 164.4, 159.8, 151.8, 148.0, 138.0, 131.2, 132.2, 134.6, 138.8, 146.0, 149.6, 149.4, 142.4, 143.2, 144.8, 145.2, 134.8, 127.2, 122.4, 121.2, 117.4, 121.2, 123.2, 122.8, 120.0],dists:[0.0, 0.206, 0.364, 0.599, 0.744, 0.861, 1.046, 1.183, 1.325, 1.523, 1.675, 1.819, 1.993, 2.202, 2.433, 2.735, 2.937, 3.132, 3.377, 3.762, 4.121, 4.405, 4.537, 4.713, 4.918, 5.245, 5.625, 5.933, 6.169, 6.332, 6.519, 6.735, 6.942, 7.11, 7.282, 7.545, 7.756, 8.006, 8.27, 8.485, 8.709, 8.881, 8.99, 9.13, 9.449, 9.672, 9.922, 10.112, 10.304, 10.621, 10.943, 11.197, 11.446, 11.673, 11.854, 12.024, 12.171, 12.371, 12.571, 12.756, 12.935, 13.228, 13.473, 13.702, 13.926, 14.132, 14.362, 14.553, 14.745, 14.937, 15.087, 15.214, 15.417, 15.615, 15.821, 16.008, 16.251, 16.466, 16.634, 16.843, 17.03, 17.249, 17.251, 17.352, 17.518, 17.668, 17.828, 17.997, 18.15, 18.348, 18.558, 18.75, 18.953, 19.083, 19.296, 19.531, 19.768, 20.005, 20.244, 20.483, 20.653, 20.858, 21.145, 21.377, 21.544, 21.72, 21.933, 22.155, 22.293, 22.414, 22.551, 22.693, 22.924, 23.126, 23.385, 23.672, 23.935, 24.142, 24.335, 24.544, 24.721, 24.919, 25.142, 25.362, 25.504, 25.703, 25.89, 26.073, 26.26, 26.463, 26.666, 26.79, 26.961, 27.085, 27.281, 27.448, 27.578, 27.711, 27.82, 27.928, 28.037, 28.159, 28.329, 28.535, 28.676, 28.801, 28.941, 29.217, 29.365, 29.479, 29.602, 29.878, 30.008, 30.113, 30.205, 30.32, 30.549, 30.773, 30.984, 31.211, 31.452, 31.727, 31.898, 32.122, 32.201, 32.345, 32.461, 32.54, 32.611, 32.714, 32.852, 32.945, 33.035, 33.174, 33.299, 33.381, 33.498, 33.669, 33.946, 34.117, 34.239, 34.439, 34.588, 34.703, 34.831, 34.921, 35.065, 35.232, 35.438, 35.624, 35.729, 35.787, 35.855, 35.929, 36.01, 36.145, 36.364, 36.538, 36.671, 36.752, 36.922, 37.084, 37.283, 37.472, 37.664, 37.867, 38.084, 38.311, 38.439, 38.619, 38.787, 38.888, 39.011, 39.253, 39.358, 39.706, 40.04, 40.17, 40.264, 40.521, 40.642, 40.749, 40.82, 40.999, 41.33, 41.498, 41.632, 41.721, 41.79, 41.942, 42.285, 42.5, 42.684, 42.816, 42.935, 43.04, 43.109, 43.205, 43.364, 43.641, 43.962, 44.206, 44.335, 44.638, 44.911, 45.204, 45.539, 45.876, 46.164, 46.289, 46.491, 46.751, 47.01, 47.254, 47.542, 47.791, 48.04, 48.258, 48.478, 48.654, 48.854, 49.093, 49.303, 49.579, 49.831, 50.059, 50.312, 50.546, 50.765, 51.009, 51.296, 51.617, 51.909, 52.211, 52.514, 52.798, 53.062, 53.307, 53.538, 53.821, 54.159, 54.532, 54.877, 55.287, 55.323, 55.535, 55.772, 55.963, 56.145, 56.379, 56.701, 57.024, 57.236, 57.483, 57.798, 58.113, 58.319, 58.527, 58.715, 58.813, 59.032, 59.281, 59.471],times_sec:[0, 36, 72, 108, 144, 180, 216, 252, 288, 324, 360, 396, 432, 468, 504, 540, 576, 612, 648, 684, 720, 756, 792, 828, 864, 900, 936, 972, 1008, 1044, 1080, 1116, 1152, 1188, 1252, 1288, 1324, 1360, 1396, 1432, 1468, 1504, 1540, 1576, 1612, 1648, 1684, 3132, 3168, 3204, 3240, 3276, 3312, 3348, 3384, 3420, 3456, 3492, 3528, 3564, 3600, 3636, 3672, 3708, 3744, 3780, 3816, 3852, 3888, 3924, 3960, 4141, 4177, 4213, 4249, 4312, 4348, 4384, 4420, 4456, 4492, 4528, 4564, 4600, 4636, 4672, 4708, 4744, 4780, 5161, 5197, 5233, 5269, 5305, 5341, 5377, 5413, 5449, 5485, 5521, 5557, 5593, 5629, 5665, 5701, 5737, 5773, 5809, 5845, 5881, 5917, 5953, 5989, 6057, 6093, 6129, 6165, 6201, 6237, 6273, 6309, 6345, 6381, 6417, 6453, 6489, 6525, 6561, 6597, 6633, 6669, 6705, 6741, 6777, 6813, 6849, 7337, 7373, 7409, 7445, 7481, 7517, 7553, 7589, 7625, 7661, 7697, 7733, 7769, 7805, 7841, 7877, 7913, 7949, 7985, 8021, 8057, 8093, 8129, 8165, 8201, 8237, 8273, 8309, 8345, 8381, 8417, 8453, 8489, 8525, 8561, 8597, 8633, 8669, 8705, 9188, 9224, 9260, 9296, 9332, 9368, 9404, 9440, 9476, 9512, 9548, 9584, 9620, 9656, 9692, 9728, 9764, 9800, 9836, 9872, 9908, 9944, 9980, 10016, 10052, 10088, 10124, 10160, 10196, 10232, 10268, 10304, 10340, 10376, 10412, 10448, 10484, 10520, 10556, 10592, 10628, 10664, 10700, 10736, 10772, 10808, 10844, 10880, 10916, 10952, 10988, 11024, 11060, 11096, 11132, 11168, 11204, 11240, 11276, 11312, 11348, 11384, 11420, 11456, 11492, 11528, 11564, 11949, 11985, 12021, 12057, 12093, 12129, 12165, 12201, 12237, 12273, 12309, 12345, 12381, 12417, 12453, 12489, 12525, 12561, 12597, 12633, 12669, 12705, 12741, 12777, 12813, 12849, 12885, 12921, 12957, 12993, 13029, 13065, 13101, 13137, 13173, 13209, 13245, 13281, 13317, 13353, 13389, 13425, 13461, 13497, 13533, 13569, 13605, 13641, 13677, 13713, 13749, 13785, 13821, 13857, 13893, 13929, 13965, 14001, 14037, 14073, 14109]},
   {name:"Tel Lachish with Nissan and Gidon",color:"#1a6bcc",date:"14 May 2026",date_sort:"2026-05-14",start_time:"05:15",distance_km:33.9,moving_time:"1:25",elev_gain:367,elev_loss:366,max_elev:265,min_elev:118,avg_speed:23.8,max_speed:72.8,avg_gradient:1.08,suffering:13454,on_form:true,is_loop:true,direction:"S",lats:[31.624077, 31.624006, 31.623927, 31.623823, 31.623475, 31.622466, 31.621373, 31.620256, 31.619205, 31.618281, 31.617483, 31.616582, 31.615653, 31.614783, 31.613923, 31.612998, 31.61207, 31.611089, 31.610095, 31.609336, 31.608545, 31.607732, 31.606824, 31.606151, 31.605609, 31.605062, 31.604518, 31.603997, 31.60346, 31.60282, 31.601845, 31.600896, 31.60001, 31.599877, 31.599474, 31.599049, 31.598653, 31.597964, 31.596784, 31.595226, 31.593936, 31.592855, 31.591983, 31.591156, 31.590301, 31.589392, 31.588332, 31.587318, 31.586603, 31.585844, 31.584871, 31.583997, 31.583188, 31.582363, 31.58151, 31.580599, 31.579601, 31.578775, 31.577925, 31.577038, 31.57601, 31.574722, 31.573286, 31.57202, 31.571326, 31.570693, 31.569897, 31.569123, 31.568415, 31.567723, 31.566818, 31.565761, 31.564697, 31.563725, 31.562832, 31.561994, 31.561151, 31.56034, 31.559566, 31.558879, 31.558096, 31.557423, 31.556852, 31.555798, 31.554854, 31.553937, 31.553064, 31.552202, 31.551358, 31.550576, 31.549815, 31.549122, 31.54849, 31.547815, 31.547103, 31.546412, 31.54672, 31.547083, 31.54731, 31.547036, 31.546647, 31.546223, 31.545712, 31.545343, 31.545024, 31.54459, 31.544251, 31.544464, 31.544513, 31.54456, 31.54433, 31.54426, 31.543842, 31.543365, 31.542791, 31.542038, 31.54132, 31.540502, 31.539882, 31.539407, 31.538968, 31.538544, 31.538097, 31.537608, 31.537098, 31.537146, 31.537612, 31.538038, 31.53837, 31.538504, 31.538574, 31.538622, 31.53867, 31.538739, 31.538823, 31.539014, 31.539227, 31.539465, 31.539672, 31.539805, 31.539824, 31.539791, 31.540017, 31.540425, 31.540533, 31.540172, 31.539788, 31.539817, 31.539885, 31.540007, 31.540032, 31.539771, 31.539299, 31.538658, 31.538148, 31.537736, 31.537289, 31.536687, 31.536055, 31.535263, 31.534983, 31.536521, 31.53788, 31.539098, 31.540695, 31.542606, 31.544251, 31.545536, 31.546502, 31.547342, 31.548086, 31.548794, 31.549478, 31.550146, 31.550805, 31.551401, 31.552109, 31.553229, 31.554767, 31.55625, 31.557644, 31.559073, 31.560355, 31.561485, 31.562207, 31.562712, 31.563039, 31.563169, 31.563537, 31.563318, 31.563031, 31.562679, 31.562142, 31.561991, 31.562291, 31.561723, 31.561025, 31.560999, 31.561623, 31.56232, 31.562918, 31.562952, 31.563625, 31.564407, 31.565246, 31.565745, 31.566812, 31.568435, 31.569866, 31.571421, 31.57257, 31.573611, 31.574882, 31.576217, 31.57774, 31.578981, 31.580062, 31.581571, 31.58293, 31.584283, 31.585758, 31.587213, 31.588498, 31.589659, 31.590709, 31.59123, 31.59154, 31.591809, 31.592062, 31.592782, 31.593423, 31.593608, 31.593986, 31.595007, 31.596107, 31.597324, 31.598107, 31.598871, 31.59913, 31.59904, 31.599482, 31.600395, 31.6017, 31.602988, 31.604264, 31.60515, 31.604436, 31.603658, 31.60352, 31.604143, 31.604331, 31.604792, 31.604722, 31.604651, 31.604512, 31.605048, 31.606134, 31.60707, 31.607839, 31.608511, 31.609098, 31.60981, 31.610466, 31.6112, 31.612127, 31.613185, 31.614297, 31.615452, 31.61668, 31.61777, 31.617643, 31.61747, 31.617992, 31.618847, 31.61975, 31.620584, 31.62134, 31.621811, 31.621639, 31.621083, 31.620574, 31.619747, 31.618967, 31.618957, 31.619024, 31.619046, 31.618856, 31.618173, 31.618185, 31.618674, 31.619103, 31.619163, 31.619833, 31.619449, 31.619509, 31.620321, 31.621322, 31.622452, 31.62357, 31.623931, 31.623919, 31.623983],lons:[34.77452, 34.775393, 34.776275, 34.776944, 34.77757, 34.777824, 34.778088, 34.778409, 34.778824, 34.779308, 34.77969, 34.780011, 34.780413, 34.78078, 34.780997, 34.781026, 34.780929, 34.78077, 34.780371, 34.780045, 34.779715, 34.77936, 34.778728, 34.778016, 34.77717, 34.776304, 34.775509, 34.775348, 34.775903, 34.776782, 34.776905, 34.776485, 34.775938, 34.775087, 34.774807, 34.775352, 34.775919, 34.776638, 34.776171, 34.776493, 34.777058, 34.777588, 34.778373, 34.77918, 34.779829, 34.780103, 34.780215, 34.780324, 34.780391, 34.780472, 34.780569, 34.7806, 34.780504, 34.780501, 34.780502, 34.780498, 34.78044, 34.780376, 34.780317, 34.780301, 34.780269, 34.780177, 34.780088, 34.779528, 34.779341, 34.780039, 34.779697, 34.779462, 34.779172, 34.778929, 34.779063, 34.77929, 34.77948, 34.779695, 34.779679, 34.779637, 34.779602, 34.779523, 34.779497, 34.779393, 34.779373, 34.779291, 34.779141, 34.779166, 34.779431, 34.779619, 34.779778, 34.779901, 34.779979, 34.780135, 34.78029, 34.780407, 34.780465, 34.780452, 34.780415, 34.780651, 34.781266, 34.78228, 34.78414, 34.785166, 34.786035, 34.786943, 34.787623, 34.788364, 34.789154, 34.790036, 34.791209, 34.792488, 34.793578, 34.794602, 34.795587, 34.796579, 34.797455, 34.798057, 34.798538, 34.798255, 34.798002, 34.797749, 34.797604, 34.797725, 34.79806, 34.798481, 34.798897, 34.799266, 34.799907, 34.800972, 34.802071, 34.803033, 34.804137, 34.805563, 34.806978, 34.808164, 34.80933, 34.810471, 34.811445, 34.812428, 34.813266, 34.814176, 34.81536, 34.816251, 34.817161, 34.818107, 34.819228, 34.820213, 34.821314, 34.822774, 34.824429, 34.825695, 34.826725, 34.827756, 34.828793, 34.829654, 34.830512, 34.831564, 34.832411, 34.83311, 34.833772, 34.83426, 34.834741, 34.8354, 34.836198, 34.837041, 34.838055, 34.838246, 34.839011, 34.839935, 34.840681, 34.841349, 34.841826, 34.842299, 34.842676, 34.842843, 34.842789, 34.842785, 34.843197, 34.843926, 34.844808, 34.845478, 34.846147, 34.847454, 34.848498, 34.848996, 34.848802, 34.848402, 34.848181, 34.847813, 34.847394, 34.846874, 34.846095, 34.844639, 34.843478, 34.843098, 34.843054, 34.842518, 34.841523, 34.84091, 34.840114, 34.838552, 34.837028, 34.835486, 34.83397, 34.832615, 34.831386, 34.830294, 34.828681, 34.826768, 34.826798, 34.826811, 34.827712, 34.827361, 34.826894, 34.827907, 34.828892, 34.829628, 34.830152, 34.829974, 34.830112, 34.830584, 34.830989, 34.831561, 34.831887, 34.831775, 34.831261, 34.83033, 34.829511, 34.829272, 34.828139, 34.826804, 34.825515, 34.825667, 34.826044, 34.82503, 34.823774, 34.823727, 34.82349, 34.82297, 34.821805, 34.820511, 34.818998, 34.817403, 34.816086, 34.814948, 34.814122, 34.813896, 34.813976, 34.813196, 34.812826, 34.812788, 34.812374, 34.811356, 34.810008, 34.809059, 34.807958, 34.806885, 34.805936, 34.805334, 34.804171, 34.803141, 34.802322, 34.801527, 34.800732, 34.799657, 34.798437, 34.797753, 34.79826, 34.798557, 34.798658, 34.798512, 34.798361, 34.798195, 34.797116, 34.796039, 34.795088, 34.794423, 34.794195, 34.793797, 34.79354, 34.793308, 34.79276, 34.792024, 34.791087, 34.790046, 34.788899, 34.787377, 34.785912, 34.78467, 34.783845, 34.78339, 34.782798, 34.782043, 34.781062, 34.780107, 34.779576, 34.779233, 34.778668, 34.778366, 34.778096, 34.77781, 34.777465, 34.776775, 34.775578, 34.774507],spds:[0.0, 22.4, 13.0, 21.0, 20.6, 25.9, 27.5, 26.9, 24.6, 25.1, 21.3, 23.1, 23.1, 21.5, 20.2, 22.2, 22.2, 21.6, 25.0, 19.9, 20.3, 21.2, 27.6, 18.9, 20.0, 23.0, 21.1, 15.4, 19.7, 25.4, 24.3, 24.1, 24.1, 17.6, 13.1, 13.5, 16.3, 29.0, 37.6, 34.0, 29.4, 26.0, 24.2, 24.4, 22.9, 22.6, 26.9, 19.6, 16.7, 20.6, 23.7, 15.7, 20.4, 21.0, 21.0, 21.7, 23.5, 17.9, 19.4, 23.4, 26.3, 34.5, 33.3, 27.8, 22.6, 23.4, 18.6, 18.9, 16.1, 21.1, 21.7, 26.7, 24.2, 23.7, 20.2, 19.1, 19.4, 18.6, 18.0, 16.8, 18.0, 13.3, 17.7, 25.7, 22.5, 22.0, 20.0, 20.0, 20.4, 18.5, 17.3, 14.6, 15.3, 16.5, 16.3, 16.8, 17.5, 29.9, 41.0, 14.1, 22.6, 20.5, 0.0, 15.0, 18.3, 21.9, 26.4, 23.5, 22.2, 19.4, 20.4, 20.3, 21.0, 14.5, 17.7, 18.2, 16.6, 19.6, 12.0, 10.5, 13.5, 13.4, 13.5, 14.7, 19.0, 25.3, 22.6, 19.5, 29.6, 30.9, 26.6, 21.8, 25.3, 22.3, 20.9, 20.2, 16.2, 24.3, 19.6, 17.9, 17.1, 19.6, 23.5, 23.0, 21.7, 36.6, 28.0, 23.0, 20.7, 21.4, 20.2, 19.1, 24.3, 25.6, 17.4, 18.4, 18.1, 17.3, 19.5, 24.9, 24.0, 46.0, 29.9, 28.1, 51.0, 46.8, 37.8, 26.4, 22.9, 21.2, 18.0, 16.9, 16.2, 14.2, 18.0, 21.1, 26.2, 33.4, 42.7, 43.0, 38.9, 33.0, 33.1, 22.9, 14.7, 12.4, 2.0, 13.5, 18.9, 38.8, 20.5, 12.8, 10.8, 21.1, 21.2, 19.9, 28.3, 39.9, 33.4, 26.4, 31.9, 26.1, 33.5, 27.2, 38.8, 35.3, 36.7, 35.6, 41.3, 33.6, 25.3, 36.5, 35.5, 38.4, 34.5, 24.9, 37.4, 35.6, 32.0, 37.4, 34.7, 31.9, 38.2, 31.3, 26.8, 20.2, 28.3, 26.8, 24.4, 17.1, 22.7, 28.3, 27.0, 24.4, 28.9, 30.0, 30.1, 27.8, 38.4, 30.9, 30.9, 33.3, 37.0, 32.7, 29.9, 26.8, 15.9, 17.6, 21.5, 27.8, 25.5, 20.5, 22.5, 19.9, 16.1, 29.9, 36.8, 24.5, 23.6, 17.6, 26.4, 25.8, 29.2, 26.2, 23.3, 25.9, 27.1, 28.5, 31.9, 23.1, 25.2, 22.0, 24.8, 25.4, 21.3, 20.6, 15.5, 8.5, 16.4, 21.7, 24.9, 31.0, 29.2, 32.8, 26.4, 25.0, 20.2, 17.6, 17.2, 23.4, 20.6, 15.7, 21.2, 15.7, 18.1, 24.2, 26.3, 28.9, 26.0, 24.5, 26.6, 10.9],eles:[120.8, 121.0, 122.6, 122.8, 123.8, 123.4, 124.2, 123.0, 122.6, 122.4, 122.4, 123.4, 124.0, 124.6, 125.8, 126.0, 125.6, 125.4, 124.2, 125.6, 127.6, 128.8, 128.8, 129.6, 130.2, 131.2, 131.0, 130.4, 130.4, 129.6, 129.2, 130.2, 131.2, 133.6, 134.0, 137.2, 141.0, 138.0, 135.6, 132.0, 132.8, 133.6, 134.2, 135.0, 136.6, 138.6, 138.6, 140.2, 143.4, 145.6, 145.4, 146.6, 147.4, 150.8, 154.2, 155.8, 156.0, 158.0, 160.4, 161.0, 159.8, 157.0, 154.2, 151.8, 152.2, 152.4, 153.8, 156.0, 157.6, 159.2, 159.8, 158.0, 158.4, 158.0, 160.0, 161.0, 161.8, 163.4, 164.6, 168.2, 169.8, 173.0, 175.4, 172.8, 172.8, 173.8, 175.4, 175.6, 176.2, 178.0, 179.4, 181.0, 183.2, 184.6, 186.2, 187.2, 189.0, 188.0, 181.0, 181.2, 181.8, 183.0, 184.8, 187.4, 189.0, 189.6, 188.2, 188.0, 189.0, 191.0, 191.4, 193.6, 194.4, 195.2, 196.4, 197.2, 200.6, 201.8, 206.4, 211.4, 214.4, 217.8, 221.0, 222.4, 222.0, 221.8, 224.6, 228.2, 229.2, 228.6, 229.6, 232.0, 232.2, 233.4, 235.8, 237.2, 239.8, 241.0, 241.4, 245.6, 247.6, 249.2, 249.0, 251.2, 251.6, 246.4, 245.0, 249.2, 252.4, 252.6, 255.2, 256.8, 256.8, 254.8, 257.2, 260.0, 262.4, 264.2, 265.2, 263.0, 264.0, 252.2, 255.4, 257.8, 248.0, 239.6, 238.2, 239.6, 242.8, 245.4, 248.2, 251.0, 254.2, 258.4, 260.0, 260.6, 258.4, 255.8, 246.8, 241.2, 238.2, 239.2, 238.0, 241.6, 247.8, 251.8, 252.8, 251.6, 251.8, 246.4, 249.2, 251.4, 255.0, 257.6, 258.4, 258.6, 257.6, 248.6, 246.4, 246.2, 244.0, 247.2, 245.4, 245.6, 233.6, 224.4, 222.6, 217.2, 211.4, 207.6, 207.8, 204.6, 201.0, 197.2, 195.0, 195.0, 195.0, 190.4, 188.8, 185.8, 182.4, 179.8, 177.8, 176.4, 174.2, 174.0, 172.6, 173.6, 173.8, 176.2, 177.0, 173.0, 170.0, 174.4, 173.8, 170.6, 169.6, 168.4, 164.6, 160.2, 161.6, 158.8, 154.8, 155.2, 154.2, 150.6, 154.2, 156.0, 158.4, 156.2, 154.6, 151.2, 147.4, 148.6, 150.4, 150.2, 144.0, 143.8, 144.2, 145.0, 144.0, 144.2, 144.6, 144.2, 145.0, 146.0, 145.8, 142.8, 138.8, 136.6, 136.8, 135.8, 134.2, 133.6, 134.2, 135.8, 139.8, 144.0, 146.2, 146.8, 146.2, 142.2, 137.4, 133.2, 130.0, 129.4, 126.2, 124.6, 124.2, 123.6, 122.8, 123.0, 119.6, 121.2, 124.4, 124.0, 125.2, 125.0, 124.4, 123.2, 121.6, 121.8],dists:[0.0, 0.083, 0.167, 0.231, 0.302, 0.417, 0.541, 0.669, 0.792, 0.905, 1.001, 1.106, 1.216, 1.319, 1.417, 1.52, 1.624, 1.734, 1.851, 1.941, 2.034, 2.13, 2.247, 2.348, 2.448, 2.55, 2.647, 2.707, 2.787, 2.897, 3.006, 3.119, 3.23, 3.312, 3.364, 3.434, 3.503, 3.606, 3.744, 3.92, 4.073, 4.203, 4.325, 4.445, 4.558, 4.662, 4.78, 4.893, 4.973, 5.058, 5.167, 5.264, 5.354, 5.446, 5.541, 5.642, 5.753, 5.845, 5.94, 6.039, 6.153, 6.296, 6.456, 6.606, 6.685, 6.782, 6.876, 6.965, 7.048, 7.128, 7.229, 7.348, 7.468, 7.578, 7.677, 7.77, 7.864, 7.954, 8.04, 8.117, 8.204, 8.279, 8.344, 8.461, 8.569, 8.673, 8.771, 8.868, 8.962, 9.05, 9.136, 9.214, 9.284, 9.359, 9.438, 9.518, 9.586, 9.69, 9.868, 9.97, 10.063, 10.161, 10.247, 10.328, 10.411, 10.508, 10.625, 10.748, 10.851, 10.948, 11.045, 11.139, 11.234, 11.312, 11.39, 11.478, 11.561, 11.655, 11.725, 11.779, 11.837, 11.899, 11.962, 12.027, 12.11, 12.211, 12.327, 12.43, 12.541, 12.677, 12.811, 12.924, 13.035, 13.143, 13.236, 13.332, 13.415, 13.505, 13.62, 13.706, 13.792, 13.882, 13.991, 14.095, 14.2, 14.344, 14.507, 14.627, 14.725, 14.824, 14.922, 15.009, 15.106, 15.229, 15.327, 15.408, 15.488, 15.569, 15.653, 15.761, 15.843, 16.032, 16.211, 16.348, 16.54, 16.77, 16.966, 17.122, 17.239, 17.343, 17.433, 17.513, 17.589, 17.663, 17.746, 17.842, 17.957, 18.097, 18.279, 18.485, 18.669, 18.835, 18.979, 19.11, 19.193, 19.259, 19.313, 19.364, 19.448, 19.588, 19.703, 19.756, 19.816, 19.869, 19.969, 20.055, 20.163, 20.311, 20.471, 20.636, 20.794, 20.922, 21.06, 21.195, 21.374, 21.564, 21.683, 21.863, 22.044, 22.22, 22.355, 22.505, 22.674, 22.838, 23.014, 23.153, 23.274, 23.448, 23.604, 23.764, 23.931, 24.093, 24.244, 24.4, 24.54, 24.602, 24.715, 24.845, 24.97, 25.051, 25.131, 25.229, 25.355, 25.469, 25.593, 25.737, 25.878, 26.027, 26.173, 26.324, 26.458, 26.606, 26.771, 26.916, 27.058, 27.181, 27.268, 27.355, 27.397, 27.516, 27.645, 27.748, 27.853, 27.955, 28.046, 28.128, 28.291, 28.434, 28.549, 28.655, 28.755, 28.884, 29.021, 29.125, 29.239, 29.36, 29.484, 29.613, 29.75, 29.872, 29.975, 30.079, 30.186, 30.3, 30.403, 30.503, 30.591, 30.648, 30.703, 30.796, 30.901, 31.036, 31.175, 31.319, 31.458, 31.576, 31.657, 31.744, 31.8, 31.89, 31.994, 32.085, 32.175, 32.229, 32.283, 32.378, 32.492, 32.621, 32.75, 32.827, 32.94, 33.042],times_sec:[0, 17, 34, 51, 68, 85, 102, 119, 136, 153, 170, 187, 204, 221, 238, 255, 272, 289, 306, 323, 340, 357, 374, 391, 408, 425, 442, 459, 476, 493, 510, 527, 544, 561, 578, 595, 612, 629, 646, 663, 680, 697, 714, 731, 748, 765, 782, 799, 816, 833, 850, 867, 884, 901, 918, 935, 952, 969, 986, 1003, 1020, 1037, 1054, 1071, 1088, 1105, 1122, 1139, 1156, 1173, 1190, 1207, 1224, 1241, 1258, 1275, 1292, 1309, 1326, 1343, 1360, 1377, 1394, 1411, 1428, 1445, 1462, 1479, 1496, 1513, 1530, 1547, 1564, 1581, 1598, 1615, 1632, 1649, 1666, 1683, 1700, 1717, 1734, 1751, 1768, 1785, 1802, 1819, 1836, 1853, 1870, 1887, 1904, 1921, 1938, 1955, 1972, 1989, 2006, 2023, 2040, 2057, 2074, 2091, 2108, 2125, 2142, 2159, 2176, 2193, 2210, 2227, 2244, 2261, 2278, 2295, 2312, 2329, 2346, 2363, 2380, 2397, 2414, 2431, 2448, 2465, 2482, 2499, 2516, 2533, 2550, 2567, 2584, 2601, 2618, 2635, 2652, 2669, 2686, 2703, 2720, 2737, 2754, 2771, 2788, 2805, 2822, 2839, 2856, 2873, 2890, 2907, 2924, 2941, 2958, 2975, 2992, 3009, 3026, 3043, 3060, 3077, 3094, 3111, 3128, 3145, 3162, 3360, 3377, 3394, 3411, 3428, 3445, 3462, 3479, 3496, 3513, 3530, 3547, 3564, 3581, 3598, 3615, 3632, 3649, 3666, 3683, 3700, 3717, 3734, 3751, 3768, 3785, 3802, 3819, 3836, 3853, 3870, 3887, 3904, 3921, 3938, 3955, 3972, 3989, 4006, 4023, 4040, 4057, 4074, 4091, 4108, 4125, 4142, 4159, 4176, 4193, 4210, 4227, 4244, 4261, 4278, 4295, 4312, 4329, 4346, 4363, 4380, 4397, 4414, 4431, 4448, 4465, 4482, 4499, 4516, 4533, 4550, 4567, 4584, 4601, 4618, 4635, 4652, 4669, 4686, 4703, 4720, 4737, 4754, 4771, 4788, 4805, 4822, 4839, 4856, 4873, 4890, 4907, 4924, 4941, 4958, 4975, 4992, 5009, 5026, 5043, 5060, 5077, 5094, 5111, 5128, 5145, 5162, 5179, 5196, 5213, 5230, 5247, 5264, 5281, 5298]},
-  {name:"Five Tels \ud83c\udf3e",color:"#2d7a3a",date:"19 May 2026",date_sort:"2026-05-19",start_time:"02:41",distance_km:66.6,moving_time:"3:05",elev_gain:1017,elev_loss:1017,max_elev:267,min_elev:106,avg_speed:21.8,max_speed:56.6,avg_gradient:1.53,suffering:103470,on_form:false,is_loop:true,direction:"S",lats:[31.624126, 31.623934, 31.62312, 31.621044, 31.618678, 31.61669, 31.614665, 31.612435, 31.60991, 31.607875, 31.606166, 31.605015, 31.604072, 31.603074, 31.601857, 31.601411, 31.601299, 31.600903, 31.600417, 31.599754, 31.598549, 31.5976, 31.595629, 31.593557, 31.591713, 31.589335, 31.58798, 31.58625, 31.584147, 31.583108, 31.582074, 31.581113, 31.580049, 31.578925, 31.577761, 31.577069, 31.57736, 31.578181, 31.577185, 31.576509, 31.577523, 31.578406, 31.576008, 31.574476, 31.573944, 31.572143, 31.570768, 31.570362, 31.569107, 31.567624, 31.565693, 31.563095, 31.562872, 31.560919, 31.559074, 31.557537, 31.5568, 31.556388, 31.557688, 31.558367, 31.556853, 31.556335, 31.555421, 31.553908, 31.552714, 31.550837, 31.549614, 31.548276, 31.547178, 31.548043, 31.549378, 31.550219, 31.55005, 31.550869, 31.551196, 31.551873, 31.551616, 31.551268, 31.550368, 31.549587, 31.549264, 31.547869, 31.547499, 31.546314, 31.545024, 31.543383, 31.541748, 31.541152, 31.540505, 31.540819, 31.540194, 31.539466, 31.53836, 31.537415, 31.536972, 31.536078, 31.534712, 31.533558, 31.532445, 31.531722, 31.531444, 31.53184, 31.531346, 31.530871, 31.529811, 31.528253, 31.526835, 31.525483, 31.524027, 31.521989, 31.520823, 31.519611, 31.517698, 31.516346, 31.515704, 31.514445, 31.512503, 31.51114, 31.509896, 31.508115, 31.506364, 31.505147, 31.503601, 31.502284, 31.50114, 31.500425, 31.50044, 31.500418, 31.500538, 31.500792, 31.501126, 31.500915, 31.500926, 31.50187, 31.503435, 31.5036, 31.503659, 31.503535, 31.50391, 31.504544, 31.503373, 31.502567, 31.502204, 31.502105, 31.502517, 31.501616, 31.50063, 31.500952, 31.500277, 31.499787, 31.498573, 31.498447, 31.498232, 31.49788, 31.49672, 31.496196, 31.49525, 31.495323, 31.495229, 31.494573, 31.493763, 31.492744, 31.490863, 31.488652, 31.486215, 31.484955, 31.483783, 31.482357, 31.480924, 31.479086, 31.477324, 31.475249, 31.473223, 31.470609, 31.469765, 31.469517, 31.469303, 31.470488, 31.471947, 31.474405, 31.476109, 31.477874, 31.479899, 31.481099, 31.483161, 31.48468, 31.486715, 31.488916, 31.490343, 31.492087, 31.494027, 31.495702, 31.497477, 31.498662, 31.501057, 31.504024, 31.505254, 31.507009, 31.508662, 31.510484, 31.512298, 31.514644, 31.517222, 31.519249, 31.522069, 31.524168, 31.525256, 31.52666, 31.528254, 31.529078, 31.529771, 31.530532, 31.532052, 31.53265, 31.533701, 31.534727, 31.535878, 31.536856, 31.537048, 31.537147, 31.538007, 31.538486, 31.538612, 31.538731, 31.539001, 31.539487, 31.539811, 31.539801, 31.540467, 31.540073, 31.539806, 31.539998, 31.539708, 31.538467, 31.537443, 31.536098, 31.535108, 31.537813, 31.539728, 31.543195, 31.545629, 31.54733, 31.548919, 31.550281, 31.551563, 31.554112, 31.556892, 31.559548, 31.561634, 31.562713, 31.563375, 31.562944, 31.562243, 31.562308, 31.560815, 31.562, 31.562945, 31.563921, 31.565392, 31.567472, 31.570488, 31.572736, 31.573289, 31.575243, 31.577216, 31.579537, 31.581486, 31.582922, 31.584334, 31.586262, 31.589029, 31.591099, 31.592585, 31.594898, 31.597402, 31.599422, 31.600213, 31.601059, 31.602643, 31.60581, 31.608075, 31.609802, 31.61132, 31.61354, 31.615906, 31.617727, 31.618087, 31.620192, 31.621666, 31.621194, 31.619678, 31.61684, 31.61442, 31.613346, 31.613243, 31.613318, 31.615775, 31.618345, 31.6196, 31.620071, 31.622355, 31.625013, 31.627917, 31.628879, 31.626753, 31.624361, 31.623998],lons:[34.77435, 34.776296, 34.777643, 34.778161, 34.779105, 34.779972, 34.780829, 34.780964, 34.780286, 34.779423, 34.77811, 34.776223, 34.774812, 34.773084, 34.770775, 34.768145, 34.765794, 34.763647, 34.761268, 34.75879, 34.755999, 34.75454, 34.755355, 34.756434, 34.757193, 34.757757, 34.759198, 34.759946, 34.760196, 34.758443, 34.756366, 34.754394, 34.752214, 34.749973, 34.747591, 34.745604, 34.743466, 34.741632, 34.740003, 34.737897, 34.735305, 34.732753, 34.731943, 34.730942, 34.727219, 34.726653, 34.725545, 34.72391, 34.722776, 34.721107, 34.721817, 34.721784, 34.72337, 34.725022, 34.725567, 34.723865, 34.72187, 34.719922, 34.718041, 34.717259, 34.719008, 34.721488, 34.722862, 34.723337, 34.725262, 34.726143, 34.72817, 34.727874, 34.728796, 34.727995, 34.728747, 34.73057, 34.732546, 34.73439, 34.736316, 34.738185, 34.740127, 34.742035, 34.743512, 34.745624, 34.747204, 34.748453, 34.74986, 34.751226, 34.752898, 34.753727, 34.755179, 34.757567, 34.75964, 34.761082, 34.762028, 34.762927, 34.761908, 34.760999, 34.758586, 34.757053, 34.75519, 34.75365, 34.752162, 34.749937, 34.746237, 34.742721, 34.741457, 34.739885, 34.73936, 34.739077, 34.738937, 34.739539, 34.739929, 34.739299, 34.740169, 34.741886, 34.742428, 34.743621, 34.744446, 34.74388, 34.742459, 34.742957, 34.742222, 34.74076, 34.739382, 34.738393, 34.739724, 34.741136, 34.743344, 34.745871, 34.74643, 34.747792, 34.749712, 34.751471, 34.753183, 34.754571, 34.755307, 34.755922, 34.757006, 34.759111, 34.7599, 34.760728, 34.760649, 34.761274, 34.761321, 34.762332, 34.763689, 34.764428, 34.762863, 34.762615, 34.763218, 34.764279, 34.765413, 34.765723, 34.766797, 34.768585, 34.769929, 34.76984, 34.770673, 34.771338, 34.772461, 34.774482, 34.77614, 34.777904, 34.778835, 34.778288, 34.778184, 34.777796, 34.776539, 34.776159, 34.775725, 34.775205, 34.774911, 34.774505, 34.774654, 34.77529, 34.77574, 34.7741, 34.775022, 34.776148, 34.777484, 34.778078, 34.778904, 34.780215, 34.780748, 34.781659, 34.782314, 34.782976, 34.784222, 34.784646, 34.78559, 34.786072, 34.786528, 34.78705, 34.786696, 34.786237, 34.78616, 34.786366, 34.786492, 34.786968, 34.787134, 34.787611, 34.78828, 34.788506, 34.788972, 34.789486, 34.789833, 34.79008, 34.789614, 34.789106, 34.789022, 34.790097, 34.791494, 34.792164, 34.792621, 34.793023, 34.793897, 34.794285, 34.794526, 34.795468, 34.795953, 34.796789, 34.798456, 34.801017, 34.802968, 34.805224, 34.807723, 34.810225, 34.812361, 34.81418, 34.816393, 34.818345, 34.82035, 34.823113, 34.825743, 34.827672, 34.829748, 34.831862, 34.833592, 34.834693, 34.836309, 34.838031, 34.83857, 34.840111, 34.841382, 34.842297, 34.842833, 34.842856, 34.844214, 34.845683, 34.84791, 34.848963, 34.848375, 34.84781, 34.846407, 34.843635, 34.843052, 34.84156, 34.839789, 34.836229, 34.833478, 34.830968, 34.82804, 34.826858, 34.827753, 34.826873, 34.825478, 34.822884, 34.820601, 34.817983, 34.815687, 34.814026, 34.812567, 34.812866, 34.811941, 34.810492, 34.810693, 34.810252, 34.810698, 34.810455, 34.808272, 34.80639, 34.805874, 34.804507, 34.802056, 34.799667, 34.797853, 34.798631, 34.798479, 34.797351, 34.794925, 34.794027, 34.793444, 34.792175, 34.789962, 34.787931, 34.786828, 34.786617, 34.784155, 34.781727, 34.78129, 34.780396, 34.779414, 34.778464, 34.77784, 34.777273, 34.777127, 34.777001, 34.776986, 34.777156, 34.775083],spds:[0.0, 21.1, 21.2, 26.7, 28.8, 24.5, 23.1, 30.8, 28.0, 23.1, 14.2, 21.5, 18.3, 18.0, 29.4, 23.7, 21.4, 20.9, 25.9, 26.9, 28.2, 20.2, 29.9, 20.3, 23.6, 24.2, 20.9, 19.2, 24.6, 18.5, 17.5, 23.1, 31.9, 22.5, 26.8, 19.7, 25.0, 15.7, 20.3, 24.0, 28.3, 28.8, 17.6, 37.9, 36.7, 21.3, 19.7, 14.4, 19.7, 27.0, 27.3, 30.7, 22.2, 31.7, 14.6, 30.0, 11.5, 27.1, 18.7, 13.9, 29.2, 20.7, 21.4, 20.2, 24.2, 22.5, 24.8, 19.2, 14.2, 27.9, 20.3, 20.7, 21.1, 19.5, 20.5, 18.4, 22.2, 14.0, 18.4, 30.7, 13.9, 13.5, 15.0, 21.1, 20.5, 24.2, 22.8, 24.0, 17.8, 1.0, 20.0, 17.9, 16.2, 11.6, 24.4, 14.7, 17.7, 18.8, 16.5, 24.2, 34.8, 22.5, 16.2, 16.1, 19.7, 13.8, 16.2, 16.2, 20.8, 20.3, 18.7, 20.3, 25.4, 15.7, 11.0, 21.7, 25.5, 13.3, 19.0, 27.5, 20.7, 14.9, 27.5, 1.1, 27.1, 0.7, 5.2, 24.0, 20.4, 15.4, 14.0, 13.8, 13.1, 11.4, 21.7, 8.9, 10.4, 10.6, 13.4, 14.2, 16.9, 12.8, 12.8, 8.6, 21.6, 14.2, 9.8, 9.6, 4.7, 23.3, 20.3, 20.6, 5.2, 10.0, 20.5, 14.0, 18.6, 19.2, 17.6, 16.8, 13.6, 12.0, 31.8, 19.6, 21.1, 12.7, 19.5, 16.6, 16.6, 20.7, 25.9, 19.6, 29.5, 27.3, 13.5, 16.4, 17.3, 13.8, 20.6, 25.6, 11.2, 39.8, 16.8, 21.1, 29.1, 13.2, 25.5, 16.9, 15.7, 26.0, 20.3, 18.4, 16.6, 18.7, 35.0, 23.2, 20.8, 22.3, 15.3, 21.2, 15.8, 33.4, 23.6, 27.7, 37.1, 25.1, 14.4, 30.2, 13.5, 7.8, 9.8, 11.5, 28.9, 8.3, 14.7, 14.7, 15.0, 13.9, 17.0, 27.1, 18.1, 27.1, 23.5, 22.9, 18.1, 23.8, 18.3, 19.4, 23.2, 39.7, 19.8, 20.8, 21.1, 24.8, 18.8, 18.7, 30.6, 19.1, 35.7, 38.6, 22.6, 18.5, 16.7, 16.9, 24.0, 39.6, 34.2, 28.1, 15.3, 12.4, 26.1, 25.1, 14.9, 22.8, 26.9, 35.9, 27.4, 27.3, 38.3, 38.4, 36.0, 20.0, 16.9, 34.3, 31.9, 34.6, 27.4, 21.2, 23.4, 24.6, 35.2, 24.2, 22.7, 27.3, 27.4, 32.4, 24.7, 23.1, 36.1, 42.7, 29.2, 28.7, 26.8, 24.7, 30.0, 27.9, 26.5, 21.9, 13.0, 22.6, 33.6, 37.6, 30.7, 23.8, 23.6, 24.7, 30.1, 30.6, 14.0, 24.6, 26.9, 31.8, 34.2, 25.0, 27.6, 26.3, 27.9],eles:[120.8, 122.4, 124.4, 124.8, 122.6, 124.0, 125.8, 126.0, 123.4, 127.2, 128.4, 129.8, 129.2, 128.4, 126.2, 128.4, 137.2, 143.0, 144.2, 143.2, 141.0, 145.0, 145.0, 146.8, 148.4, 143.6, 147.2, 150.2, 144.0, 151.0, 152.4, 152.8, 151.6, 155.6, 151.6, 158.0, 159.0, 158.2, 164.2, 165.2, 159.8, 148.6, 149.2, 147.6, 138.4, 135.4, 141.2, 148.6, 150.0, 141.0, 141.2, 138.2, 136.2, 120.4, 119.0, 114.6, 107.8, 107.4, 110.2, 113.2, 107.8, 107.4, 111.0, 112.2, 111.8, 111.6, 111.2, 114.4, 124.2, 118.6, 112.4, 113.4, 117.6, 119.4, 121.8, 123.6, 124.2, 126.6, 134.2, 130.2, 139.6, 136.8, 146.8, 149.0, 139.6, 140.2, 141.4, 143.0, 146.8, 150.8, 146.4, 149.2, 152.8, 155.8, 152.0, 162.8, 161.0, 161.4, 167.8, 169.0, 157.4, 138.6, 131.4, 136.4, 136.8, 142.0, 148.6, 155.2, 158.0, 158.6, 165.0, 164.6, 160.6, 167.6, 177.4, 178.0, 170.4, 180.8, 185.6, 179.8, 182.2, 190.0, 181.6, 176.4, 171.0, 161.0, 165.8, 163.8, 169.6, 177.0, 181.6, 189.4, 194.6, 201.8, 194.0, 184.6, 180.2, 166.2, 167.6, 164.2, 167.8, 170.0, 173.6, 174.8, 171.2, 170.8, 176.8, 172.8, 169.0, 171.2, 174.4, 177.0, 180.6, 180.0, 180.8, 186.0, 183.6, 186.6, 190.8, 196.0, 200.8, 209.6, 202.0, 203.0, 189.0, 199.6, 204.6, 208.8, 212.8, 213.4, 214.2, 216.4, 211.0, 201.4, 200.2, 202.8, 204.8, 213.2, 216.8, 204.4, 211.4, 205.0, 203.0, 210.2, 206.6, 214.8, 208.0, 200.6, 208.2, 205.4, 210.0, 214.8, 218.2, 226.4, 222.4, 216.4, 211.2, 209.6, 215.6, 213.8, 218.4, 213.4, 207.2, 212.4, 203.4, 186.8, 185.8, 188.2, 183.6, 193.6, 201.0, 208.4, 207.6, 199.4, 202.2, 210.2, 214.8, 222.4, 227.4, 222.6, 229.0, 229.6, 232.0, 234.0, 237.8, 241.0, 245.8, 249.8, 251.2, 245.4, 249.0, 252.6, 257.0, 255.6, 262.4, 266.2, 263.0, 256.4, 255.4, 238.2, 240.0, 245.2, 251.4, 258.0, 259.6, 250.2, 237.2, 237.0, 241.8, 250.6, 250.4, 248.8, 254.2, 257.6, 256.2, 241.6, 245.0, 244.2, 229.8, 218.8, 209.2, 208.0, 218.4, 203.8, 202.2, 190.6, 187.4, 192.2, 194.8, 192.6, 184.4, 175.4, 174.8, 168.8, 169.8, 164.6, 154.4, 158.4, 155.0, 143.6, 143.6, 143.6, 143.4, 145.6, 141.0, 136.0, 133.0, 134.6, 141.8, 145.8, 140.2, 125.4, 124.4, 127.8, 131.4, 126.2, 123.8, 121.4, 118.6, 123.8, 124.8, 122.0, 120.6, 119.4, 120.6, 122.4, 120.8],dists:[0.0, 0.185, 0.341, 0.577, 0.855, 1.091, 1.33, 1.578, 1.866, 2.107, 2.334, 2.554, 2.724, 2.922, 3.179, 3.433, 3.656, 3.864, 4.096, 4.342, 4.638, 4.812, 5.044, 5.296, 5.513, 5.783, 5.986, 6.191, 6.426, 6.628, 6.856, 7.071, 7.309, 7.555, 7.815, 8.018, 8.223, 8.419, 8.609, 8.822, 9.092, 9.353, 9.63, 9.825, 10.183, 10.39, 10.575, 10.736, 10.912, 11.14, 11.365, 11.654, 11.806, 12.074, 12.286, 12.521, 12.727, 12.917, 13.146, 13.252, 13.488, 13.73, 13.895, 14.069, 14.295, 14.52, 14.755, 14.906, 15.056, 15.179, 15.344, 15.54, 15.728, 15.925, 16.111, 16.303, 16.489, 16.674, 16.846, 17.064, 17.218, 17.413, 17.553, 17.738, 17.952, 18.151, 18.379, 18.615, 18.824, 18.965, 19.078, 19.196, 19.352, 19.488, 19.722, 19.898, 20.131, 20.325, 20.513, 20.739, 21.091, 21.427, 21.559, 21.717, 21.845, 22.02, 22.178, 22.339, 22.505, 22.739, 22.893, 23.104, 23.323, 23.511, 23.617, 23.767, 24.022, 24.181, 24.336, 24.578, 24.812, 24.977, 25.19, 25.388, 25.633, 25.885, 25.938, 26.067, 26.25, 26.419, 26.586, 26.72, 26.79, 26.91, 27.112, 27.312, 27.387, 27.467, 27.509, 27.601, 27.731, 27.862, 27.997, 28.068, 28.223, 28.326, 28.45, 28.557, 28.688, 28.75, 28.919, 29.089, 29.219, 29.259, 29.41, 29.496, 29.646, 29.838, 29.996, 30.178, 30.304, 30.429, 30.638, 30.887, 31.183, 31.328, 31.465, 31.631, 31.793, 32.001, 32.197, 32.435, 32.664, 32.994, 33.122, 33.232, 33.361, 33.504, 33.684, 33.984, 34.18, 34.394, 34.628, 34.775, 35.033, 35.207, 35.45, 35.699, 35.863, 36.063, 36.281, 36.472, 36.67, 36.803, 37.07, 37.403, 37.541, 37.741, 37.935, 38.139, 38.345, 38.61, 38.899, 39.126, 39.443, 39.681, 39.802, 39.988, 40.209, 40.32, 40.408, 40.501, 40.689, 40.765, 40.884, 41.029, 41.165, 41.3, 41.459, 41.702, 41.91, 42.13, 42.367, 42.604, 42.809, 42.99, 43.203, 43.388, 43.592, 43.857, 44.108, 44.292, 44.491, 44.734, 44.934, 45.116, 45.305, 45.647, 45.866, 46.278, 46.574, 46.782, 46.966, 47.117, 47.309, 47.625, 47.999, 48.311, 48.55, 48.681, 48.833, 49.1, 49.196, 49.338, 49.574, 49.936, 50.217, 50.478, 50.8, 51.057, 51.403, 51.667, 51.813, 52.141, 52.449, 52.807, 53.114, 53.338, 53.547, 53.763, 54.083, 54.351, 54.517, 54.778, 55.06, 55.286, 55.511, 55.713, 55.896, 56.271, 56.614, 56.911, 57.152, 57.41, 57.673, 57.902, 58.135, 58.384, 58.557, 58.688, 58.957, 59.327, 59.616, 59.737, 59.97, 60.2, 60.476, 60.774, 60.942, 61.046, 61.307, 61.607, 61.93, 62.038, 62.274, 62.54, 62.74],times_sec:[0, 47, 83, 119, 155, 191, 227, 263, 299, 335, 371, 407, 443, 479, 515, 551, 587, 623, 659, 695, 731, 795, 831, 867, 903, 939, 975, 1011, 1047, 1083, 1119, 1155, 1191, 1227, 1263, 1299, 1335, 1371, 1407, 1443, 1479, 1515, 1551, 1587, 1623, 1659, 1695, 1731, 1767, 1803, 1839, 1875, 1911, 1947, 1983, 2019, 2055, 2091, 2127, 2176, 2212, 2248, 2284, 2320, 2356, 2392, 2428, 2464, 2500, 2761, 2797, 2833, 2869, 2905, 2941, 2977, 3013, 3049, 3085, 3121, 3157, 3193, 3229, 3265, 3301, 3337, 3373, 3409, 3445, 3481, 3517, 3553, 3589, 3686, 3722, 3758, 3794, 3830, 3866, 3902, 3938, 3974, 4010, 4046, 4096, 4132, 4168, 4204, 4240, 4276, 4312, 4348, 4384, 4420, 4456, 4492, 4528, 4564, 4600, 4636, 4672, 4708, 4744, 4780, 4847, 4883, 5004, 5184, 5220, 5256, 5292, 5328, 5364, 5400, 5436, 5472, 5521, 5585, 5642, 5693, 5729, 5765, 5801, 6070, 6106, 6142, 6178, 6259, 6305, 6344, 6380, 6416, 6462, 6544, 6580, 6649, 6685, 6721, 6757, 6793, 6829, 6865, 6901, 6937, 6973, 7009, 7045, 7081, 7117, 7153, 7189, 7225, 7261, 7297, 7333, 7407, 7443, 7479, 7515, 7551, 7587, 7623, 7659, 7695, 7731, 7767, 7803, 7839, 7875, 7911, 7947, 7983, 8019, 8055, 8091, 8127, 8163, 8199, 8235, 8271, 8307, 8343, 8379, 8415, 8451, 8487, 8544, 8580, 8616, 8652, 8688, 8724, 8760, 8799, 8841, 8877, 8913, 8949, 8985, 9021, 9057, 9093, 9129, 9165, 9201, 9237, 9273, 9309, 9345, 9381, 9417, 9453, 9489, 9525, 9561, 9597, 9633, 9669, 9705, 9741, 9777, 9813, 9849, 9885, 9921, 9957, 9993, 10029, 10065, 10101, 10679, 10715, 10751, 10787, 10823, 10859, 10895, 10931, 10967, 11003, 11039, 11075, 11111, 11147, 11183, 11219, 11255, 11291, 11327, 11363, 11399, 11435, 11482, 11518, 11554, 11590, 11626, 11662, 11698, 11734, 11770, 11806, 11842, 11878, 11914, 11950, 11986, 12022, 12058, 12094, 12130, 12166, 12202, 12238, 12274, 12310, 12346, 12382, 12418, 12454, 12490, 12526, 12562, 12598, 12634, 12670, 12706]}
+  {name:"Five Tels \ud83c\udf3e",color:"#2d7a3a",date:"19 May 2026",date_sort:"2026-05-19",start_time:"02:41",distance_km:66.6,moving_time:"3:05",elev_gain:1017,elev_loss:1017,max_elev:267,min_elev:106,avg_speed:21.8,max_speed:56.6,avg_gradient:1.53,suffering:103470,on_form:false,is_loop:true,direction:"S",lats:[31.624126, 31.623934, 31.62312, 31.621044, 31.618678, 31.61669, 31.614665, 31.612435, 31.60991, 31.607875, 31.606166, 31.605015, 31.604072, 31.603074, 31.601857, 31.601411, 31.601299, 31.600903, 31.600417, 31.599754, 31.598549, 31.5976, 31.595629, 31.593557, 31.591713, 31.589335, 31.58798, 31.58625, 31.584147, 31.583108, 31.582074, 31.581113, 31.580049, 31.578925, 31.577761, 31.577069, 31.57736, 31.578181, 31.577185, 31.576509, 31.577523, 31.578406, 31.576008, 31.574476, 31.573944, 31.572143, 31.570768, 31.570362, 31.569107, 31.567624, 31.565693, 31.563095, 31.562872, 31.560919, 31.559074, 31.557537, 31.5568, 31.556388, 31.557688, 31.558367, 31.556853, 31.556335, 31.555421, 31.553908, 31.552714, 31.550837, 31.549614, 31.548276, 31.547178, 31.548043, 31.549378, 31.550219, 31.55005, 31.550869, 31.551196, 31.551873, 31.551616, 31.551268, 31.550368, 31.549587, 31.549264, 31.547869, 31.547499, 31.546314, 31.545024, 31.543383, 31.541748, 31.541152, 31.540505, 31.540819, 31.540194, 31.539466, 31.53836, 31.537415, 31.536972, 31.536078, 31.534712, 31.533558, 31.532445, 31.531722, 31.531444, 31.53184, 31.531346, 31.530871, 31.529811, 31.528253, 31.526835, 31.525483, 31.524027, 31.521989, 31.520823, 31.519611, 31.517698, 31.516346, 31.515704, 31.514445, 31.512503, 31.51114, 31.509896, 31.508115, 31.506364, 31.505147, 31.503601, 31.502284, 31.50114, 31.500425, 31.50044, 31.500418, 31.500538, 31.500792, 31.501126, 31.500915, 31.500926, 31.50187, 31.503435, 31.5036, 31.503659, 31.503535, 31.50391, 31.504544, 31.503373, 31.502567, 31.502204, 31.502105, 31.502517, 31.501616, 31.50063, 31.500952, 31.500277, 31.499787, 31.498573, 31.498447, 31.498232, 31.49788, 31.49672, 31.496196, 31.49525, 31.495323, 31.495229, 31.494573, 31.493763, 31.492744, 31.490863, 31.488652, 31.486215, 31.484955, 31.483783, 31.482357, 31.480924, 31.479086, 31.477324, 31.475249, 31.473223, 31.470609, 31.469765, 31.469517, 31.469303, 31.470488, 31.471947, 31.474405, 31.476109, 31.477874, 31.479899, 31.481099, 31.483161, 31.48468, 31.486715, 31.488916, 31.490343, 31.492087, 31.494027, 31.495702, 31.497477, 31.498662, 31.501057, 31.504024, 31.505254, 31.507009, 31.508662, 31.510484, 31.512298, 31.514644, 31.517222, 31.519249, 31.522069, 31.524168, 31.525256, 31.52666, 31.528254, 31.529078, 31.529771, 31.530532, 31.532052, 31.53265, 31.533701, 31.534727, 31.535878, 31.536856, 31.537048, 31.537147, 31.538007, 31.538486, 31.538612, 31.538731, 31.539001, 31.539487, 31.539811, 31.539801, 31.540467, 31.540073, 31.539806, 31.539998, 31.539708, 31.538467, 31.537443, 31.536098, 31.535108, 31.537813, 31.539728, 31.543195, 31.545629, 31.54733, 31.548919, 31.550281, 31.551563, 31.554112, 31.556892, 31.559548, 31.561634, 31.562713, 31.563375, 31.562944, 31.562243, 31.562308, 31.560815, 31.562, 31.562945, 31.563921, 31.565392, 31.567472, 31.570488, 31.572736, 31.573289, 31.575243, 31.577216, 31.579537, 31.581486, 31.582922, 31.584334, 31.586262, 31.589029, 31.591099, 31.592585, 31.594898, 31.597402, 31.599422, 31.600213, 31.601059, 31.602643, 31.60581, 31.608075, 31.609802, 31.61132, 31.61354, 31.615906, 31.617727, 31.618087, 31.620192, 31.621666, 31.621194, 31.619678, 31.61684, 31.61442, 31.613346, 31.613243, 31.613318, 31.615775, 31.618345, 31.6196, 31.620071, 31.622355, 31.625013, 31.627917, 31.628879, 31.626753, 31.624361, 31.623998],lons:[34.77435, 34.776296, 34.777643, 34.778161, 34.779105, 34.779972, 34.780829, 34.780964, 34.780286, 34.779423, 34.77811, 34.776223, 34.774812, 34.773084, 34.770775, 34.768145, 34.765794, 34.763647, 34.761268, 34.75879, 34.755999, 34.75454, 34.755355, 34.756434, 34.757193, 34.757757, 34.759198, 34.759946, 34.760196, 34.758443, 34.756366, 34.754394, 34.752214, 34.749973, 34.747591, 34.745604, 34.743466, 34.741632, 34.740003, 34.737897, 34.735305, 34.732753, 34.731943, 34.730942, 34.727219, 34.726653, 34.725545, 34.72391, 34.722776, 34.721107, 34.721817, 34.721784, 34.72337, 34.725022, 34.725567, 34.723865, 34.72187, 34.719922, 34.718041, 34.717259, 34.719008, 34.721488, 34.722862, 34.723337, 34.725262, 34.726143, 34.72817, 34.727874, 34.728796, 34.727995, 34.728747, 34.73057, 34.732546, 34.73439, 34.736316, 34.738185, 34.740127, 34.742035, 34.743512, 34.745624, 34.747204, 34.748453, 34.74986, 34.751226, 34.752898, 34.753727, 34.755179, 34.757567, 34.75964, 34.761082, 34.762028, 34.762927, 34.761908, 34.760999, 34.758586, 34.757053, 34.75519, 34.75365, 34.752162, 34.749937, 34.746237, 34.742721, 34.741457, 34.739885, 34.73936, 34.739077, 34.738937, 34.739539, 34.739929, 34.739299, 34.740169, 34.741886, 34.742428, 34.743621, 34.744446, 34.74388, 34.742459, 34.742957, 34.742222, 34.74076, 34.739382, 34.738393, 34.739724, 34.741136, 34.743344, 34.745871, 34.74643, 34.747792, 34.749712, 34.751471, 34.753183, 34.754571, 34.755307, 34.755922, 34.757006, 34.759111, 34.7599, 34.760728, 34.760649, 34.761274, 34.761321, 34.762332, 34.763689, 34.764428, 34.762863, 34.762615, 34.763218, 34.764279, 34.765413, 34.765723, 34.766797, 34.768585, 34.769929, 34.76984, 34.770673, 34.771338, 34.772461, 34.774482, 34.77614, 34.777904, 34.778835, 34.778288, 34.778184, 34.777796, 34.776539, 34.776159, 34.775725, 34.775205, 34.774911, 34.774505, 34.774654, 34.77529, 34.77574, 34.7741, 34.775022, 34.776148, 34.777484, 34.778078, 34.778904, 34.780215, 34.780748, 34.781659, 34.782314, 34.782976, 34.784222, 34.784646, 34.78559, 34.786072, 34.786528, 34.78705, 34.786696, 34.786237, 34.78616, 34.786366, 34.786492, 34.786968, 34.787134, 34.787611, 34.78828, 34.788506, 34.788972, 34.789486, 34.789833, 34.79008, 34.789614, 34.789106, 34.789022, 34.790097, 34.791494, 34.792164, 34.792621, 34.793023, 34.793897, 34.794285, 34.794526, 34.795468, 34.795953, 34.796789, 34.798456, 34.801017, 34.802968, 34.805224, 34.807723, 34.810225, 34.812361, 34.81418, 34.816393, 34.818345, 34.82035, 34.823113, 34.825743, 34.827672, 34.829748, 34.831862, 34.833592, 34.834693, 34.836309, 34.838031, 34.83857, 34.840111, 34.841382, 34.842297, 34.842833, 34.842856, 34.844214, 34.845683, 34.84791, 34.848963, 34.848375, 34.84781, 34.846407, 34.843635, 34.843052, 34.84156, 34.839789, 34.836229, 34.833478, 34.830968, 34.82804, 34.826858, 34.827753, 34.826873, 34.825478, 34.822884, 34.820601, 34.817983, 34.815687, 34.814026, 34.812567, 34.812866, 34.811941, 34.810492, 34.810693, 34.810252, 34.810698, 34.810455, 34.808272, 34.80639, 34.805874, 34.804507, 34.802056, 34.799667, 34.797853, 34.798631, 34.798479, 34.797351, 34.794925, 34.794027, 34.793444, 34.792175, 34.789962, 34.787931, 34.786828, 34.786617, 34.784155, 34.781727, 34.78129, 34.780396, 34.779414, 34.778464, 34.77784, 34.777273, 34.777127, 34.777001, 34.776986, 34.777156, 34.775083],spds:[0.0, 21.1, 21.2, 26.7, 28.8, 24.5, 23.1, 30.8, 28.0, 23.1, 14.2, 21.5, 18.3, 18.0, 29.4, 23.7, 21.4, 20.9, 25.9, 26.9, 28.2, 20.2, 29.9, 20.3, 23.6, 24.2, 20.9, 19.2, 24.6, 18.5, 17.5, 23.1, 31.9, 22.5, 26.8, 19.7, 25.0, 15.7, 20.3, 24.0, 28.3, 28.8, 17.6, 37.9, 36.7, 21.3, 19.7, 14.4, 19.7, 27.0, 27.3, 30.7, 22.2, 31.7, 14.6, 30.0, 11.5, 27.1, 18.7, 13.9, 29.2, 20.7, 21.4, 20.2, 24.2, 22.5, 24.8, 19.2, 14.2, 27.9, 20.3, 20.7, 21.1, 19.5, 20.5, 18.4, 22.2, 14.0, 18.4, 30.7, 13.9, 13.5, 15.0, 21.1, 20.5, 24.2, 22.8, 24.0, 17.8, 1.0, 20.0, 17.9, 16.2, 11.6, 24.4, 14.7, 17.7, 18.8, 16.5, 24.2, 34.8, 22.5, 16.2, 16.1, 19.7, 13.8, 16.2, 16.2, 20.8, 20.3, 18.7, 20.3, 25.4, 15.7, 11.0, 21.7, 25.5, 13.3, 19.0, 27.5, 20.7, 14.9, 27.5, 1.1, 27.1, 0.7, 5.2, 24.0, 20.4, 15.4, 14.0, 13.8, 13.1, 11.4, 21.7, 8.9, 10.4, 10.6, 13.4, 14.2, 16.9, 12.8, 12.8, 8.6, 21.6, 14.2, 9.8, 9.6, 4.7, 23.3, 20.3, 20.6, 5.2, 10.0, 20.5, 14.0, 18.6, 19.2, 17.6, 16.8, 13.6, 12.0, 31.8, 19.6, 21.1, 12.7, 19.5, 16.6, 16.6, 20.7, 25.9, 19.6, 29.5, 27.3, 13.5, 16.4, 17.3, 13.8, 20.6, 25.6, 11.2, 39.8, 16.8, 21.1, 29.1, 13.2, 25.5, 16.9, 15.7, 26.0, 20.3, 18.4, 16.6, 18.7, 35.0, 23.2, 20.8, 22.3, 15.3, 21.2, 15.8, 33.4, 23.6, 27.7, 37.1, 25.1, 14.4, 30.2, 13.5, 7.8, 9.8, 11.5, 28.9, 8.3, 14.7, 14.7, 15.0, 13.9, 17.0, 27.1, 18.1, 27.1, 23.5, 22.9, 18.1, 23.8, 18.3, 19.4, 23.2, 39.7, 19.8, 20.8, 21.1, 24.8, 18.8, 18.7, 30.6, 19.1, 35.7, 38.6, 22.6, 18.5, 16.7, 16.9, 24.0, 39.6, 34.2, 28.1, 15.3, 12.4, 26.1, 25.1, 14.9, 22.8, 26.9, 35.9, 27.4, 27.3, 38.3, 38.4, 36.0, 20.0, 16.9, 34.3, 31.9, 34.6, 27.4, 21.2, 23.4, 24.6, 35.2, 24.2, 22.7, 27.3, 27.4, 32.4, 24.7, 23.1, 36.1, 42.7, 29.2, 28.7, 26.8, 24.7, 30.0, 27.9, 26.5, 21.9, 13.0, 22.6, 33.6, 37.6, 30.7, 23.8, 23.6, 24.7, 30.1, 30.6, 14.0, 24.6, 26.9, 31.8, 34.2, 25.0, 27.6, 26.3, 27.9],eles:[120.8, 122.4, 124.4, 124.8, 122.6, 124.0, 125.8, 126.0, 123.4, 127.2, 128.4, 129.8, 129.2, 128.4, 126.2, 128.4, 137.2, 143.0, 144.2, 143.2, 141.0, 145.0, 145.0, 146.8, 148.4, 143.6, 147.2, 150.2, 144.0, 151.0, 152.4, 152.8, 151.6, 155.6, 151.6, 158.0, 159.0, 158.2, 164.2, 165.2, 159.8, 148.6, 149.2, 147.6, 138.4, 135.4, 141.2, 148.6, 150.0, 141.0, 141.2, 138.2, 136.2, 120.4, 119.0, 114.6, 107.8, 107.4, 110.2, 113.2, 107.8, 107.4, 111.0, 112.2, 111.8, 111.6, 111.2, 114.4, 124.2, 118.6, 112.4, 113.4, 117.6, 119.4, 121.8, 123.6, 124.2, 126.6, 134.2, 130.2, 139.6, 136.8, 146.8, 149.0, 139.6, 140.2, 141.4, 143.0, 146.8, 150.8, 146.4, 149.2, 152.8, 155.8, 152.0, 162.8, 161.0, 161.4, 167.8, 169.0, 157.4, 138.6, 131.4, 136.4, 136.8, 142.0, 148.6, 155.2, 158.0, 158.6, 165.0, 164.6, 160.6, 167.6, 177.4, 178.0, 170.4, 180.8, 185.6, 179.8, 182.2, 190.0, 181.6, 176.4, 171.0, 161.0, 165.8, 163.8, 169.6, 177.0, 181.6, 189.4, 194.6, 201.8, 194.0, 184.6, 180.2, 166.2, 167.6, 164.2, 167.8, 170.0, 173.6, 174.8, 171.2, 170.8, 176.8, 172.8, 169.0, 171.2, 174.4, 177.0, 180.6, 180.0, 180.8, 186.0, 183.6, 186.6, 190.8, 196.0, 200.8, 209.6, 202.0, 203.0, 189.0, 199.6, 204.6, 208.8, 212.8, 213.4, 214.2, 216.4, 211.0, 201.4, 200.2, 202.8, 204.8, 213.2, 216.8, 204.4, 211.4, 205.0, 203.0, 210.2, 206.6, 214.8, 208.0, 200.6, 208.2, 205.4, 210.0, 214.8, 218.2, 226.4, 222.4, 216.4, 211.2, 209.6, 215.6, 213.8, 218.4, 213.4, 207.2, 212.4, 203.4, 186.8, 185.8, 188.2, 183.6, 193.6, 201.0, 208.4, 207.6, 199.4, 202.2, 210.2, 214.8, 222.4, 227.4, 222.6, 229.0, 229.6, 232.0, 234.0, 237.8, 241.0, 245.8, 249.8, 251.2, 245.4, 249.0, 252.6, 257.0, 255.6, 262.4, 266.2, 263.0, 256.4, 255.4, 238.2, 240.0, 245.2, 251.4, 258.0, 259.6, 250.2, 237.2, 237.0, 241.8, 250.6, 250.4, 248.8, 254.2, 257.6, 256.2, 241.6, 245.0, 244.2, 229.8, 218.8, 209.2, 208.0, 218.4, 203.8, 202.2, 190.6, 187.4, 192.2, 194.8, 192.6, 184.4, 175.4, 174.8, 168.8, 169.8, 164.6, 154.4, 158.4, 155.0, 143.6, 143.6, 143.6, 143.4, 145.6, 141.0, 136.0, 133.0, 134.6, 141.8, 145.8, 140.2, 125.4, 124.4, 127.8, 131.4, 126.2, 123.8, 121.4, 118.6, 123.8, 124.8, 122.0, 120.6, 119.4, 120.6, 122.4, 120.8],dists:[0.0, 0.185, 0.341, 0.577, 0.855, 1.091, 1.33, 1.578, 1.866, 2.107, 2.334, 2.554, 2.724, 2.922, 3.179, 3.433, 3.656, 3.864, 4.096, 4.342, 4.638, 4.812, 5.044, 5.296, 5.513, 5.783, 5.986, 6.191, 6.426, 6.628, 6.856, 7.071, 7.309, 7.555, 7.815, 8.018, 8.223, 8.419, 8.609, 8.822, 9.092, 9.353, 9.63, 9.825, 10.183, 10.39, 10.575, 10.736, 10.912, 11.14, 11.365, 11.654, 11.806, 12.074, 12.286, 12.521, 12.727, 12.917, 13.146, 13.252, 13.488, 13.73, 13.895, 14.069, 14.295, 14.52, 14.755, 14.906, 15.056, 15.179, 15.344, 15.54, 15.728, 15.925, 16.111, 16.303, 16.489, 16.674, 16.846, 17.064, 17.218, 17.413, 17.553, 17.738, 17.952, 18.151, 18.379, 18.615, 18.824, 18.965, 19.078, 19.196, 19.352, 19.488, 19.722, 19.898, 20.131, 20.325, 20.513, 20.739, 21.091, 21.427, 21.559, 21.717, 21.845, 22.02, 22.178, 22.339, 22.505, 22.739, 22.893, 23.104, 23.323, 23.511, 23.617, 23.767, 24.022, 24.181, 24.336, 24.578, 24.812, 24.977, 25.19, 25.388, 25.633, 25.885, 25.938, 26.067, 26.25, 26.419, 26.586, 26.72, 26.79, 26.91, 27.112, 27.312, 27.387, 27.467, 27.509, 27.601, 27.731, 27.862, 27.997, 28.068, 28.223, 28.326, 28.45, 28.557, 28.688, 28.75, 28.919, 29.089, 29.219, 29.259, 29.41, 29.496, 29.646, 29.838, 29.996, 30.178, 30.304, 30.429, 30.638, 30.887, 31.183, 31.328, 31.465, 31.631, 31.793, 32.001, 32.197, 32.435, 32.664, 32.994, 33.122, 33.232, 33.361, 33.504, 33.684, 33.984, 34.18, 34.394, 34.628, 34.775, 35.033, 35.207, 35.45, 35.699, 35.863, 36.063, 36.281, 36.472, 36.67, 36.803, 37.07, 37.403, 37.541, 37.741, 37.935, 38.139, 38.345, 38.61, 38.899, 39.126, 39.443, 39.681, 39.802, 39.988, 40.209, 40.32, 40.408, 40.501, 40.689, 40.765, 40.884, 41.029, 41.165, 41.3, 41.459, 41.702, 41.91, 42.13, 42.367, 42.604, 42.809, 42.99, 43.203, 43.388, 43.592, 43.857, 44.108, 44.292, 44.491, 44.734, 44.934, 45.116, 45.305, 45.647, 45.866, 46.278, 46.574, 46.782, 46.966, 47.117, 47.309, 47.625, 47.999, 48.311, 48.55, 48.681, 48.833, 49.1, 49.196, 49.338, 49.574, 49.936, 50.217, 50.478, 50.8, 51.057, 51.403, 51.667, 51.813, 52.141, 52.449, 52.807, 53.114, 53.338, 53.547, 53.763, 54.083, 54.351, 54.517, 54.778, 55.06, 55.286, 55.511, 55.713, 55.896, 56.271, 56.614, 56.911, 57.152, 57.41, 57.673, 57.902, 58.135, 58.384, 58.557, 58.688, 58.957, 59.327, 59.616, 59.737, 59.97, 60.2, 60.476, 60.774, 60.942, 61.046, 61.307, 61.607, 61.93, 62.038, 62.274, 62.54, 62.74],times_sec:[0, 47, 83, 119, 155, 191, 227, 263, 299, 335, 371, 407, 443, 479, 515, 551, 587, 623, 659, 695, 731, 795, 831, 867, 903, 939, 975, 1011, 1047, 1083, 1119, 1155, 1191, 1227, 1263, 1299, 1335, 1371, 1407, 1443, 1479, 1515, 1551, 1587, 1623, 1659, 1695, 1731, 1767, 1803, 1839, 1875, 1911, 1947, 1983, 2019, 2055, 2091, 2127, 2176, 2212, 2248, 2284, 2320, 2356, 2392, 2428, 2464, 2500, 2761, 2797, 2833, 2869, 2905, 2941, 2977, 3013, 3049, 3085, 3121, 3157, 3193, 3229, 3265, 3301, 3337, 3373, 3409, 3445, 3481, 3517, 3553, 3589, 3686, 3722, 3758, 3794, 3830, 3866, 3902, 3938, 3974, 4010, 4046, 4096, 4132, 4168, 4204, 4240, 4276, 4312, 4348, 4384, 4420, 4456, 4492, 4528, 4564, 4600, 4636, 4672, 4708, 4744, 4780, 4847, 4883, 5004, 5184, 5220, 5256, 5292, 5328, 5364, 5400, 5436, 5472, 5521, 5585, 5642, 5693, 5729, 5765, 5801, 6070, 6106, 6142, 6178, 6259, 6305, 6344, 6380, 6416, 6462, 6544, 6580, 6649, 6685, 6721, 6757, 6793, 6829, 6865, 6901, 6937, 6973, 7009, 7045, 7081, 7117, 7153, 7189, 7225, 7261, 7297, 7333, 7407, 7443, 7479, 7515, 7551, 7587, 7623, 7659, 7695, 7731, 7767, 7803, 7839, 7875, 7911, 7947, 7983, 8019, 8055, 8091, 8127, 8163, 8199, 8235, 8271, 8307, 8343, 8379, 8415, 8451, 8487, 8544, 8580, 8616, 8652, 8688, 8724, 8760, 8799, 8841, 8877, 8913, 8949, 8985, 9021, 9057, 9093, 9129, 9165, 9201, 9237, 9273, 9309, 9345, 9381, 9417, 9453, 9489, 9525, 9561, 9597, 9633, 9669, 9705, 9741, 9777, 9813, 9849, 9885, 9921, 9957, 9993, 10029, 10065, 10101, 10679, 10715, 10751, 10787, 10823, 10859, 10895, 10931, 10967, 11003, 11039, 11075, 11111, 11147, 11183, 11219, 11255, 11291, 11327, 11363, 11399, 11435, 11482, 11518, 11554, 11590, 11626, 11662, 11698, 11734, 11770, 11806, 11842, 11878, 11914, 11950, 11986, 12022, 12058, 12094, 12130, 12166, 12202, 12238, 12274, 12310, 12346, 12382, 12418, 12454, 12490, 12526, 12562, 12598, 12634, 12670, 12706]},
+  {name:"Zikim 100k exploring our beautiful land \ud83c\udf3f",color:"#9b4dca",date:"28 May 2026",date_sort:"2026-05-28",start_time:"02:23",distance_km:101.0,moving_time:"4:27",elev_gain:1115,elev_loss:1115,max_elev:158,min_elev:3,avg_speed:22.9,max_speed:52.1,avg_gradient:1.1,suffering:124278,on_form:true,is_loop:true,direction:"W",lats:[31.62405, 31.623386, 31.62022, 31.617277, 31.614224, 31.610639, 31.607523, 31.6054, 31.603873, 31.601763, 31.601371, 31.600948, 31.600207, 31.598665, 31.597114, 31.594463, 31.592968, 31.590637, 31.588978, 31.587792, 31.586722, 31.58616, 31.586055, 31.585945, 31.586076, 31.586288, 31.586594, 31.587191, 31.587059, 31.587343, 31.587614, 31.587763, 31.589188, 31.59046, 31.591868, 31.593938, 31.595449, 31.596926, 31.59709, 31.597384, 31.59759, 31.597862, 31.597933, 31.597488, 31.596141, 31.595783, 31.595596, 31.597247, 31.598124, 31.598503, 31.598392, 31.598042, 31.600883, 31.602126, 31.604081, 31.60459, 31.606012, 31.607369, 31.606796, 31.604325, 31.606303, 31.609506, 31.6104, 31.610949, 31.611183, 31.610223, 31.611012, 31.614396, 31.617482, 31.619959, 31.619857, 31.618488, 31.618321, 31.618098, 31.61742, 31.616986, 31.616902, 31.615723, 31.614002, 31.612966, 31.611152, 31.609487, 31.608313, 31.608603, 31.608892, 31.607926, 31.606241, 31.60671, 31.605646, 31.605466, 31.606478, 31.608444, 31.609968, 31.611693, 31.613243, 31.614701, 31.614766, 31.616224, 31.616333, 31.61598, 31.615593, 31.615265, 31.615974, 31.613609, 31.611646, 31.608629, 31.605454, 31.603339, 31.601575, 31.599883, 31.599399, 31.598678, 31.598361, 31.597103, 31.595933, 31.595766, 31.596114, 31.59673, 31.595522, 31.594266, 31.593697, 31.593716, 31.594035, 31.594259, 31.595462, 31.594075, 31.59354, 31.592346, 31.592619, 31.594181, 31.595882, 31.596725, 31.597603, 31.598181, 31.598645, 31.599684, 31.600496, 31.602332, 31.602061, 31.601625, 31.602602, 31.604494, 31.605096, 31.606894, 31.608212, 31.609266, 31.609356, 31.609326, 31.609675, 31.609903, 31.612053, 31.613165, 31.611522, 31.607786, 31.606868, 31.610731, 31.612547, 31.612416, 31.610272, 31.607209, 31.606581, 31.6088, 31.611133, 31.612883, 31.613018, 31.612957, 31.616285, 31.619415, 31.622654, 31.625918, 31.629908, 31.632773, 31.633541, 31.635072, 31.638333, 31.641578, 31.643953, 31.64695, 31.651667, 31.656019, 31.65917, 31.662003, 31.664366, 31.665705, 31.667913, 31.67124, 31.674294, 31.678113, 31.6812, 31.683739, 31.683878, 31.683335, 31.681288, 31.680205, 31.678431, 31.675874, 31.673995, 31.673384, 31.673938, 31.675247, 31.677615, 31.678911, 31.679313, 31.679504, 31.676788, 31.675949, 31.676276, 31.675504, 31.672975, 31.670408, 31.668585, 31.667752, 31.666822, 31.666723, 31.670071, 31.673686, 31.675849, 31.676346, 31.676432, 31.675574, 31.672819, 31.670907, 31.670478, 31.672618, 31.67127, 31.67053, 31.669962, 31.668877, 31.667326, 31.665436, 31.664685, 31.662884, 31.661575, 31.658595, 31.654508, 31.656098, 31.658494, 31.660237, 31.663076, 31.666312, 31.668829, 31.671784, 31.674505, 31.677189, 31.67991, 31.682159, 31.683528, 31.682978, 31.68252, 31.681092, 31.680134, 31.679587, 31.678976, 31.678528, 31.678208, 31.677931, 31.67755, 31.677874, 31.679048, 31.677353, 31.675508, 31.674156, 31.672807, 31.67131, 31.66951, 31.66819, 31.666186, 31.664341, 31.663209, 31.662686, 31.665707, 31.668141, 31.6687, 31.668182, 31.667508, 31.665529, 31.662557, 31.660753, 31.658726, 31.655339, 31.652423, 31.650974, 31.650301, 31.648881, 31.647388, 31.646017, 31.643584, 31.641252, 31.640054, 31.63887, 31.637724, 31.636641, 31.634178, 31.632145, 31.630034, 31.627029, 31.623924, 31.622027, 31.620263, 31.619033, 31.61826, 31.61911, 31.619465, 31.621199, 31.623976],lons:[34.774768, 34.777594, 34.778411, 34.779775, 34.780959, 34.780597, 34.779246, 34.77681, 34.77414, 34.770539, 34.766949, 34.763851, 34.760278, 34.756255, 34.754113, 34.751535, 34.749484, 34.74658, 34.744749, 34.742544, 34.739252, 34.735278, 34.73015, 34.725756, 34.722545, 34.719709, 34.714653, 34.710952, 34.707983, 34.704576, 34.700702, 34.696251, 34.691886, 34.689189, 34.686525, 34.682748, 34.679298, 34.673723, 34.669822, 34.666732, 34.664125, 34.660296, 34.656967, 34.654834, 34.651962, 34.64937, 34.647009, 34.645797, 34.643125, 34.641183, 34.638263, 34.634718, 34.633832, 34.631553, 34.627726, 34.62262, 34.617944, 34.614941, 34.611806, 34.609785, 34.607209, 34.605375, 34.601274, 34.596868, 34.592432, 34.588519, 34.586057, 34.585617, 34.584266, 34.583326, 34.581433, 34.579237, 34.578229, 34.576739, 34.574166, 34.571781, 34.568782, 34.570235, 34.569401, 34.566925, 34.566451, 34.567356, 34.566844, 34.565692, 34.564853, 34.564538, 34.565264, 34.562654, 34.561593, 34.564228, 34.566174, 34.567427, 34.569303, 34.57161, 34.573596, 34.574085, 34.576192, 34.577038, 34.575956, 34.574254, 34.572428, 34.571377, 34.569677, 34.567473, 34.564552, 34.562192, 34.559928, 34.558862, 34.557926, 34.557022, 34.557938, 34.557472, 34.5563, 34.555065, 34.55585, 34.558088, 34.559757, 34.561796, 34.562076, 34.56022, 34.559338, 34.55974, 34.56048, 34.560958, 34.562561, 34.563538, 34.564284, 34.563668, 34.564786, 34.565531, 34.565644, 34.563263, 34.562936, 34.563923, 34.561546, 34.56107, 34.561686, 34.561501, 34.56105, 34.559925, 34.559306, 34.559632, 34.557553, 34.552655, 34.54862, 34.544323, 34.538716, 34.534142, 34.530092, 34.526469, 34.52555, 34.523443, 34.518399, 34.514659, 34.510417, 34.507877, 34.504942, 34.505269, 34.508138, 34.510364, 34.513141, 34.515583, 34.517969, 34.520832, 34.524604, 34.528069, 34.530928, 34.53329, 34.537122, 34.540679, 34.544787, 34.546828, 34.544461, 34.54449, 34.547099, 34.549316, 34.550519, 34.548942, 34.547498, 34.547906, 34.550749, 34.553192, 34.55567, 34.558134, 34.556931, 34.554905, 34.55375, 34.55643, 34.559005, 34.561935, 34.565901, 34.568756, 34.570499, 34.572694, 34.574982, 34.577306, 34.580785, 34.583973, 34.588074, 34.59093, 34.594009, 34.596756, 34.600976, 34.604743, 34.606263, 34.608672, 34.611526, 34.61479, 34.615723, 34.614978, 34.614173, 34.616914, 34.620785, 34.62494, 34.626035, 34.627973, 34.631494, 34.635636, 34.639533, 34.64289, 34.643861, 34.644515, 34.64602, 34.646831, 34.648707, 34.649864, 34.652535, 34.654622, 34.657285, 34.657611, 34.65895, 34.661385, 34.662832, 34.663911, 34.662603, 34.663321, 34.664265, 34.665765, 34.668047, 34.671164, 34.673667, 34.675309, 34.67714, 34.677723, 34.678977, 34.68051, 34.682195, 34.686954, 34.691064, 34.696945, 34.701726, 34.705973, 34.709788, 34.713872, 34.716255, 34.718681, 34.722449, 34.725677, 34.728116, 34.73007, 34.731203, 34.733748, 34.737333, 34.740337, 34.740564, 34.743704, 34.74663, 34.749733, 34.752888, 34.755456, 34.758137, 34.760336, 34.762979, 34.766245, 34.769704, 34.771197, 34.77044, 34.767403, 34.763951, 34.763082, 34.76413, 34.765096, 34.768699, 34.772413, 34.775842, 34.778283, 34.781686, 34.785027, 34.788602, 34.792151, 34.795551, 34.798731, 34.799129, 34.79872, 34.798034, 34.797775, 34.795363, 34.793478, 34.790598, 34.786542, 34.783609, 34.781052, 34.779275, 34.778122, 34.77742],spds:[0.0, 23.0, 27.3, 23.4, 26.0, 29.2, 24.5, 22.2, 27.1, 29.4, 21.1, 21.5, 29.0, 30.2, 18.7, 24.5, 13.9, 24.9, 20.0, 29.6, 21.7, 28.0, 32.0, 27.2, 19.8, 30.6, 22.8, 30.5, 18.9, 26.8, 19.7, 32.9, 32.5, 18.8, 23.7, 32.5, 33.3, 31.1, 19.7, 22.9, 13.3, 23.8, 28.7, 21.7, 17.4, 24.0, 10.1, 19.0, 14.2, 13.4, 31.0, 18.9, 29.6, 24.7, 33.9, 35.0, 32.6, 22.7, 26.3, 19.3, 30.2, 25.1, 30.5, 31.2, 33.5, 31.3, 26.6, 22.7, 25.2, 18.2, 41.0, 10.9, 15.2, 15.8, 23.1, 23.2, 21.6, 13.0, 18.8, 20.5, 16.5, 11.6, 15.3, 23.6, 14.5, 20.8, 18.2, 14.1, 9.8, 21.7, 22.7, 21.7, 23.8, 11.5, 23.6, 14.0, 15.8, 16.3, 17.6, 14.9, 7.4, 13.5, 12.4, 23.1, 33.1, 27.2, 28.5, 19.2, 17.5, 11.0, 17.7, 16.4, 17.9, 14.8, 16.9, 15.3, 11.4, 17.1, 13.6, 16.4, 17.3, 14.8, 13.0, 21.4, 13.9, 16.5, 13.4, 15.2, 14.6, 16.5, 12.4, 15.2, 16.6, 14.2, 21.0, 14.7, 16.4, 19.9, 13.6, 24.5, 15.3, 12.4, 37.6, 31.2, 29.5, 36.9, 32.2, 27.1, 27.0, 19.5, 17.8, 32.0, 36.6, 33.7, 27.2, 35.4, 5.4, 18.6, 28.0, 26.8, 23.1, 28.1, 22.5, 23.0, 25.8, 23.5, 36.4, 29.7, 29.7, 36.4, 33.2, 20.6, 15.8, 25.1, 26.3, 30.6, 20.7, 29.9, 38.2, 31.0, 26.7, 24.3, 23.5, 13.9, 51.8, 24.4, 36.4, 30.1, 31.3, 27.8, 9.5, 20.8, 17.7, 19.6, 30.1, 8.9, 31.1, 26.3, 29.6, 27.2, 24.0, 24.9, 28.6, 25.9, 25.8, 9.7, 31.0, 31.3, 25.2, 14.1, 4.0, 28.0, 21.6, 23.9, 28.4, 33.3, 27.6, 29.6, 27.1, 27.8, 18.4, 9.3, 32.3, 29.0, 10.1, 18.4, 19.6, 24.6, 22.2, 14.7, 23.2, 19.3, 14.9, 32.1, 28.8, 18.1, 19.6, 17.2, 39.2, 24.9, 26.9, 24.2, 23.2, 23.9, 19.3, 23.5, 22.7, 32.8, 39.6, 34.6, 35.9, 24.5, 24.8, 27.6, 21.4, 21.2, 28.1, 19.5, 16.9, 23.4, 3.2, 32.2, 26.7, 23.9, 14.3, 23.5, 27.0, 24.9, 24.1, 27.9, 26.2, 18.1, 28.8, 21.3, 24.1, 23.8, 22.8, 26.4, 31.6, 23.2, 21.0, 17.2, 25.9, 27.8, 20.6, 21.6, 33.7, 25.0, 25.8, 24.2, 23.0, 22.1, 18.7, 15.0, 18.4, 31.4, 22.8, 23.3, 27.5, 30.0, 19.9, 23.5, 12.4, 24.5, 21.2],eles:[120.2, 124.2, 124.0, 123.4, 125.6, 124.2, 128.0, 129.0, 127.4, 125.8, 131.8, 141.8, 143.2, 140.4, 142.4, 136.8, 149.4, 138.2, 146.4, 154.0, 156.0, 148.4, 131.2, 129.2, 137.6, 134.0, 121.4, 120.2, 130.8, 132.0, 128.0, 112.2, 106.2, 117.4, 122.4, 114.2, 113.6, 95.0, 91.2, 90.8, 104.4, 97.2, 102.2, 97.8, 102.0, 99.2, 95.4, 100.8, 107.4, 119.8, 122.0, 109.0, 103.8, 95.2, 89.8, 77.4, 72.8, 80.4, 67.6, 64.8, 61.2, 58.6, 54.2, 52.0, 48.4, 46.0, 44.0, 44.0, 43.8, 47.2, 46.0, 49.4, 54.0, 59.2, 57.4, 55.4, 44.0, 47.0, 44.0, 39.6, 43.8, 48.8, 50.4, 49.4, 46.4, 48.8, 44.0, 39.4, 41.4, 44.0, 50.8, 53.6, 57.8, 54.2, 53.0, 54.0, 54.0, 53.2, 52.6, 61.6, 67.2, 58.6, 45.4, 38.2, 32.8, 34.0, 30.4, 32.2, 32.6, 35.0, 37.4, 44.0, 35.8, 32.4, 34.8, 41.4, 52.6, 58.2, 54.4, 51.8, 57.8, 60.6, 61.0, 54.4, 52.2, 49.6, 43.6, 40.6, 37.6, 44.2, 48.2, 53.6, 55.8, 62.2, 63.8, 55.2, 56.8, 54.0, 50.0, 40.0, 37.8, 31.0, 24.8, 20.2, 24.0, 22.8, 14.0, 14.0, 19.0, 23.6, 37.2, 38.8, 26.6, 14.4, 8.2, 4.0, 4.0, 5.6, 7.0, 9.4, 11.4, 17.0, 27.4, 33.8, 40.4, 49.6, 43.6, 52.2, 47.4, 43.8, 32.4, 33.2, 47.0, 53.2, 46.8, 45.4, 48.2, 49.6, 35.8, 31.2, 33.4, 37.8, 40.4, 46.8, 27.6, 21.4, 13.0, 11.8, 15.4, 14.2, 19.0, 25.2, 34.8, 42.6, 44.6, 34.4, 32.8, 34.8, 35.4, 37.2, 45.2, 47.6, 50.8, 59.2, 52.2, 56.8, 58.6, 54.4, 54.4, 49.8, 50.8, 48.0, 45.2, 46.0, 45.6, 43.8, 46.4, 48.2, 51.6, 51.2, 58.6, 68.0, 64.2, 54.8, 57.0, 60.8, 65.4, 69.4, 75.4, 83.8, 88.6, 95.4, 107.8, 102.2, 93.2, 98.8, 103.4, 111.2, 98.4, 96.8, 97.4, 92.2, 94.6, 95.8, 100.2, 103.2, 101.0, 84.6, 85.8, 70.6, 63.8, 60.6, 62.2, 63.2, 62.8, 62.8, 62.6, 58.6, 67.6, 75.2, 78.6, 73.6, 80.8, 84.2, 87.2, 88.4, 89.2, 92.8, 95.0, 96.8, 86.4, 88.6, 84.0, 91.2, 89.8, 92.6, 96.8, 96.8, 98.0, 97.6, 99.4, 99.2, 103.4, 105.6, 112.4, 121.2, 115.6, 118.8, 122.0, 124.4, 129.4, 132.6, 136.2, 143.6, 149.2, 147.0, 138.6, 143.0, 142.0, 127.4, 121.8, 119.8, 119.0, 123.0, 122.2],dists:[0.0, 0.278, 0.638, 0.99, 1.348, 1.748, 2.117, 2.447, 2.752, 3.166, 3.509, 3.806, 4.154, 4.572, 4.838, 5.221, 5.477, 5.855, 6.108, 6.355, 6.689, 7.071, 7.557, 7.973, 8.278, 8.548, 9.028, 9.385, 9.667, 9.991, 10.359, 10.781, 11.224, 11.516, 11.813, 12.238, 12.605, 13.158, 13.528, 13.822, 14.07, 14.434, 14.749, 14.957, 15.268, 15.517, 15.742, 15.959, 16.23, 16.419, 16.696, 17.034, 17.361, 17.617, 18.04, 18.527, 18.997, 19.319, 19.623, 19.958, 20.286, 20.682, 21.083, 21.505, 21.926, 22.312, 22.561, 22.94, 23.306, 23.595, 23.775, 24.033, 24.13, 24.273, 24.528, 24.759, 25.043, 25.233, 25.44, 25.701, 25.908, 26.112, 26.251, 26.365, 26.451, 26.562, 26.762, 27.015, 27.17, 27.42, 27.636, 27.885, 28.131, 28.422, 28.677, 28.846, 29.046, 29.227, 29.33, 29.496, 29.674, 29.78, 29.959, 30.295, 30.647, 31.05, 31.463, 31.719, 31.934, 32.141, 32.243, 32.335, 32.451, 32.633, 32.783, 32.996, 33.159, 33.364, 33.501, 33.726, 33.831, 33.869, 33.948, 34.0, 34.202, 34.382, 34.474, 34.619, 34.729, 34.916, 35.105, 35.349, 35.451, 35.564, 35.795, 35.919, 36.026, 36.231, 36.283, 36.4, 36.523, 36.736, 36.944, 37.449, 37.858, 38.281, 38.812, 39.245, 39.63, 39.974, 40.228, 40.463, 40.974, 41.52, 41.934, 42.426, 42.77, 42.804, 43.165, 43.566, 43.838, 44.176, 44.52, 44.854, 45.212, 45.54, 45.999, 46.413, 46.924, 47.419, 48.009, 48.382, 48.622, 48.792, 49.231, 49.648, 49.936, 50.301, 50.843, 51.328, 51.77, 52.161, 52.513, 52.79, 53.061, 53.478, 53.835, 54.33, 54.751, 55.147, 55.523, 55.8, 56.081, 56.321, 56.614, 56.973, 57.363, 57.672, 58.065, 58.372, 58.765, 59.062, 59.464, 59.821, 60.156, 60.402, 60.675, 60.996, 61.291, 61.585, 61.802, 62.077, 62.458, 62.851, 63.237, 63.679, 64.09, 64.486, 64.855, 65.187, 65.507, 65.728, 65.878, 66.128, 66.36, 66.497, 66.758, 66.989, 67.294, 67.506, 67.658, 67.963, 68.163, 68.51, 68.981, 69.17, 69.451, 69.691, 70.073, 70.538, 70.905, 71.268, 71.617, 71.921, 72.246, 72.535, 72.755, 73.209, 73.601, 74.18, 74.645, 75.051, 75.418, 75.808, 76.036, 76.268, 76.627, 76.935, 77.2, 77.464, 77.695, 77.979, 78.35, 78.679, 78.88, 79.211, 79.566, 79.924, 80.248, 80.498, 80.919, 81.26, 81.518, 81.832, 82.168, 82.43, 82.768, 83.119, 83.516, 83.901, 84.24, 84.425, 84.774, 85.159, 85.524, 85.801, 86.222, 86.631, 86.995, 87.356, 87.702, 88.026, 88.302, 88.531, 88.775, 89.11, 89.524, 89.8, 90.136, 90.544, 90.835, 91.095, 91.268, 91.49, 91.806],times_sec:[0, 52, 104, 156, 208, 260, 312, 364, 416, 468, 520, 572, 624, 676, 824, 876, 928, 980, 1032, 1084, 1136, 1188, 1240, 1292, 1344, 1465, 1517, 1569, 1621, 1673, 1725, 1777, 1829, 1881, 1933, 1985, 2037, 2089, 2141, 2193, 2245, 2297, 2349, 2408, 2460, 2512, 2575, 2629, 2681, 2733, 2785, 2837, 2889, 2946, 2998, 3050, 3102, 3154, 3206, 3258, 3310, 3362, 3414, 3466, 3518, 3570, 3622, 3674, 3726, 3778, 3830, 3906, 4229, 4281, 4333, 4385, 4437, 4489, 4541, 4593, 4645, 4697, 4749, 4801, 4853, 4905, 4957, 5009, 5067, 5119, 5171, 5223, 5275, 5327, 5379, 5431, 5483, 5535, 5587, 5639, 5691, 5743, 5795, 5847, 5899, 5951, 6003, 6055, 6107, 6159, 6211, 6263, 6315, 6367, 6419, 6471, 6523, 6575, 6627, 6679, 6731, 6783, 6835, 6887, 6939, 6991, 7043, 7095, 7147, 7199, 7251, 7303, 7355, 7407, 7459, 7511, 7563, 7615, 7667, 7719, 7771, 7849, 8261, 8313, 8365, 8417, 8469, 8521, 8573, 8625, 8677, 8729, 8781, 8833, 8885, 8937, 8989, 10104, 10156, 10208, 10260, 10312, 10364, 10416, 10468, 10520, 10572, 10624, 10676, 10728, 10780, 10832, 10884, 10936, 10988, 11040, 11092, 11144, 11196, 11248, 11300, 11352, 11404, 11456, 11829, 11881, 11933, 11985, 12037, 12089, 12141, 12198, 12250, 12302, 12354, 12406, 12459, 12511, 12563, 12631, 12683, 12735, 12787, 12839, 12891, 12943, 13023, 13075, 13127, 13179, 13231, 13369, 13421, 13473, 13525, 13577, 13629, 13681, 13733, 13785, 13837, 13889, 13941, 13993, 14045, 14097, 14149, 14201, 14253, 14305, 14575, 14627, 14679, 14731, 14783, 14844, 14896, 14948, 15000, 15052, 15104, 15156, 15208, 15260, 15312, 15364, 15416, 15468, 15520, 15572, 15624, 15676, 15728, 15780, 15878, 15943, 15995, 16047, 16099, 16151, 16203, 16255, 16307, 16359, 16411, 16463, 16515, 16567, 16619, 16671, 16723, 16775, 16843, 16895, 16947, 16999, 17051, 17103, 17155, 17207, 17259, 17335, 17387, 17439, 17491, 17543, 17595, 17647, 17699, 17751, 17803, 17855, 17907, 17959, 18011, 18063, 18115, 18167, 18219, 18271, 18323, 18375, 18427, 18479, 18531]}
 ];
 
 const TILE_SIZE=256;
@@ -3220,15 +3058,10 @@ const mapState={
   'm34':{layer:'standard',color:'speed',rides:[RIDES[34]],zoom:null,panX:0,panY:0},
   'm35':{layer:'standard',color:'speed',rides:[RIDES[35]],zoom:null,panX:0,panY:0},
   'm36':{layer:'standard',color:'speed',rides:[RIDES[36]],zoom:null,panX:0,panY:0},
+  'm37':{layer:'standard',color:'speed',rides:[RIDES[37]],zoom:null,panX:0,panY:0},
   'master':{layer:'standard',rides:RIDES,zoom:null,panX:0,panY:0},
   'heat':{layer:'standard',rides:RIDES,zoom:null,panX:0,panY:0}
 }
-
-// NAVIGATION
-window.scrollToRide=function(i){
-  const ridesTab=document.querySelector('.nav-tab');showTab('rides',ridesTab);
-  setTimeout(()=>{const el=document.getElementById('rideblock-'+i);if(!el)return;el.scrollIntoView({behavior:'smooth',block:'start'});el.style.transition='outline 0.15s, box-shadow 0.15s';el.style.outline='2.5px solid #2d7a3a';el.style.boxShadow='0 0 0 5px rgba(45,122,58,0.2),0 4px 24px rgba(45,122,58,0.15)';setTimeout(()=>{el.style.transition='outline 0.6s, box-shadow 0.6s';el.style.outline='';el.style.boxShadow='';setTimeout(()=>{el.style.transition='';},700);},2000);},200);
-};
 const tabRendered={};
 window.showTab=function(name,el){
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');
@@ -3269,9 +3102,9 @@ function addGearBadges(){
 }
 
 window.addEventListener('load',()=>{
-  const ids=['m0','m1','m2','m3','m4','m5','m6','m7','m8','m9','m10','m11','m12','m13','m14','m15','m16','m17','m18','m19','m20','m21','m22','m23','m24','m25','m26','m27','m28','m29','m30','m31','m32','m33','m34','m35','m36'];
+  const ids=['m0','m1','m2','m3','m4','m5','m6','m7','m8','m9','m10','m11','m12','m13','m14','m15','m16','m17','m18','m19','m20','m21','m22','m23','m24','m25','m26','m27','m28','m29','m30','m31','m32','m33','m34','m35','m36','m37'];
   ids.forEach(id=>{renderMap(id).then(()=>{attachScrollZoom(id);attachPanDrag(id);});});
-  for(let i=0;i<37;i++)initCharts(i);
+  for(let i=0;i<38;i++)initCharts(i);
   addGearBadges();
   const dateBtn=document.querySelector('.sort-btn[data-key="date"]');
   if(dateBtn){dateBtn.dataset.dir='asc';sortRides('date','desc',dateBtn);}
@@ -4322,9 +4155,10 @@ window.builderExportSaved=async function(idx){
 
 window.addEventListener('resize',()=>{
   ['master','heat'].forEach(id=>{mapState[id].zoom=null;mapState[id].panX=0;mapState[id].panY=0;});
-  ['m0','m1','m2','m3','m4','m5','m6','m7','m8','m9','m10','m11','m12','m13','m14','m15','m16','m17','m18','m19','m20','m21','m22','m23','m24','m25','m26','m27','m28','m29','m30','m31','m32','m33','m34','m35','m36'].forEach(id=>{mapState[id].zoom=null;mapState[id].panX=0;mapState[id].panY=0;renderMap(id);});
-  for(let i=0;i<37;i++)initCharts(i);
+  ['m0','m1','m2','m3','m4','m5','m6','m7','m8','m9','m10','m11','m12','m13','m14','m15','m16','m17','m18','m19','m20','m21','m22','m23','m24','m25','m26','m27','m28','m29','m30','m31','m32','m33','m34','m35','m36','m37'].forEach(id=>{mapState[id].zoom=null;mapState[id].panX=0;mapState[id].panY=0;renderMap(id);});
+  for(let i=0;i<38;i++)initCharts(i);
   if(tabRendered.master)renderMap('master');if(tabRendered.heat)renderMap('heat');
 });
+
 
 </script></body></html>
