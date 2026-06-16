@@ -3156,6 +3156,22 @@ function addGearBadges(){
   });
 }
 
+
+window.scrollToRide=function(i){
+  const ridesTab=document.querySelector('.nav-tab');showTab('rides',ridesTab);
+  setTimeout(()=>{const el=document.getElementById('rideblock-'+i);if(!el)return;el.scrollIntoView({behavior:'smooth',block:'start'});el.style.transition='outline 0.15s, box-shadow 0.15s';el.style.outline='2.5px solid #2d7a3a';el.style.boxShadow='0 0 0 5px rgba(45,122,58,0.2),0 4px 24px rgba(45,122,58,0.15)';setTimeout(()=>{el.style.transition='outline 0.6s, box-shadow 0.6s';el.style.outline='';el.style.boxShadow='';setTimeout(()=>{el.style.transition='';},700);},2000);},200);
+};
+
+const tabRendered={};
+window.showTab=function(name,el){
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');
+  ['rides','master','heatmap','stats','builder'].forEach(t=>{const d=document.getElementById('tab-'+t);if(d)d.style.display=t===name?'block':'none';});
+  if(name==='master'&&!tabRendered.master){tabRendered.master=true;setTimeout(()=>{renderMap('master').then(()=>{setupMasterHover();attachScrollZoom('master');attachPanDrag('master');});},30);}
+  if(name==='heatmap'&&!tabRendered.heat){tabRendered.heat=true;setTimeout(()=>{renderMap('heat').then(()=>{attachScrollZoom('heat');attachPanDrag('heat');});},30);}
+  if(name==='builder'&&!tabRendered.builder){tabRendered.builder=true;setTimeout(()=>{initBuilder();loadMilZones();renderSavedRoutesList();},30);}
+  if(name==='stats'&&!tabRendered.stats){tabRendered.stats=true;setTimeout(initStatsTab,30);}
+};
+
 window.addEventListener('load',()=>{
   const ids=['m0','m1','m2','m3','m4','m5','m6','m7','m8','m9','m10','m11','m12','m13','m14','m15','m16','m17','m18','m19','m20','m21','m22','m23','m24','m25','m26','m27','m28','m29','m30','m31','m32','m33','m34','m35','m36','m37','m38'];
   ids.forEach(id=>{renderMap(id).then(()=>{attachScrollZoom(id);attachPanDrag(id);});});
