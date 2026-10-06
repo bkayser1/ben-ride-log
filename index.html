@@ -3133,9 +3133,9 @@ main{padding:36px 48px 80px;}
 <div id="tab-heatmap" style="display:none">
   <div class="section-head"><h2>Heatmap — route frequency &amp; intensity</h2></div>
   <div class="ride-block" style="overflow:hidden;">
-    <div class="map-wrap" id="wrap-heat" style="height:600px;background:#080b12;position:relative;">
+    <div class="map-wrap" id="wrap-heatmap" style="height:600px;background:#080b12;position:relative;">
       <canvas id="heatmap"></canvas>
-      <div class="map-loading" id="load-heat" style="color:rgba(255,255,255,.4);background:rgba(8,11,18,0.7);">Loading map…</div>
+      <div class="map-loading" id="load-heatmap" style="color:rgba(255,255,255,.4);background:rgba(8,11,18,0.7);">Loading map…</div>
       <div class="zoom-controls">
         <button class="zoom-btn zoom-btn-dark" onclick="zoomMap('heat',1)">+</button>
         <div class="zoom-level zoom-level-dark" id="zlevel-heat">—</div>
@@ -3458,6 +3458,7 @@ function drawChart(canvasId,data,smoothed,color,fillColor,crosshairFrac){
 function fmtTime(sec){const h=Math.floor(sec/3600);const m=Math.floor((sec%3600)/60);return h>0?`${h}h${m.toString().padStart(2,'0')}m`:`${m}m`;}
 function drawXAxis(containerId,dists,timesSec){
   const el=document.getElementById(containerId);if(!el)return;
+  if(!dists||!dists.length){el.style.display='none';return;}
   const n=dists.length;const ticks=[0,0.25,0.5,0.75,1.0];
   const labels=ticks.map(f=>{const distIdx=Math.round(f*(n-1));const dist=dists[distIdx];const distStr=dist.toFixed(1)+' km';if(timesSec&&timesSec[distIdx]!=null){return `<span class="xaxis-tick"><span class="xaxis-dist">${distStr}</span><span class="xaxis-time">${fmtTime(timesSec[distIdx])}</span></span>`;}return `<span class="xaxis-tick"><span class="xaxis-dist">${distStr}</span></span>`;});
   el.innerHTML=labels.join('');
@@ -3500,11 +3501,13 @@ function attachMapHover(idx){
   wrap.addEventListener('mousemove',e=>{const vp=mapViewport[`m${idx}`];if(!vp)return;const rect=wrap.getBoundingClientRect();const mx=e.clientX-rect.left,my=e.clientY-rect.top;const ptIdx=nearestPt(mx,my,vp);if(ptIdx!==null){showCrosshair(idx,ptIdx);showMapDot(idx,ptIdx);}else{hideCrosshair(idx);}});
   wrap.addEventListener('mouseleave',()=>{hideCrosshair(idx);});
 }
+function haverDist(la1,lo1,la2,lo2){const R=6371,dLat=(la2-la1)*Math.PI/180,dLon=(lo2-lo1)*Math.PI/180,a=Math.sin(dLat/2)**2+Math.cos(la1*Math.PI/180)*Math.cos(la2*Math.PI/180)*Math.sin(dLon/2)**2;return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));}
+function computeDists(r){if(r.dists)return r.dists;const d=[0];for(let i=1;i<r.lats.length;i++)d.push(d[i-1]+haverDist(r.lats[i-1],r.lons[i-1],r.lats[i],r.lons[i]));r.dists=d;return d;}
 function initCharts(idx){
-  const r=RIDES[idx];const sSpd=getSmoothed(idx,'spd',r.spds,5);const sEle=getSmoothed(idx,'ele',r.eles,5);
+  const r=RIDES[idx];const dists=computeDists(r);const sSpd=getSmoothed(idx,'spd',r.spds,5);const sEle=getSmoothed(idx,'ele',r.eles,5);
   drawChart(`chart-spd-${idx}`,r.spds,sSpd,'#1a6bcc','rgba(26,107,204,0.12)',null);
   drawChart(`chart-ele-${idx}`,r.eles,sEle,'#c0392b','rgba(192,57,43,0.1)',null);
-  drawXAxis(`chart-xaxis-${idx}`,r.dists,r.times_sec||null);
+  drawXAxis(`chart-xaxis-${idx}`,dists,r.times_sec||null);
   attachChartHover(idx);attachMapHover(idx);
 }
 
