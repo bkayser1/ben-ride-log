@@ -3134,7 +3134,7 @@ main{padding:36px 48px 80px;}
   <div class="section-head"><h2>Heatmap — route frequency &amp; intensity</h2></div>
   <div class="ride-block" style="overflow:hidden;">
     <div class="map-wrap" id="wrap-heat" style="height:600px;background:#080b12;position:relative;">
-      <canvas id="heat"></canvas>
+      <canvas id="heatmap"></canvas>
       <div class="map-loading" id="load-heat" style="color:rgba(255,255,255,.4);background:rgba(8,11,18,0.7);">Loading map…</div>
       <div class="zoom-controls">
         <button class="zoom-btn zoom-btn-dark" onclick="zoomMap('heat',1)">+</button>
@@ -3146,7 +3146,7 @@ main{padding:36px 48px 80px;}
     </div>
     <div class="heat-legend-bar">
       <span class="heat-legend-label">Frequency</span>
-      <canvas id="lgrad-heat" width="160" height="8" style="flex:0 0 160px;border-radius:4px;"></canvas>
+      <canvas id="lgrad-heatmap" width="160" height="8" style="flex:0 0 160px;border-radius:4px;"></canvas>
       <span class="heat-legend-minmax">1 ride</span><span class="heat-legend-sep">—</span><span class="heat-legend-minmax">many rides</span>
       <span class="heat-note">Brighter = more rides · White = overlap</span>
     </div>
@@ -3349,7 +3349,7 @@ async function renderMap(id){
   const W=wrap.clientWidth||600,H=wrap.clientHeight||380;
   canvas.width=W;canvas.height=H;canvas.style.width=W+'px';canvas.style.height=H+'px';
   if(loader)loader.style.display='flex';
-  const ctx=canvas.getContext('2d');ctx.fillStyle=id==='heat'?'#080b12':'#d8d4ca';ctx.fillRect(0,0,W,H);
+  const ctx=canvas.getContext('2d');ctx.fillStyle=id==='heatmap'?'#080b12':'#d8d4ca';ctx.fillRect(0,0,W,H);
   const rides=state.rides;const lats=rides.flatMap(r=>r.lats);const lons=rides.flatMap(r=>r.lons);
   const latMin=Math.min(...lats),latMax=Math.max(...lats),lonMin=Math.min(...lons),lonMax=Math.max(...lons);
   const pad=0.12;const latMinP=latMin-(latMax-latMin)*pad,latMaxP=latMax+(latMax-latMin)*pad;
@@ -3363,22 +3363,22 @@ async function renderMap(id){
   if(id==='master'){const ov=document.getElementById('master-overlay');if(ov){ov.width=W;ov.height=H;ov.style.width=W+'px';ov.style.height=H+'px';}}
   const txMin=Math.floor(tileX0)-1,txMax=Math.ceil(tileX0+W/TILE_SIZE)+1,tyMin=Math.floor(tileY0)-1,tyMax=Math.ceil(tileY0+H/TILE_SIZE)+1;
   const zBadge=document.getElementById('zlevel-'+id);if(zBadge)zBadge.textContent='z'+z;
-  const source=id==='heat'?TILE_SOURCES.standard:TILE_SOURCES[state.layer];
+  const source=id==='heatmap'?TILE_SOURCES.standard:TILE_SOURCES[state.layer];
   const attrEl=document.getElementById('attr-'+id);if(attrEl)attrEl.textContent=source.attr||'';
   try{const tiles=await loadTiles(source,z,txMin,txMax,tyMin,tyMax);drawTiles(ctx,tiles,tileX0,tileY0);}catch(e){ctx.fillStyle='#ccc';ctx.fillRect(0,0,W,H);}
-  if(id==='heat'){ctx.fillStyle='rgba(6,9,18,0.82)';ctx.fillRect(0,0,W,H);}
+  if(id==='heatmap'){ctx.fillStyle='rgba(6,9,18,0.82)';ctx.fillRect(0,0,W,H);}
   if(id.startsWith('m')&&id!=='master'){
     const r=rides[0];ctx.shadowColor='rgba(0,0,0,0.6)';ctx.shadowBlur=6;ctx.shadowOffsetY=1;
     drawRoute(ctx,r,z,tileX0,tileY0,state.color,8,0.35);ctx.shadowBlur=0;ctx.shadowOffsetX=0;ctx.shadowOffsetY=0;
     drawRoute(ctx,r,z,tileX0,tileY0,state.color,4,1);updateRideLegend(id,state.color,r);
   }
   if(id==='master'){rides.forEach(r=>{drawRoute(ctx,r,z,tileX0,tileY0,'plain',6,0.15);drawRoute(ctx,r,z,tileX0,tileY0,'plain',3,0.9);});ctx.globalAlpha=1;}
-  if(id==='heat'){
+  if(id==='heatmap'){
     const cellDeg=0.0004,grid={};
     rides.forEach((r,ri)=>{const seen=new Set();r.lats.forEach((lat,i)=>{const lon=r.lons[i],key=`${Math.floor(lat/cellDeg)}_${Math.floor(lon/cellDeg)}`;if(!seen.has(key)){seen.add(key);if(!grid[key])grid[key]=new Set();grid[key].add(ri);}});});
     const maxFreq=Math.max(...Object.values(grid).map(s=>s.size));
     rides.forEach(r=>{for(let i=1;i<r.lats.length;i++){const key=`${Math.floor(r.lats[i]/cellDeg)}_${Math.floor(r.lons[i]/cellDeg)}`;const f=(grid[key]||{size:1}).size,intensity=f/maxFreq;let br,bg,bb;if(f>=3){br=255;bg=255;bb=255;}else if(f===2){br=255;bg=235;bb=130;}else if(r.color==='#e05a3a'||r.color==='#e8720c'){br=224;bg=90;bb=58;}else if(r.color==='#1a6bcc'){br=40;bg=130;bb=255;}else if(r.color==='#2d7a3a'){br=80;bg=200;bb=80;}else{br=180;bg=100;bb=255;}const p0x=(lonToTileX(r.lons[i-1],z)-tileX0)*TILE_SIZE,p0y=(latToTileY(r.lats[i-1],z)-tileY0)*TILE_SIZE;const p1x=(lonToTileX(r.lons[i],z)-tileX0)*TILE_SIZE,p1y=(latToTileY(r.lats[i],z)-tileY0)*TILE_SIZE;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(p0x,p0y);ctx.lineTo(p1x,p1y);ctx.strokeStyle=`rgba(${br},${bg},${bb},${0.04+intensity*0.07})`;ctx.lineWidth=18+intensity*8;ctx.stroke();ctx.beginPath();ctx.moveTo(p0x,p0y);ctx.lineTo(p1x,p1y);ctx.strokeStyle=`rgba(${br},${bg},${bb},${0.12+intensity*0.22})`;ctx.lineWidth=7+intensity*4;ctx.stroke();ctx.beginPath();ctx.moveTo(p0x,p0y);ctx.lineTo(p1x,p1y);ctx.strokeStyle=`rgba(${br},${bg},${bb},${0.65+intensity*0.35})`;ctx.lineWidth=1.5+intensity*2;ctx.stroke();}});
-    const lgc=document.getElementById('lgrad-heat');if(lgc){const lctx=lgc.getContext('2d');for(let x=0;x<160;x++){const t=x/160;if(t<0.5){const u=t/0.5;lctx.fillStyle=`rgb(${Math.round(224*u+30*(1-u))},${Math.round(90*u+30*(1-u))},${Math.round(58*u+30*(1-u))})`;}else{const u=(t-0.5)/0.5;lctx.fillStyle=`rgb(${Math.round(224+(255-224)*u)},${Math.round(90+(255-90)*u)},${Math.round(58+(255-58)*u)})`;}lctx.fillRect(x,0,2,8);}}
+    const lgc=document.getElementById('lgrad-heatmap');if(lgc){const lctx=lgc.getContext('2d');for(let x=0;x<160;x++){const t=x/160;if(t<0.5){const u=t/0.5;lctx.fillStyle=`rgb(${Math.round(224*u+30*(1-u))},${Math.round(90*u+30*(1-u))},${Math.round(58*u+30*(1-u))})`;}else{const u=(t-0.5)/0.5;lctx.fillStyle=`rgb(${Math.round(224+(255-224)*u)},${Math.round(90+(255-90)*u)},${Math.round(58+(255-58)*u)})`;}lctx.fillRect(x,0,2,8);}}
   }
   if(loader)loader.style.display='none';
 }
@@ -3531,7 +3531,7 @@ function pgApply(){
       initCharts(idx);
       const canvas=document.getElementById('m'+idx);
       if(canvas){
-        const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){renderMap('m'+idx);obs.disconnect();}});},{threshold:0.1});
+        const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){renderMap('m'+idx).then(()=>{attachScrollZoom('m'+idx);attachPanDrag('m'+idx);});obs.disconnect();}});},{threshold:0.1});
         obs.observe(canvas);
       }
     }
@@ -3673,7 +3673,7 @@ window.showTab=function(name,el){
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');
   ['rides','master','heatmap','stats','builder'].forEach(t=>{const d=document.getElementById('tab-'+t);if(d)d.style.display=t===name?'block':'none';});
   if(name==='master'&&!tabRendered.master){tabRendered.master=true;setTimeout(()=>{renderMap('master').then(()=>{setupMasterHover();attachScrollZoom('master');attachPanDrag('master');});},30);}
-  if(name==='heatmap'&&!tabRendered.heat){tabRendered.heat=true;setTimeout(()=>{renderMap('heat').then(()=>{attachScrollZoom('heat');attachPanDrag('heat');});},30);}
+  if(name==='heatmap'&&!tabRendered.heatmap){tabRendered.heatmap=true;setTimeout(()=>{renderMap('heatmap').then(()=>{attachScrollZoom('heatmap');attachPanDrag('heatmap');});},30);}
   if(name==='builder'&&!tabRendered.builder){tabRendered.builder=true;setTimeout(()=>{initBuilder();loadMilZones();renderSavedRoutesList();},30);}
   if(name==='stats'&&!tabRendered.stats){tabRendered.stats=true;setTimeout(initStatsTab,30);}
 };
@@ -3681,7 +3681,6 @@ window.showTab=function(name,el){
 window.addEventListener('load',()=>{
   const ids=['m0','m1','m2','m3','m4','m5','m6','m7','m8','m9','m10','m11','m12','m13','m14','m15','m16','m17','m18','m19','m20','m21','m22','m23','m24','m25','m26','m27','m28','m29','m30','m31','m32','m33','m34','m35','m36','m37','m38'];
   ids.forEach(id=>{renderMap(id).then(()=>{attachScrollZoom(id);attachPanDrag(id);});});
-  for(let i=0;i<46;i++)initCharts(i);
   addGearBadges();
   const dateBtn=document.querySelector('.sort-btn[data-key="date"]');
   if(dateBtn){dateBtn.dataset.dir='asc';sortRides('date','desc',dateBtn);}else{pgInit();}
@@ -4731,10 +4730,9 @@ window.builderExportSaved=async function(idx){
 };
 
 window.addEventListener('resize',()=>{
-  ['master','heat'].forEach(id=>{mapState[id].zoom=null;mapState[id].panX=0;mapState[id].panY=0;});
+  ['master','heatmap'].forEach(id=>{mapState[id].zoom=null;mapState[id].panX=0;mapState[id].panY=0;});
   ['m0','m1','m2','m3','m4','m5','m6','m7','m8','m9','m10','m11','m12','m13','m14','m15','m16','m17','m18','m19','m20','m21','m22','m23','m24','m25','m26','m27','m28','m29','m30','m31','m32','m33','m34','m35','m36','m37','m38'].forEach(id=>{mapState[id].zoom=null;mapState[id].panX=0;mapState[id].panY=0;renderMap(id);});
-  for(let i=0;i<46;i++)initCharts(i);
-  if(tabRendered.master)renderMap('master');if(tabRendered.heat)renderMap('heat');
+  if(tabRendered.master)renderMap('master');if(tabRendered.heatmap)renderMap('heatmap');
 });
 
 
