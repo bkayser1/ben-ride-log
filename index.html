@@ -3689,16 +3689,15 @@ const tabRendered={};
 window.showTab=function(name,el){
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');
   ['rides','master','heatmap','stats','builder'].forEach(t=>{const d=document.getElementById('tab-'+t);if(d)d.style.display=t===name?'block':'none';});
-  if(name==='master'&&!tabRendered.master){tabRendered.master=true;setTimeout(()=>{renderMap('master').then(()=>{setupMasterHover();attachScrollZoom('master');attachPanDrag('master');});},30);}
-  if(name==='heatmap'&&!tabRendered.heatmap){tabRendered.heatmap=true;setTimeout(()=>{renderMap('heatmap').then(()=>{attachScrollZoom('heatmap');attachPanDrag('heatmap');});},30);}
+  if(name==='master'){if(!tabRendered.master){tabRendered.master=true;setTimeout(()=>{renderMap('master').then(()=>{setupMasterHover();attachScrollZoom('master');attachPanDrag('master');});},80);}else{setTimeout(()=>renderMap('master'),30);}}
+  if(name==='heatmap'){if(!tabRendered.heatmap){tabRendered.heatmap=true;setTimeout(()=>{renderMap('heatmap').then(()=>{attachScrollZoom('heatmap');attachPanDrag('heatmap');});},80);}else{setTimeout(()=>renderMap('heatmap'),30);}}
   if(name==='builder'&&!tabRendered.builder){tabRendered.builder=true;setTimeout(()=>{initBuilder();loadMilZones();renderSavedRoutesList();},30);}
   if(name==='stats'&&!tabRendered.stats){tabRendered.stats=true;setTimeout(initStatsTab,30);}
 };
 
 window.addEventListener('load',()=>{
-  // Master map and heatmap only — individual ride maps lazy-loaded by pagination
-  renderMap('master').then(()=>{attachScrollZoom('master');attachPanDrag('master');});
-  renderMap('heatmap').then(()=>{attachScrollZoom('heatmap');attachPanDrag('heatmap');});
+  // Individual ride maps are lazy-loaded by pagination
+  // Master map and heatmap are lazy-loaded when their tab is first clicked (via showTab)
   addGearBadges();
   const dateBtn=document.querySelector('.sort-btn[data-key="date"]');
   if(dateBtn){dateBtn.dataset.dir='asc';sortRides('date','desc',dateBtn);}else{pgInit();}
