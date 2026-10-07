@@ -66,6 +66,7 @@ main{padding:36px 48px 80px;}
 .ri-name{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:var(--text);display:block;margin-bottom:2px;line-height:1.3;}
 .ri-dist{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-muted);font-weight:500;}
 .sort-bar{display:flex;align-items:center;gap:8px;padding:10px 0 18px;flex-wrap:wrap;}
+.rides-controls{display:flex;align-items:center;gap:8px;padding:0 0 18px;flex-wrap:wrap;}
 .sort-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);font-weight:600;margin-right:4px;}
 .sort-btn{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1px;padding:6px 14px;border-radius:3px;cursor:pointer;border:1px solid var(--border);background:var(--surface);color:var(--text);font-weight:600;text-transform:uppercase;transition:all .15s;display:flex;align-items:center;gap:5px;}
 .sort-btn:hover{border-color:var(--border-strong);color:var(--text);}
@@ -250,6 +251,7 @@ main{padding:36px 48px 80px;}
 @media(max-width:900px){header{flex-direction:column;align-items:flex-start;padding:24px;}.stats-bar{grid-template-columns:repeat(3,1fr);}main{padding:20px;}.metrics{grid-template-columns:repeat(2,1fr);}.pr-grid{grid-template-columns:repeat(2,1fr);}.section-nav{padding:0 20px;}.logo{font-size:36px;}.rides-layout{grid-template-columns:1fr;}.ride-index{position:static;max-height:none;}}
 .ride-block{display:none;}
 .ride-block.rb-visible{display:block;}
+.pagination-bar.pagination-top{padding:0 0 14px;}
 .pagination-bar{display:flex;align-items:center;justify-content:center;gap:10px;padding:20px 0 32px;flex-wrap:wrap;}
 .pg-btn{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1px;padding:8px 18px;border-radius:3px;cursor:pointer;border:1px solid var(--border);background:var(--surface);color:var(--text);font-weight:600;text-transform:uppercase;transition:all .15s;}
 .pg-btn:hover:not(:disabled){border-color:var(--border-strong);background:var(--surface2);}
@@ -290,6 +292,14 @@ main{padding:36px 48px 80px;}
 <main>
 <div id="tab-rides">
   <div class="section-head"><h2>All rides</h2></div>
+  <div class="rides-controls">
+    <span class="sort-label">Sort:</span>
+    <button class="sort-btn" data-key="date" onclick="sortRides('date', this.dataset.dir||'desc', this)">Date <span class="sort-arrow">↓</span></button>
+    <button class="sort-btn" data-key="distance_km" onclick="sortRides('distance_km', this.dataset.dir||'desc', this)">Distance <span class="sort-arrow"></span></button>
+    <button class="sort-btn" data-key="elev_gain" onclick="sortRides('elev_gain', this.dataset.dir||'desc', this)">Elevation <span class="sort-arrow"></span></button>
+    <button class="sort-btn" data-key="avg_speed" onclick="sortRides('avg_speed', this.dataset.dir||'desc', this)">Avg Speed <span class="sort-arrow"></span></button>
+    <button class="sort-btn" data-key="suffering" onclick="sortRides('suffering', this.dataset.dir||'desc', this)">Suffering <span class="sort-arrow"></span></button>
+  </div>
   <div class="rides-layout">
     <div class="ride-index"><div class="ride-index-header">Jump to ride</div><div class="ride-index-item" onclick="scrollToRide(0)" id="idx-0"><span class="ri-date">25 Jul 2025</span><span class="ri-name">Agur 353, Friday am</span><span class="ri-dist">40.5 km · ↑448m</span></div>
 <div class="ride-index-item" onclick="scrollToRide(1)" id="idx-1"><span class="ri-date">08 Aug 2025</span><span class="ri-name">Yaar melachim interior Fri am</span><span class="ri-dist">26.4 km · ↑421m</span></div>
@@ -338,7 +348,14 @@ main{padding:36px 48px 80px;}
 <div class="ride-index-item" onclick="scrollToRide(44)" id="idx-44"><span class="ri-date">16 Sep 2026</span><span class="ri-name">MTB Kiryat gat to Karmei Katif, Tel Lachish, Israel national trail to BG</span><span class="ri-dist">68.3 km · ↑901m</span></div>
 <div class="ride-index-item" onclick="scrollToRide(45)" id="idx-45"><span class="ri-date">25 Sep 2026</span><span class="ri-name">MTB. KG. Tel Zafit. Sdot Micha. Brittania. Guvrin. Tel Lachish 🌾🍇</span><span class="ri-dist">76.5 km · ↑1210m</span></div></div>
 
-      <div id="rides-list">  <div class="ride-block" id="rideblock-0">
+      <div class="pagination-bar pagination-top" id="rides-pagination-top">
+  <button class="pg-btn" id="pg-first-t" onclick="pgGo(0)" title="Oldest">⟨⟨</button>
+  <button class="pg-btn" id="pg-prev-t" onclick="pgGo(pgState.page-1)">← Prev</button>
+  <span class="pg-info" id="pg-info-t">1–10 of 46</span>
+  <button class="pg-btn pg-primary" id="pg-next-t" onclick="pgGo(pgState.page+1)">Next →</button>
+  <button class="pg-btn" id="pg-last-t" onclick="pgGo(pgState.totalPages-1)" title="Newest">⟩⟩</button>
+</div>
+<div id="rides-list">  <div class="ride-block" id="rideblock-0">
     <div class="ride-card-inner">
       <div class="card-top"><div class="ride-name">Agur 353, Friday am</div><div class="ride-date-wrap"><span class="ride-date">25 Jul 2025</span><span class="ride-time-label">start 03:23</span></div></div>
       <div class="badges"><span class="badge badge-loop">Loop</span><span class="badge badge-dir">→ E</span><span class="badge badge-gear">🚲 Bottecchia</span></div>
@@ -3539,18 +3556,15 @@ function pgApply(){
     }
   });
   // Update controls
-  const info=document.getElementById('pg-info');
-  if(info)info.textContent=`${start+1}–${end} of ${total}`;
-  const btnFirst=document.getElementById('pg-first');
-  const btnPrev=document.getElementById('pg-prev');
-  const btnNext=document.getElementById('pg-next');
-  const btnLast=document.getElementById('pg-last');
-  if(btnFirst)btnFirst.disabled=page===0;
-  if(btnPrev)btnPrev.disabled=page===0;
-  if(btnNext)btnNext.disabled=page>=pgState.totalPages-1;
-  if(btnLast)btnLast.disabled=page>=pgState.totalPages-1;
+  const infoText=`${start+1}–${end} of ${total}`;
+  ['pg-info','pg-info-t'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=infoText;});
+  const isFirst=page===0, isLast=page>=pgState.totalPages-1;
+  ['pg-first','pg-first-t'].forEach(id=>{const b=document.getElementById(id);if(b)b.disabled=isFirst;});
+  ['pg-prev','pg-prev-t'].forEach(id=>{const b=document.getElementById(id);if(b)b.disabled=isFirst;});
+  ['pg-next','pg-next-t'].forEach(id=>{const b=document.getElementById(id);if(b)b.disabled=isLast;});
+  ['pg-last','pg-last-t'].forEach(id=>{const b=document.getElementById(id);if(b)b.disabled=isLast;});
   // Scroll to top of rides list
-  const rl=document.getElementById('rides-list');
+  const rl=document.getElementById('rides-pagination-top');
   if(rl)rl.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
