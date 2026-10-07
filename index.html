@@ -55,6 +55,7 @@ main{padding:36px 48px 80px;}
 .section-head{display:flex;align-items:center;gap:16px;margin-bottom:20px;}
 .section-head h2{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--text);font-weight:700;white-space:nowrap;}
 .section-head::after{content:'';flex:1;height:1px;background:var(--border);}
+.rides-main{min-width:0;display:flex;flex-direction:column;gap:0;}
 .rides-layout{display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:start;}
 .ride-index{background:var(--surface);border:1px solid var(--border);border-radius:6px;position:sticky;top:60px;max-height:calc(100vh - 80px);overflow-y:auto;}
 .ride-index-header{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);font-weight:700;padding:12px 14px 8px;border-bottom:1px solid var(--border);}
@@ -348,7 +349,7 @@ main{padding:36px 48px 80px;}
 <div class="ride-index-item" onclick="scrollToRide(44)" id="idx-44"><span class="ri-date">16 Sep 2026</span><span class="ri-name">MTB Kiryat gat to Karmei Katif, Tel Lachish, Israel national trail to BG</span><span class="ri-dist">68.3 km · ↑901m</span></div>
 <div class="ride-index-item" onclick="scrollToRide(45)" id="idx-45"><span class="ri-date">25 Sep 2026</span><span class="ri-name">MTB. KG. Tel Zafit. Sdot Micha. Brittania. Guvrin. Tel Lachish 🌾🍇</span><span class="ri-dist">76.5 km · ↑1210m</span></div></div>
 
-      <div class="pagination-bar pagination-top" id="rides-pagination-top">
+      <div class="rides-main"><div class="pagination-bar pagination-top" id="rides-pagination-top">
   <button class="pg-btn" id="pg-first-t" onclick="pgGo(0)" title="Oldest">⟨⟨</button>
   <button class="pg-btn" id="pg-prev-t" onclick="pgGo(pgState.page-1)">← Prev</button>
   <span class="pg-info" id="pg-info-t">1–10 of 46</span>
@@ -3076,7 +3077,7 @@ main{padding:36px 48px 80px;}
   <span class="pg-info" id="pg-info">1–10 of 46</span>
   <button class="pg-btn pg-primary" id="pg-next" onclick="pgGo(pgState.page+1)">Next 10 →</button>
   <button class="pg-btn" id="pg-last" onclick="pgGo(pgState.totalPages-1)" title="Newest">Last ⟩⟩</button>
-</div>
+</div></div>
 
     </div>
   </div></div>
