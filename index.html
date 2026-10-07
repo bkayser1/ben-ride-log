@@ -3084,7 +3084,7 @@ main{padding:36px 48px 80px;}
     </div>
   </div>
 </div>
-<div id="tab-master" style="display:none">
+<div id="tab-master" style="display:none;min-height:700px;">
   <div class="section-head"><h2>All rides — master map</h2></div>
   <div class="ride-block">
     <div class="map-controls"><div class="map-controls-row">
@@ -3093,7 +3093,7 @@ main{padding:36px 48px 80px;}
       <button class="map-btn" onclick="setLayer('master','satellite',this)">Satellite</button>
       <button class="map-btn" onclick="setLayer('master','terrain',this)">Terrain</button>
     </div></div>
-    <div class="map-wrap" id="wrap-master" style="height:600px;position:relative;">
+    <div class="map-wrap" id="wrap-master" style="height:600px;min-height:600px;position:relative;width:100%;">
       <canvas id="master" style="position:absolute;top:0;left:0;"></canvas>
       <canvas id="master-overlay" style="position:absolute;top:0;left:0;pointer-events:none;"></canvas>
       <div class="map-loading" id="load-master">Loading map…</div>
@@ -3148,10 +3148,10 @@ main{padding:36px 48px 80px;}
 </div>
   </div>
 </div>
-<div id="tab-heatmap" style="display:none">
+<div id="tab-heatmap" style="display:none;min-height:700px;">
   <div class="section-head"><h2>Heatmap — route frequency &amp; intensity</h2></div>
   <div class="ride-block" style="overflow:hidden;">
-    <div class="map-wrap" id="wrap-heatmap" style="height:600px;background:#080b12;position:relative;">
+    <div class="map-wrap" id="wrap-heatmap" style="height:600px;min-height:600px;background:#080b12;position:relative;width:100%;">
       <canvas id="heatmap"></canvas>
       <div class="map-loading" id="load-heatmap" style="color:rgba(255,255,255,.4);background:rgba(8,11,18,0.7);">Loading map…</div>
       <div class="zoom-controls">
@@ -3364,7 +3364,7 @@ const mapViewport={};
 async function renderMap(id){
   const state=mapState[id];const canvas=document.getElementById(id);const wrap=document.getElementById('wrap-'+id);const loader=document.getElementById('load-'+id);
   if(!canvas||!wrap)return;
-  const W=wrap.clientWidth||600,H=wrap.clientHeight||380;
+  const W=wrap.clientWidth||wrap.offsetWidth||600,H=wrap.clientHeight||wrap.offsetHeight||600;
   canvas.width=W;canvas.height=H;canvas.style.width=W+'px';canvas.style.height=H+'px';
   if(loader)loader.style.display='flex';
   const ctx=canvas.getContext('2d');ctx.fillStyle=id==='heatmap'?'#080b12':'#d8d4ca';ctx.fillRect(0,0,W,H);
@@ -3689,8 +3689,8 @@ const tabRendered={};
 window.showTab=function(name,el){
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');
   ['rides','master','heatmap','stats','builder'].forEach(t=>{const d=document.getElementById('tab-'+t);if(d)d.style.display=t===name?'block':'none';});
-  if(name==='master'){if(!tabRendered.master){tabRendered.master=true;setTimeout(()=>{renderMap('master').then(()=>{setupMasterHover();attachScrollZoom('master');attachPanDrag('master');});},80);}else{setTimeout(()=>renderMap('master'),30);}}
-  if(name==='heatmap'){if(!tabRendered.heatmap){tabRendered.heatmap=true;setTimeout(()=>{renderMap('heatmap').then(()=>{attachScrollZoom('heatmap');attachPanDrag('heatmap');});},80);}else{setTimeout(()=>renderMap('heatmap'),30);}}
+  if(name==='master'){if(!tabRendered.master){tabRendered.master=true;requestAnimationFrame(()=>requestAnimationFrame(()=>{renderMap('master').then(()=>{setupMasterHover();attachScrollZoom('master');attachPanDrag('master');});}));}else{requestAnimationFrame(()=>renderMap('master'));}}
+  if(name==='heatmap'){if(!tabRendered.heatmap){tabRendered.heatmap=true;requestAnimationFrame(()=>requestAnimationFrame(()=>{renderMap('heatmap').then(()=>{attachScrollZoom('heatmap');attachPanDrag('heatmap');});}));}else{requestAnimationFrame(()=>renderMap('heatmap'));}}
   if(name==='builder'&&!tabRendered.builder){tabRendered.builder=true;setTimeout(()=>{initBuilder();loadMilZones();renderSavedRoutesList();},30);}
   if(name==='stats'&&!tabRendered.stats){tabRendered.stats=true;setTimeout(initStatsTab,30);}
 };
